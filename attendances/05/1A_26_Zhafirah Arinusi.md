@@ -20,7 +20,7 @@ Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks pemil
 1. Perhatikan flowchart dibawah ini!
 
     <p align="left">
-    <img width="351" height="460" src="images/01.png">
+    <img width="351" height="460" src="2131710156/01.png">
     </p>
     
 
@@ -37,11 +37,11 @@ Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks pemil
 import java.util.Scanner;
 Scanner input = new Scanner(System.in);
 int bil;
-System.out.print("Masukkan sebuah bilangan:  ");
+System.out.print("Masukkan sebuah bilangan: ");
 bil = input.nextInt();
 ```
 
-    Masukkan sebuah bilangan:  25
+    Masukkan sebuah bilangan: 13
 
 
 3. Buatlah struktur kondisi untuk mengecek apakah bilangan tersebut merupakan bilangan genap atau ganjil
@@ -51,9 +51,9 @@ bil = input.nextInt();
 
 ```Java
 // Ketik kode program di atas di bawah sini
-if(bil % 2 == 0) {
+if(bil % 2 == 0){
     System.out.println("Bilangan Genap");
-} else {
+}else{
     System.out.println("Bilangan Ganjil");
 }
 ```
@@ -69,14 +69,12 @@ if(bil % 2 == 0) {
 
 ```Java
 // Ketik kode program di atas di bawah sini
-String output = (bil % 2 == 0) ? "Bilangan Genap" : "Bilangan Ganjil";
-System.out.println(output);
+
 ```
 
-    Bilangan Ganjil
-
-
 2. Jalankan dan amatilah hasilnya!
+
+        nceiuboxcwoecjod
 3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
 
 #### Percobaan 2 : Penggunaan if else
@@ -90,13 +88,8 @@ System.out.println(output);
 
 ```Java
 // Ketik kode program di atas di bawah sini
-int nilai;
-System.out.print("Masukkan sebuah bilangan: ");
-nilai = input.nextInt();
+ 
 ```
-
-    Masukkan sebuah bilangan: 20
-
 
 + Tambahkan sebuah kondisi untuk mengecek input pada variabel nilai
 
@@ -105,16 +98,8 @@ nilai = input.nextInt();
 
 ```Java
 // Ketik kode program di atas di bawah sini
-if(nilai >= 100) {
-    nilai += 10;
-} else {
-    nilai -= 10;
-}
-System.out.println("Hasil akhir nilai adalah " + nilai);
+
 ```
-
-    Hasil akhir nilai adalah 10
-
 
 + Jalankan program. Amati apa yang terjadi!
 
@@ -125,10 +110,7 @@ System.out.println("Hasil akhir nilai adalah " + nilai);
     nilai+=10;
     nilai-=10;
     ```
-    
-    - nilai +=10 (menambahkan nilai 10 pada variabel nilai)
-    - nilai -=10 (mengurangi nilai 10 pada variabel nilai)
-    
+
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
 
 #### Percobaan 3 : Penggunaan if else-if else
