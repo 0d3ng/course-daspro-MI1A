@@ -372,3 +372,54 @@ Total       :2400000
 Diskon      :240000.0
 Total Bayar :2160000.0
 ```
+```java
+import java.util.Scanner;
+public class Test {
+    public static void main(String args[]) {
+      
+Scanner in = new Scanner(System.in);
+
+int barangA,barangB,barangC;
+double hargaA, hargaB, hargaC;
+
+double total, diskon,totalBayar;
+System.out.print("Masukkan harga barang A : ");
+hargaA = in.nextDouble();
+System.out.print("Masukkan jumlah barang A : ");
+barangA = in.nextInt();
+System.out.print("Masukkan harga barang B : ");
+hargaB = in.nextDouble();
+System.out.print("Masukkan jumlah barang B : ");
+barangB = in.nextInt();
+System.out.print("Masukkan harga barang C : ");
+hargaC = in.nextDouble();
+System.out.print("Masukkan jumlah barang C : ");
+barangC = in.nextInt();
+
+total = (hargaA*barangA) + (hargaB*barangB) + (hargaC*barangC);
+if(total >= 1000000) {
+  diskon = (double) 10/100;  
+} else if(total >= 500000) {
+  diskon = (double) 5/100;  
+} else if(total >= 200000) {
+  diskon = (double) 2/100;  
+} else {
+    diskon = 0;
+}
+totalBayar = total - total * diskon;
+System.out.println("Diskon Saat ini: " + diskon);
+System.out.println("\n----------------------------------------------------------------------");
+System.out.println("                             Struk Total                              ");
+System.out.println("----------------------------------------------------------------------");
+System.out.println("Nama Barang\t|\tHarga\t|\tJumlah\t|\tTotal");
+System.out.println(String.format("Barang A\t\t%s\t%s\t\t%s",hargaA, barangA, hargaA*barangA));
+System.out.println(String.format("Barang B\t\t%s\t%s\t\t%s",hargaB, barangB, hargaB*barangB));
+System.out.println(String.format("Barang A\t\t%s\t%s\t\t%s",hargaC, barangC, hargaC*barangC));
+System.out.println("Total\t:" + total);
+
+System.out.println("Diskon\t:" + (total * diskon));
+System.out.println("Total\t:" + totalBayar);
+in.close();
+    }
+}
+```
