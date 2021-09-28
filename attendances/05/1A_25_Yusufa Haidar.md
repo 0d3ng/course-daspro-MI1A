@@ -134,13 +134,14 @@ System.out.println("Hasil akhir nilai adalah "+nilai);
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
 
 ```Java
-int nilai1, nilai2;
+int nilai1, nilai2, nilairata;
 System.out.print("Masukkan bilangan pertama: ");
 nilai1 = sc.nextInt;
 System.out.print("Masukkan bilangan kedua: ");
 nilai2 = sc.nextInt;
+nilairata = nilai1 + nilai2 / 2; 
 
-if(nilai >= 100){
+if(nilairata >= 100){
     nilai -= 5;
 }else{
     nilai += 0;
