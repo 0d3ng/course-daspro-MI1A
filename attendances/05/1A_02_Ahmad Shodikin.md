@@ -278,13 +278,54 @@ System.out.println("Operator yang Anda masukkan salah");
 #### Waktu pengerjaan Tugas: 140 menit
 
 1. Buatlah program untuk menginputkan dua buah bilangan bulat, kemudian mencetak salah satu bilangan yang nilainya terbesar.
-2. Perhatikan flowchart berikut ini:
+```Java
+// Ketik kode program di atas di bawah sini
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+int bil1,bil2;
+System.out.print("Masukkan bilangan 1: ");
+bil1 = input.nextInt();
+System.out.print("Masukkan bilangan 2: ");
+bil2 = input.nextInt();
 
+if(bil1>bil2){
+    System.out.print(bil1 + " Adalah bilangan terbesar");
+} else {
+    System.out.print(bil2 + " Adalah bilangan terbesar");
+}
+```
+2. Perhatikan flowchart berikut ini:
 ![](images/02.png)
 
+```Java
+// Ketik kode program di atas di bawah sini
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+int umur;
+System.out.print("Masukkan umur Anda: ");
+umur = input.nextInt();
+
+if(umur >=17){
+    System.out.print("Anda boleh Berkendara");
+} else {System.out.print("Anda tidak boleh berkendara"); }
+```
 > Buatlah program sesuai dengan flowchart diatas!
 
+
 3. Pada akhir semester seorang dosen menghitung nilai akhir dari mahasiswa yang terdiri dari nilai uas, uts, kuis, dan tugas. Nilai akhir didapatkan dari 40% nilai uas, 30% nilai uts, 10% nilai kuis, dan 20% nilai tugas. Jika nilai akhir dari mahasiswa dibawah 65 maka mahasiswa tersebut akan mendapatkan remidi. Buatlah program untuk membantu mengetahui mahasiswa yang mendapatkan remidi berdasarkan nilai akhir yang didapatkannya!
+
+```Java
+// Ketik kode program di atas di bawah sini
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+double nilai;
+System.out.print("Masukkan akhir mahasiswa : ");
+nilai = input.nextDouble();
+
+if(nilai <65){
+    System.out.print("Anda remidi");
+} System.out.print("Anda tidak tidak remidi");
+```
 
 4. Sebuah toko memberikan diskon kepada pelanggannya dengan ketentuan sebagai berikut:
 
@@ -314,4 +355,55 @@ Barang C            150000         1         150000
 Total       :2400000
 Diskon      :240000.0
 Total Bayar :2160000.0
+```
+
+
+```Java
+// Ketik kode program di atas di bawah sini
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+double hargaA,hargaB,hargaC,totalBarang,jumlahA,jumlahB,jumlahC,totalA,totalB,totalC,totalBayar;
+double diskon = 0;
+
+System.out.print("Masukkan harga barang A : ");
+hargaA = input.nextDouble();
+System.out.print("Masukkan jumlah barang A :");
+jumlahA = input.nextDouble();
+System.out.print("Masukkan harga barang B : ");
+hargaB = input.nextDouble();
+System.out.print("Masukkan jumlah barang B :");
+jumlahB = input.nextDouble();
+System.out.print("Masukkan harga barang C : ");
+hargaC = input.nextDouble();
+System.out.print("Masukkan jumlah barang C :");
+jumlahC = input.nextDouble();
+
+totalA = hargaA * jumlahA;
+totalB = hargaB * jumlahB;
+totalC = hargaC * jumlahC;
+
+System.out.println("---------------------------------");
+System.out.println("\tStruk Total");
+System.out.println("---------------------------------");
+System.out.println("Nama Barang" + "\t\t\t" + "Harga" + "\t\t" + "Jumlah" + "\t\t" + "Total");
+System.out.println("Barang A" + "\t\t" + hargaA + "\t\t" + jumlahA + "\t\t" + totalA);
+System.out.println("Barang A" + "\t\t" + hargaB + "\t\t" + jumlahB + "\t\t" + totalB);
+System.out.println("Barang A" + "\t\t" + hargaC + "\t\t" + jumlahC + "\t\t" + totalC);
+
+totalBarang = totalA + totalB + totalC;
+System.out.println("Total : " + totalBarang);
+
+if (totalBarang > 1000000) {
+	diskon = totalBarang * 10/100;
+	System.out.println("Diskon : " + diskon);
+    } else if (totalBarang > 500000){
+    	diskon = totalBarang * 5/100;
+    	System.out.println("Diskon : " + diskon);
+    } else if (totalBarang > 200000){
+    	diskon = totalBarang * 2/100;
+    	System.out.println("Diskon : " + diskon);
+    } 
+ totalBayar = totalBarang - diskon;
+ System.out.print("Total Bayar :" + totalBayar);
+
 ```
