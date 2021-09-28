@@ -470,3 +470,4 @@ System.out.println("Bayar: " + hBayar);
     Total: 241000.0
     Diskon: 4820.0
     Bayar: 236180.0
+    
