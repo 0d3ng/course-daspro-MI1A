@@ -77,7 +77,7 @@ System.out.println(output);
 
 2. Jalankan dan amatilah hasilnya!
 3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
-
+<br>Jawab: output dari program yang dimodifikasi sama dengan yang belum dimodifikasi karena
 #### Percobaan 2 : Penggunaan if else
 
 #### Waktu percobaan : 40 menit
@@ -125,9 +125,10 @@ System.out.println("Hasil akhir nilai adalah "+nilai)
     nilai+=10;
     nilai-=10;
     ```
+    <br>Jawab: kode nilai+=10 untuk menambah nilai sebanyak 10, sedangkan nilai-=10 untuk mengurangi nilai sebanyak 10
 
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
-
+<br>
 #### Percobaan 3 : Penggunaan if else-if else
 
 #### Waktu percobaan : 40 menit
