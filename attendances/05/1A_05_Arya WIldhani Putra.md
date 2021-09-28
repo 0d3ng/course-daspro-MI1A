@@ -306,7 +306,7 @@ switch(operator){
     ```
     operator = sc.next().chartAt(0);
     ```
-    untuk metode mengembalikan karakter pada indeks tertentu dalam sebuah fungsi
+    untuk metode mengembalikan karakter pada indeks tertentu dalam sebuah fungsi atau input
 
 ### Tugas
 
