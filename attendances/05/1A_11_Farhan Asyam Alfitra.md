@@ -140,6 +140,34 @@ System.out.println("Hasil akhir nilai adalah "+nilai);
 
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
 
+import.java.util.Scanner
+
+public class nilai{
+    
+	public static void main(String[] args){
+
+    Scanner input = new Scanner(System.in);
+    int nilai1, nilai2, nilairatarata;	
+    System.out.print("Masukkan nilai pertama");
+    nilai1 = input.nextInt();
+	System.out.print("Masukkan nilai kedua");
+    nilai2 = input.nextInt();
+    System.out.print(((nilai1 + nilai2)/2));
+    nilairatarata = (((nilai1 + nilai2)/2));
+    if(nilairatarata >= 100){
+        nilairatarata -= 5;
+    }else if(nilairatarata <= 100){
+     System.out.print("nilairatarata");		
+}
+	
+    }
+
+}
+
+Masukkan nilai pertama 100
+Masukkan nilai kedua 120
+110
+
 
 
 #### Percobaan 3 : Penggunaan if else-if else
@@ -211,17 +239,17 @@ char operator;
 
 ```Java
 // Ketik kode program di atas di bawah sini
-System.out.print("Massukkan angka pertama: ");
+System.out.print("Masukkan angka pertama: ");
 angka1 = sc.nextDouble();
-System.out.print("Massukkan angka kedua: ");
+System.out.print("Masukkan angka kedua: ");
 angka2 = sc.nextDouble();
-System.out.print("Massukkan operator (+ - * /): ");
+System.out.print("Masukkan operator (+ - * /): ");
 operator = sc.next(). charAt(0);
 ```
 
-    Massukkan angka pertama: 11
-    Massukkan angka kedua: 12
-    Massukkan operator (+ - * /): 13
+    Masukkan angka pertama: 11
+    Masukkan angka kedua: 12
+    Masukkan operator (+ - * /): +
 
 
 4. Kode di bawah ini untuk melakukan pengecekan operator yang digunakan sebelum dilakukan operasi aritmatika
@@ -253,7 +281,7 @@ switch(operator){
 }
 ```
 
-    Operator yang Anda masukkan salah
+    23
 
 
 5. Jalankan program. Amati apa yang terjadi!
