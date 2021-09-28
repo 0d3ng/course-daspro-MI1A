@@ -356,4 +356,27 @@ Total Bayar :2160000.0
 ```Java
 import java.util.Scanner;
 Scanner input = new Scanner(System.in);
-double hargaA, jumlahA, hargaB, jumlahB, hargaC, jumlahC
+double hargaA, jumlahA, hargaB, jumlahB, hargaC, jumlahC, total, diskon, totalA, totalB, totalC, totalbayar;
+
+System.out.print("Masukkan harga barang A   : ");
+hargaA = sc.nextInt();
+System.out.print("Masukkan jumlah barang A  : ");
+jumlahA = sc.nextInt();
+System.out.print("Masukkan harga barang B   : ");
+hargaB = sc.nextInt();
+System.out.print("Masukkan jumlah barang B  : ");
+jumlahB = sc.nextInt();
+System.out.print("Masukkan harga barang C   : ");
+hargaC = sc.nextInt();
+System.out.print("Masukkan jumlah barang C  : "):
+jumlahC = sc.nextInt();
+System.out.println("---------------------------------------------");
+System.out.println("                Struk total                  ");
+System.out.println("---------------------------------------------");
+System.out.println("Nama Barang     | 	Harga 	| 	Jumlah 	| 	Total");
+totalA = hargaA * jumlahA;
+System.out.println(String.format("Barang A      %s         %s        %s", hargaA, jumlahA, totalA));
+totalB = hargaB * jumlahB;
+System.out.println(String.format("Barang B      %s         %s        %s", hargaB, jumlahB, totalB));
+totalA = hargaC * jumlahC;
+System.out.println(String.format("Barang C      %s         %s        %s", hargaC, jumlahC, totalC));
