@@ -355,7 +355,7 @@ Total Bayar :2160000.0
 ```
 ```Java
 import java.util.Scanner;
-Scanner input = new Scanner(System.in);
+Scanner sc = new Scanner(System.in);
 double hargaA, jumlahA, hargaB, jumlahB, hargaC, jumlahC, total, diskon, totalA, totalB, totalC, totalABC, totalbayar, diskon;
 
 System.out.print("Masukkan harga barang A   : ");
