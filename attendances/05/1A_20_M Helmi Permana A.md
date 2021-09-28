@@ -84,7 +84,7 @@ System.out.println(output);
 2. Jalankan dan amatilah hasilnya!
 3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
 
-Jawab: kedua program memiliki fungsi yang sama, dimana ketika pernyataan benar, maka menggunakan kondisi pertama, namun jika pernyatannya salah, maka menggunakan kondisi kedua.
+Jawab: kedua program memiliki fungsi yang sama, dimana ketika statement atau pernyataan benar, maka menggunakan kondisi pertama, namun jika statement atau pernyatannya salah, maka menggunakan kondisi kedua.
 
 #### Percobaan 2 : Penggunaan if else
 
