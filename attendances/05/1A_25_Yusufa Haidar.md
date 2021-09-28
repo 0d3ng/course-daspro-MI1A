@@ -144,6 +144,7 @@ if(nilai >= 100){
     nilai -= 5;
 }else{
     nilai += 0;
+```
 
 #### Percobaan 3 : Penggunaan if else-if else
 
@@ -281,11 +282,37 @@ Sebagai proses pembacaan data char
 #### Waktu pengerjaan Tugas: 140 menit
 
 1. Buatlah program untuk menginputkan dua buah bilangan bulat, kemudian mencetak salah satu bilangan yang nilainya terbesar.
+
+```Java
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+int bilbul1, bilbul2;
+System.out.print("Masukkan sebuah bilangan: ");
+bilbul1 = input.nextInt();
+System.out.print("Masukkan sebuah bilangan: ");
+bilbul2 = input.nextInt();
+if(bilbul1>bilbul2){
+    System.out.println(bilbul1 + " adalah Bilangan Terbesar");
+}else if(bilbul2>bilbul1){
+    System.out.println(bilbul2 + " adalah Bilangan Terbesar");
+}
+```
+
+
+
 2. Perhatikan flowchart berikut ini:
 
 ![](images/02.png)
 
 > Buatlah program sesuai dengan flowchart diatas!
+```Java
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+int umur;
+System.out.print("Masukkan Umur Anda: ");
+umur = sc.nextInt();
+String output = (umur >=17) ? "Boleh Berkendara":"Tidak Boleh Berkendara";
+System.out.println(output);
 
 3. Pada akhir semester seorang dosen menghitung nilai akhir dari mahasiswa yang terdiri dari nilai uas, uts, kuis, dan tugas. Nilai akhir didapatkan dari 40% nilai uas, 30% nilai uts, 10% nilai kuis, dan 20% nilai tugas. Jika nilai akhir dari mahasiswa dibawah 65 maka mahasiswa tersebut akan mendapatkan remidi. Buatlah program untuk membantu mengetahui mahasiswa yang mendapatkan remidi berdasarkan nilai akhir yang didapatkannya!
 
