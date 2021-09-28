@@ -263,12 +263,19 @@ switch(operator){
 
 ##### Pertanyaan
 1. Jelaskan fungsi dari break dan default pada percobaan 4 diatas!
+
+break : Sebagai pemisah antar kondisi
+
+default : Apabila tidak ada kondisi Case yang memenuhi maka kode default akan dijalankan
+
+
 2. Jelaskan fungsi perintah kode program dibawah ini pada percobaan 4!
 
     ```
     operator = sc.next().chartAt(0);
     ```
 
+Sebagai proses pembacaan data char
 ### Tugas
 
 #### Waktu pengerjaan Tugas: 140 menit
