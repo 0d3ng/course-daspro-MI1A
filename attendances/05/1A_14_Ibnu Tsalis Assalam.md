@@ -403,19 +403,19 @@ Total Bayar :2160000.0
 double hA, hjA, hB, hjB, hC, hjC, hTotal, hDiskon, hBayar;
 int jA, jB, jC;
 
-System.out.print("Masukkan harga barang A: ");
+System.out.print("Masukkan harga barang A\t: ");
 hA = ss.nextDouble();
 System.out.print("Masukkan jumlah barang A: ");
 jA = ss.nextInt();
 hjA = hA * jA;
 
-System.out.print("Masukkan harga barang B: ");
+System.out.print("Masukkan harga barang B\t: ");
 hB = ss.nextDouble();
 System.out.print("Masukkan jumlah barang B: ");
 jB = ss.nextInt();
 hjB = hB * jB;
 
-System.out.print("Masukkan harga barang C: ");
+System.out.print("Masukkan harga barang C\t: ");
 hC = ss.nextDouble();
 System.out.print("Masukkan jumlah barang C: ");
 jC = ss.nextInt();
@@ -442,9 +442,9 @@ else
 
 hBayar = hTotal - hDiskon;
 
-System.out.println("--------------------------");
-System.out.println("       Struk total        ");
-System.out.println("--------------------------");
+System.out.println("---------------------------------------");
+System.out.println("              Struk total              ");
+System.out.println("---------------------------------------");
 System.out.println("Nama Barang | Harga   | Jumlah | Total ");
 System.out.println(String.format("Barang A     %s\t %s\t %s ", hA, jA, hjA));
 System.out.println(String.format("Barang A     %s\t %s\t %s ", hB, jB, hjB));
@@ -454,11 +454,11 @@ System.out.println("Diskon: " + hDiskon);
 System.out.println("Bayar: " + hBayar);
 ```
 
-    Masukkan harga barang A: 100000
+    Masukkan harga barang A : 100000
     Masukkan jumlah barang A: 1
-    Masukkan harga barang B: 20000
+    Masukkan harga barang B : 20000
     Masukkan jumlah barang B: 4
-    Masukkan harga barang C: 30500
+    Masukkan harga barang C : 30500
     Masukkan jumlah barang C: 2
     --------------------------
         Struk total        
