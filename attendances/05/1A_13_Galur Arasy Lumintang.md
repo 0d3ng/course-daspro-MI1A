@@ -29,7 +29,7 @@ Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks pemil
 
 2. Tambahkan library Scanner, deklarasi Scanner, dan buat variabel bil untuk menampung data yang diinput melalui keyboard
 
-    ![](images/02.png)
+    ![](images/03.png)
 
 
 ```Java
@@ -41,7 +41,7 @@ System.out.print("Masukkan sebuah bilangan:  ");
 bil = input.nextInt();
 ```
 
-    Masukkan sebuah bilangan:  20
+    Masukkan sebuah bilangan:  25
 
 
 3. Buatlah struktur kondisi untuk mengecek apakah bilangan tersebut merupakan bilangan genap atau ganjil
@@ -58,7 +58,7 @@ if(bil % 2 == 0) {
 }
 ```
 
-    Bilangan Genap
+    Bilangan Ganjil
 
 
 ##### Pertanyaan
@@ -73,7 +73,7 @@ String output = (bil % 2 == 0) ? "Bilangan Genap" : "Bilangan Ganjil";
 System.out.println(output);
 ```
 
-    Bilangan Genap
+    Bilangan Ganjil
 
 
 2. Jalankan dan amatilah hasilnya!
@@ -83,10 +83,6 @@ System.out.println(output);
 
 #### Waktu percobaan : 40 menit
 
-### Jawaban
-1. 123456789
-2. 123456789
-
 + Buatlah sebuah variabel nilai untuk menyimpan inputan dari keyboard
 
     ![](images/06.png)
@@ -94,8 +90,13 @@ System.out.println(output);
 
 ```Java
 // Ketik kode program di atas di bawah sini
- 
+int nilai;
+System.out.print("Masukkan sebuah bilangan: ");
+nilai = input.nextInt();
 ```
+
+    Masukkan sebuah bilangan: 20
+
 
 + Tambahkan sebuah kondisi untuk mengecek input pada variabel nilai
 
@@ -104,8 +105,16 @@ System.out.println(output);
 
 ```Java
 // Ketik kode program di atas di bawah sini
-
+if(nilai >= 100) {
+    nilai += 10;
+} else {
+    nilai -= 10;
+}
+System.out.println("Hasil akhir nilai adalah " + nilai);
 ```
+
+    Hasil akhir nilai adalah 10
+
 
 + Jalankan program. Amati apa yang terjadi!
 
@@ -116,7 +125,10 @@ System.out.println(output);
     nilai+=10;
     nilai-=10;
     ```
-
+    
+    - nilai +=10 (menambahkan nilai 10 pada variabel nilai)
+    - nilai -=10 (mengurangi nilai 10 pada variabel nilai)
+    
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
 
 #### Percobaan 3 : Penggunaan if else-if else
