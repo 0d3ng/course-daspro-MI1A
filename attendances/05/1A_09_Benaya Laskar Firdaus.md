@@ -73,6 +73,13 @@ System.out.println(output);
 2. Jalankan dan amatilah hasilnya!
 3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
 
+#### JAWABAN
+
+2. Hasilnya mengeluarkan output yang sama
+
+3. Kedua program tersebut merupakan pemilihan if else dan operator ternary, disini operator ternary berfungsi sebagai program yang sederhana dari pemilihan if else dua kondisi. sehingga outputnya sama.
+
+
 #### Percobaan 2 : Penggunaan if else
 
 #### Waktu percobaan : 40 menit
@@ -117,6 +124,17 @@ System.out.println("Hasil akhir nilai adalah"+nilai);
 
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
 
+#### JAWABAN
+
+1. nilai+=10; 
+
+    nilai-=10; 
+    
+    Fungsi kode program diatas sebagai output kondisi dari pernyataan yang ada.
+
+
+
+
 #### Percobaan 3 : Penggunaan if else-if else
 
 #### Waktu percobaan : 40 menit
@@ -149,7 +167,7 @@ if (umur > 60)
 else if (umur > 45)
     System.out.println("Tua");
 else if (umur > 17)
-    System.out.println("Dewasa")
+    System.out.println("Dewasa");
 else if (umur > 5)
     System.out.println("Anak-anak");
 else
@@ -219,6 +237,7 @@ switch(operator){
     break;
     default:
     System.out.println("Operator yang Anda masukkan salah");
+}
         
         
 
@@ -235,6 +254,13 @@ switch(operator){
     operator = sc.next().chartAt(0);
     ```
 
+#### JAWABAN
+
+1. Break untuk menghentikan operasi dari pernyataan/ agar output pernyataan pertama tidak gabung dengan pernyataan lainnya.
+
+2. operator = sc.next().chartAt(0);
+ 
+    Fungsi kode program diatas yaitu untuk mencari karakter pertama pada input.
 ### Tugas
 
 #### Waktu pengerjaan Tugas: 140 menit
