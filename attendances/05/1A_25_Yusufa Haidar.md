@@ -313,9 +313,17 @@ System.out.print("Masukkan Umur Anda: ");
 umur = sc.nextInt();
 String output = (umur >=17) ? "Boleh Berkendara":"Tidak Boleh Berkendara";
 System.out.println(output);
-
+```
 3. Pada akhir semester seorang dosen menghitung nilai akhir dari mahasiswa yang terdiri dari nilai uas, uts, kuis, dan tugas. Nilai akhir didapatkan dari 40% nilai uas, 30% nilai uts, 10% nilai kuis, dan 20% nilai tugas. Jika nilai akhir dari mahasiswa dibawah 65 maka mahasiswa tersebut akan mendapatkan remidi. Buatlah program untuk membantu mengetahui mahasiswa yang mendapatkan remidi berdasarkan nilai akhir yang didapatkannya!
-
+```Java
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+double nilaiakhir;
+System.out.print("Masukkan Nilai Akhir Anda: ");
+umur = sc.nextDouble();
+String output = (nilaiakhir <65) ? "Remidi":"Tidak Remidi";
+System.out.println(output);
+```
 4. Sebuah toko memberikan diskon kepada pelanggannya dengan ketentuan sebagai berikut:
 
 | Total Belanja     | Potongan |
@@ -345,3 +353,7 @@ Total       :2400000
 Diskon      :240000.0
 Total Bayar :2160000.0
 ```
+```Java
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+double hargaA, jumlahA, hargaB, jumlahB, hargaC, jumlahC
