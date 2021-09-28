@@ -1,0 +1,335 @@
+## JOBSHEET 5
+
+## PEMILIHAN 1
+
+### Tujuan
+
+Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks pemilihan 1 dan mengimplemantasikannya dalam bahasa pemrogaman java.
+
+### Alat dan Bahan
++ PC/laptop
++ Browser(chrome, firefox, safari)
++ Koneksi internet
+
+### Praktikum
+
+#### Percobaan 1 : Penggunaan if
+
+#### Waktu percobaan : 40 menit
+
+1. Perhatikan flowchart dibawah ini!
+
+    <p align="left">
+    <img width="351" height="460" src="images/01.png">
+    </p>
+    
+
+> Flowchart diatas digunakan untuk menentukan bilangan ganjil/genap, selanjutnya kita akan membuat programnya berdasarkan
+> flowchart di atas!
+
+2. Tambahkan library Scanner, deklarasi Scanner, dan buat variabel bil untuk menampung data yang diinput melalui keyboard
+
+    ![](images/03.png)
+
+
+```Java
+// Ketik kode program di atas di bawah sini
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+int bil;
+System.out.print("Masukkan sebuah bilangan: ");
+bil = input.nextInt();
+```
+
+    Masukkan sebuah bilangan: 9
+
+
+3. Buatlah struktur kondisi untuk mengecek apakah bilangan tersebut merupakan bilangan genap atau ganjil
+
+    ![](images/04.png)
+
+
+```Java
+// Ketik kode program di atas di bawah sini
+if(bil%2 == 0){
+    System.out.println("Bilangan Genap");
+}else{
+    System.out.println("Bilangan Ganjil");
+}
+```
+
+    Bilangan Ganjil
+
+
+##### Pertanyaan
+1. Modifikasi program diatas dibagian struktur pemilihannya sehingga menjadi sebagai berikut:
+
+    ![](images/05.png)
+
+
+```Java
+// Ketik kode program di atas di bawah sini
+String output = (bil % 2 == 0) ? "Bilangan Genap" : "Bilangan Ganjil";
+System.out.println(output);
+```
+
+    Bilangan Ganjil
+
+
+2. Jalankan dan amatilah hasilnya!
+3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
+  
+
+
+
+### Jawab
+2.  Setelah dijalankan, hasil output dari if-else dan ternary operator sama.
+3.  Karena ternary operator merupakan bentuk sederhana dari if-else.
+#### Percobaan 2 : Penggunaan if else
+#### Waktu percobaan : 40 menit
+
++ Buatlah sebuah variabel nilai untuk menyimpan inputan dari keyboard
+
+    ![](images/06.png)
+
+
+```Java
+// Ketik kode program di atas di bawah sini
+int nilai;
+System.out.print("Masukkan sebuah bilangan: ");
+nilai = input.nextInt();
+```
+
+    Masukkan sebuah bilangan: 7
+
+
++ Tambahkan sebuah kondisi untuk mengecek input pada variabel nilai
+
+    ![](images/07.png)
+
+
+```Java
+// Ketik kode program di atas di bawah sini
+if(nilai >= 100){
+    nilai += 10;
+}else{
+    nilai -= 10;
+}
+System.out.println("Hasil akhir nilai adalah "+nilai);
+```
+
+    Hasil akhir nilai adalah -3
+
+
++ Jalankan program. Amati apa yang terjadi!
+
+##### Pertanyaan
+1. Jelaskan fungsi kode program berikut:
+    
+    ```
+    nilai+=10;
+    nilai-=10;
+    ```
+
+2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
+
+### Jawab
+1. nilai+=10 berarti variabel nilai ditambah 10 sedangakan nilai-=10 berarti variabel nilai dikurangi 10
+
+
+```Java
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+int nilai1, nilai2, rerata, hasil;
+System.out.print("Masukkan nilai pertama: ");
+nilai1 = input.nextInt();
+System.out.print("Masukkan nilai kedua: ");
+nilai2 = input.nextInt();
+
+rerata = nilai1 + nilai2 / 2;
+
+if(rerata >= 100){
+    hasil -= 5;
+}else{
+    hasil = rerata;
+}
+System.out.println("Hasil akhir nilai adalah: "+hasil);
+
+```
+
+    Masukkan nilai pertama: 10
+    Masukkan nilai kedua: 20
+    Hasil akhir nilai adalah: 20
+
+
+#### Percobaan 3 : Penggunaan if else-if else
+
+#### Waktu percobaan : 40 menit
+
++ Tambahakan library `Scanner`
++ Buatlah deklarasi `Scanner`
++ Buat variabel umur bertipe `int`
+
+    ![](images/08.png)
+
+
+```Java
+// Ketik kode program di atas di bawah sini
+int umur;
+System.out.print("Masukkan umur Anda: ");
+umur = input.nextInt();
+```
+
+    Masukkan umur Anda: 18
+
+
++ Kode untuk melakukan pengecekan variabel `umur`
+
+    ![](images/09.png)
+
+
+```Java
+// Ketik kode program di atas di bawah sini
+if(umur > 60)
+    System.out.println("Lansia");
+else if(umur > 45)
+    System.out.println("Tua");
+else if(umur > 17)
+    System.out.println("Dewasa");
+else if(umur > 5)
+    System.out.println("Anak-anak");
+else
+    System.out.println("Balita");
+```
+
+    Dewasa
+
+
++ Jalankan program dan amati apa yang terjadi!
+
+##### Percobaan 4 : Penggunaan switch-case
+
+#### Waktu percobaan : 40 menit
+
+1. Deklarasikan Scanner
+1. Buatlah variabel-variabel berikut
+
+    ![](images/10.png)
+
+
+```Java
+// Ketik kode program di atas di bawah sini
+Scanner sc = new Scanner(System.in);
+double angka1, angka2, hasil;
+char operator;
+```
+
+3. Kode program untuk meminta inputan dari keyboard
+
+    ![](images/11.png)
+
+
+```Java
+// Ketik kode program di atas di bawah sini
+System.out.print("Masukkan angka pertama: ");
+angka1 = sc.nextDouble();
+System.out.print("Masukkan angka kedua: ");
+angka2 = sc.nextDouble();
+System.out.print("Masukkan operator (+ - * /): ");
+operator = sc.next().charAt(0);
+```
+
+    Masukkan angka pertama: 8
+    Masukkan angka kedua: 6
+    Masukkan operator (+ - * /): -
+
+
+4. Kode di bawah ini untuk melakukan pengecekan operator yang digunakan sebelum dilakukan operasi aritmatika
+
+    ![](images/12.png)
+
+
+```Java
+// Ketik kode program di atas di bawah sini
+switch(operator){
+    case '+':
+        hasil = angka1 + angka2;
+        System.out.println(angka1 + " + " + angka2 + " = " + hasil);
+        break;
+    case '-':
+        hasil = angka1 - angka2;
+        System.out.println(angka1 + " - " + angka2 + " = " + hasil);
+        break;
+    case '*':
+        hasil = angka1 * angka2;
+        System.out.println(angka1 + " * " + angka2 + " = " + hasil);
+        break;
+    case '/':
+        hasil = angka1 / angka2;
+        System.out.println(angka1 + " / " + angka2 + " = " + hasil);
+        break;
+    default:
+        System.out.println("Operator yang Anda masukkan salah");
+        
+}
+```
+
+    8.0 - 6.0 = 2.0
+
+
+5. Jalankan program. Amati apa yang terjadi!
+
+##### Pertanyaan
+1. Jelaskan fungsi dari break dan default pada percobaan 4 diatas!
+2. Jelaskan fungsi perintah kode program dibawah ini pada percobaan 4!
+
+    ```
+    operator = sc.next().chartAt(0);
+    ```
+
+### Jawab 
+1. Break berfungsi untuk melakukan stop jika perintah yang dijalankan sudah cukup. Sedangkan default berfungsi jika inputan tidak ada yang cocok dengan semua case.
+2. Mengambil sebuah karakter dari String.
+
+### Tugas
+
+#### Waktu pengerjaan Tugas: 140 menit
+
+1. Buatlah program untuk menginputkan dua buah bilangan bulat, kemudian mencetak salah satu bilangan yang nilainya terbesar.
+2. Perhatikan flowchart berikut ini:
+
+![](images/02.png)
+
+> Buatlah program sesuai dengan flowchart diatas!
+
+3. Pada akhir semester seorang dosen menghitung nilai akhir dari mahasiswa yang terdiri dari nilai uas, uts, kuis, dan tugas. Nilai akhir didapatkan dari 40% nilai uas, 30% nilai uts, 10% nilai kuis, dan 20% nilai tugas. Jika nilai akhir dari mahasiswa dibawah 65 maka mahasiswa tersebut akan mendapatkan remidi. Buatlah program untuk membantu mengetahui mahasiswa yang mendapatkan remidi berdasarkan nilai akhir yang didapatkannya!
+
+4. Sebuah toko memberikan diskon kepada pelanggannya dengan ketentuan sebagai berikut:
+
+| Total Belanja     | Potongan |
+|-------------------|----------|
+| >Rp. 200.000,00   | 2%       |
+| >Rp. 500.000,00   | 5%       |
+| >Rp. 1.000.000,00 | 10%      |
+
+> Total belanja diperoleh dari pembelian tiga barang yaitu barang A, barang B, dan barang C. Ketika menginputkan harga barang juga menginputkan jumlah barang yang dibeli.
+
+Contoh outputnya
+```
+Masukkan harga barang A   :100000
+Masukkan jumlah barang A  :10
+Masukkan harga barang B   :250000
+Masukkan jumlah barang B  :5
+Masukkan harga barang C   :150000
+Masukkan jumlah barang C  :1
+---------------------------------------------
+                Struk total
+---------------------------------------------
+Nama Barang 	| 	Harga 	| 	Jumlah 	| 	Total
+Barang A            100000         10        1000000   
+Barang B            250000         5         1250000   
+Barang C            150000         1         150000    
+Total       :2400000
+Diskon      :240000.0
+Total Bayar :2160000.0
+```
