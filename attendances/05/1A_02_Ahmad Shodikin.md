@@ -20,7 +20,7 @@ Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks pemil
 1. Perhatikan flowchart dibawah ini!
 
     <p align="left">
-    <img width="351" height="460" src="2131710132/01.png">
+    <img width="351" height="460" src="images/01.png">
     </p>
     
 
