@@ -267,8 +267,7 @@ switch(operator){
     ```
     operator = sc.next().chartAt(0);
     ```
-<br>Jawab: 
-
+<br>Jawab: sc.next untuk user dapat menginput operator, lalu charAt untuk mengambil sebuah karakter dari String (dalam hal ini untuk mengambil karakter dari operator yang diinput) 
 ### Tugas
 
 #### Waktu pengerjaan Tugas: 140 menit
