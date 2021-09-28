@@ -368,7 +368,7 @@ System.out.print("Masukkan jumlah barang B  : ");
 jumlahB = sc.nextInt();
 System.out.print("Masukkan harga barang C   : ");
 hargaC = sc.nextInt();
-System.out.print("Masukkan jumlah barang C  : "):
+System.out.print("Masukkan jumlah barang C  : ");
 jumlahC = sc.nextInt();
 System.out.println("---------------------------------------------");
 System.out.println("                Struk total                  ");
@@ -384,17 +384,16 @@ totalABC = totalA + totalB + totalC;
 System.out.println("Total       : " + totalABC);
 if(totalABC>=1000000){
     diskon = totalABC * 10 / 100;
-    System.out.println("Diskon      : ");
+    System.out.println("Diskon      : " + diskon);
 }else if(totalABC>=500000){
     diskon = totalABC * 5 / 100;
-    System.out.println("Diskon      : ");
+    System.out.println("Diskon      : " + diskon);
 }else if(totalABC>=200000){
     diskon = totalABC * 2 / 100;
-    System.out.println("Diskon      : ");
+    System.out.println("Diskon      : " + diskon);
 }
 totalbayar = totalABC - diskon;
 System.out.println("Total Bayar : " + totalbayar);
 
-}
 ```
 
