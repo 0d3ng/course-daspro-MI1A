@@ -132,7 +132,10 @@ hasil nya yaitu 40 karena nilai 50 itu berada dibawah angka 100 jadi di kurangi 
     nilai+=10;
     nilai-=10;
     ```
-
+  ```
+    nilai+=10;
+    nilai-=10;
+    ```
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
 
 ### Jawaban
