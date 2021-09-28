@@ -356,7 +356,7 @@ Total Bayar :2160000.0
 ```Java
 import java.util.Scanner;
 Scanner input = new Scanner(System.in);
-double hargaA, jumlahA, hargaB, jumlahB, hargaC, jumlahC, total, diskon, totalA, totalB, totalC, totalbayar;
+double hargaA, jumlahA, hargaB, jumlahB, hargaC, jumlahC, total, diskon, totalA, totalB, totalC, totalABC, totalbayar, diskon;
 
 System.out.print("Masukkan harga barang A   : ");
 hargaA = sc.nextInt();
@@ -378,5 +378,23 @@ totalA = hargaA * jumlahA;
 System.out.println(String.format("Barang A      %s         %s        %s", hargaA, jumlahA, totalA));
 totalB = hargaB * jumlahB;
 System.out.println(String.format("Barang B      %s         %s        %s", hargaB, jumlahB, totalB));
-totalA = hargaC * jumlahC;
+totalC = hargaC * jumlahC;
 System.out.println(String.format("Barang C      %s         %s        %s", hargaC, jumlahC, totalC));
+totalABC = totalA + totalB + totalC;
+System.out.println("Total       : " + totalABC);
+if(totalABC>=1000000){
+    diskon = totalABC * 10 / 100;
+    System.out.println("Diskon      : ");
+}else if(totalABC>=500000){
+    diskon = totalABC * 5 / 100;
+    System.out.println("Diskon      : ");
+}else if(totalABC>=200000){
+    diskon = totalABC * 2 / 100;
+    System.out.println("Diskon      : ");
+}
+totalbayar = totalABC - diskon;
+System.out.println("Total Bayar : " + totalbayar);
+
+}
+```
+
