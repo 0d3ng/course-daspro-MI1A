@@ -20,7 +20,7 @@ Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks pemil
 1. Perhatikan flowchart dibawah ini!
 
     <p align="left">
-    <img width="351" height="460" src="images/01.png">
+    <img width="351" height="460" src="2131710156/01.png">
     </p>
     
 
@@ -29,7 +29,7 @@ Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks pemil
 
 2. Tambahkan library Scanner, deklarasi Scanner, dan buat variabel bil untuk menampung data yang diinput melalui keyboard
 
-    ![](images/03.png)
+    ![](2131710156/01.png)
 
 
 ```Java
