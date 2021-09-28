@@ -74,7 +74,7 @@ if(bil % 2 == 0){
 
 2. Jalankan dan amatilah hasilnya!
 
-        nceiuboxcwoecjod
+        nceiuboxcwoecjoddwindiwin
 3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
 
 #### Percobaan 2 : Penggunaan if else
