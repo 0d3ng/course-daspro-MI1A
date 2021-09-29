@@ -329,14 +329,89 @@ hasil akan ada .0 dibelakangnya karena memakai double
 #### Waktu pengerjaan Tugas: 140 menit
 
 1. Buatlah program untuk menginputkan dua buah bilangan bulat, kemudian mencetak salah satu bilangan yang nilainya terbesar.
+                
+ ```Java
+ import java.util.Scanner;
+	public class ez {
+		public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		int nilai1,nilai2,nilai;
+		System.out.println("Masukkan Bilangan Pertama: ");
+		nilai1 = sc.nextInt();
+		System.out.println("Masukkan Bilangan Kedua: ");
+		nilai2 = sc.nextInt();
+		if(nilai1>nilai2){
+			nilai = nilai1;
+		}else{
+			nilai = nilai2;
+		}
+		System.out.println("Hasil Akhir Adalah: " + nilai);
+
+		
+		}
+}
+ ```    
+                Masukkan Bilangan Pertama:
+                41
+                Masukkan Bilangan Kedua:
+                90
+                Hasil Akhir Adalah: 90   
+>   script di atas merupakan cara menentukan umur untuk dapat menggunakan kendaraan untuk variabel diatas saya menggunakan nilai1 untuk bilangan pertama,nilai2 untuk bilangan kedua dan nilai untuk variabel yang akan ditampilkan outputnya dan saya memakai tipe data int karena output nya angka nya hanya sedikit jadi saya pakai int saja 
+                
 2. Perhatikan flowchart berikut ini:
 
 ![](images/02.png)
 
 > Buatlah program sesuai dengan flowchart diatas!
+```java
+import java.util.Scanner;
+	public class ez {
+		public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		int umur;
+		System.out.println("Masukkan umur: ");
+		umur = sc.nextInt();
+		if(umur>17){
+		System.out.println("Boleh Berkendara le");
+		}else{
+		System.out.println("Anak kecil ga boleh berkendara " );
+		}
+		
+
+		
+		}
+}
+```
+            Masukkan umur:
+            12
+            Anak kecil ga boleh berkendara 12
+        
+
+> script di atas merupakan cara menentukan umur untuk dapat menggunakan kendaraan untuk variabel diatas saya menggunakan umur dan tipe data int karena output nya angka nya hanya sedikit jadi saya pakai int saja
 
 3. Pada akhir semester seorang dosen menghitung nilai akhir dari mahasiswa yang terdiri dari nilai uas, uts, kuis, dan tugas. Nilai akhir didapatkan dari 40% nilai uas, 30% nilai uts, 10% nilai kuis, dan 20% nilai tugas. Jika nilai akhir dari mahasiswa dibawah 65 maka mahasiswa tersebut akan mendapatkan remidi. Buatlah program untuk membantu mengetahui mahasiswa yang mendapatkan remidi berdasarkan nilai akhir yang didapatkannya!
 
+```java
+   import java.util.Scanner;
+    public class ez {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner (System.in);
+    int nilaiAkhir;
+    System.out.println("Masukkan Nilai: ");
+    nilaiAkhir = sc.nextInt();
+    if(nilaiAkhir>=65){ 
+      System.out.println("Kamu Tidaklah Remidi karena nilai kamu:  " + nilaiAkhir) ;
+    }else{
+       System.out.println("Remidi ya karena nilai kamu dibawah kkm: " + nilaiAkhir);
+    }
+    
+    }
+} 
+```
+        Masukkan Nilai:
+        65
+        Kamu Tidaklah Remidi karena nilai kamu:  65
+>script diatas yaitu untuk mengetahui siswa melakukakn remidi atau tidak tetapi hanya dengan menginputkan nilai akhir,sebenarnya saya jugan pengen menginputkan nilai uas,uts,dan segala macam,tapi logika saya untuk membuat script nya belum sampai sana ilmu saya.
 4. Sebuah toko memberikan diskon kepada pelanggannya dengan ketentuan sebagai berikut:
 
 | Total Belanja     | Potongan |
@@ -366,3 +441,80 @@ Total       :2400000
 Diskon      :240000.0
 Total Bayar :2160000.0
 ```
+
+```java
+import java.util.Scanner;
+public class ez {
+   public static void main(String[] args) {
+   Scanner sc = new Scanner(System.in);
+   int barangA,barangB,barangC;
+   int jumlahA,jumlahB,jumlahC;
+   
+ 
+   System.out.println("Masukkan harga barang A : ");
+   barangA = sc.nextInt();
+   System.out.println("Masukkan jumlah barang A : ");
+   jumlahA = sc.nextInt();
+   System.out.println("Masukkan harga barang  B : ");
+   barangB = sc.nextInt();
+   System.out.println("Masukkan jumlah barang B : ");
+   jumlahB = sc.nextInt();
+   System.out.println("Masukkan harga barang C : ");
+   barangC = sc.nextInt();
+   System.out.println("Masukkan jumlah barang C : ");
+   jumlahC = sc.nextInt();
+   System.out.println("--------------------------------------- ");
+   System.out.println("              Struk Total     : ");
+   System.out.println("---------------------------------------");
+   System.out.println("Nama Barang    |     Harga     |    Jumlah    |    Total ");
+   System.out.println(String.format("Barang A\t%s\t\t%s\t\t%s",barangA,jumlahA,     jumlahA*barangA ));
+   System.out.println(String.format("Barang B\t%s\t\t%s\t\t%s",barangB,jumlahB, jumlahB*barangB));
+   System.out.println(String.format("Barang C\t%s\t\t%s\t\t%s",barangC,jumlahC, jumlahC*barangC));
+   double total,totalBayar;
+   double diskon=0;
+   total = (jumlahA*barangA)+(jumlahB*barangB)+(jumlahC*barangC);
+   System.out.println("Total   :" + total);
+
+
+   if(total > 200000){
+      diskon =(total * 2/100); 
+      System.out.println("Diskon :" + diskon);
+   }else if (total > 500000){
+      diskon =(total * 5/100);
+      System.out.println("Diskon :" + diskon);
+   }else if (total > 1000000){
+      diskon = (total * 10/100);
+      System.out.println("Diskon :" + diskon);
+   }
+      totalBayar = total - diskon ;
+      System.out.println("Total Bayar :" + totalBayar);
+
+   }
+
+   }
+
+```
+        Masukkan harga barang A :
+        20000
+        Masukkan jumlah barang A :
+        3
+        Masukkan harga barang  B :
+        40000
+        Masukkan jumlah barang B :
+        2
+        Masukkan harga barang C :
+        30000
+        Masukkan jumlah barang C :
+        4
+        ---------------------------------------
+                    Struk Total     :
+        ---------------------------------------
+        Nama Barang    |     Harga     |    Jumlah    |      Total
+        Barang A             20000           3               60000
+        Barang B             40000           2               80000
+        Barang C             30000           4               120000
+        Total   :260000.0
+        Diskon :5200.0
+        Total Bayar :254800.0   
+
+>Eh ya ini adalah script s saya jujur saya dibantu teman tapi akhirnya saya mengerti untuk string format itu berfungsi untuk memasukkan data variabel dengan dalam bentuk string dan %s sebagai template,dan juga urutan penempatan variabel di sebelah kanan juga harus tepat agar tidak keliru tampilan outputnya   
