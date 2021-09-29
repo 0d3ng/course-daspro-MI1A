@@ -392,26 +392,47 @@ import java.util.Scanner;
 3. Pada akhir semester seorang dosen menghitung nilai akhir dari mahasiswa yang terdiri dari nilai uas, uts, kuis, dan tugas. Nilai akhir didapatkan dari 40% nilai uas, 30% nilai uts, 10% nilai kuis, dan 20% nilai tugas. Jika nilai akhir dari mahasiswa dibawah 65 maka mahasiswa tersebut akan mendapatkan remidi. Buatlah program untuk membantu mengetahui mahasiswa yang mendapatkan remidi berdasarkan nilai akhir yang didapatkannya!
 
 ```java
-   import java.util.Scanner;
-    public class ez {
-    public static void main(String[] args) {
-    Scanner sc = new Scanner (System.in);
-    int nilaiAkhir;
-    System.out.println("Masukkan Nilai: ");
-    nilaiAkhir = sc.nextInt();
-    if(nilaiAkhir>=65){ 
-      System.out.println("Kamu Tidaklah Remidi karena nilai kamu:  " + nilaiAkhir) ;
-    }else{
-       System.out.println("Remidi ya karena nilai kamu dibawah kkm: " + nilaiAkhir);
-    }
-    
-    }
-} 
+import java.util.Scanner;
+public class ez {
+      public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+int uas, uts, kuis, tugas, nilai;
+
+System.out.println("Masukkan nilai UAS: ");
+uas = input.nextInt();
+System.out.println("Masukkan nilai UTS: ");
+uts = input.nextInt();
+System.out.println("Masukkan nilai kuis: ");
+kuis = input.nextInt();
+System.out.println("Masukkan nilai tugas: ");
+tugas = input.nextInt();
+uas = uas * 40/100;
+uts = uts * 30/100;
+kuis = kuis * 10/100;
+tugas = tugas * 20/100;
+
+nilai = uas + uts + kuis + tugas;
+
+System.out.println("Nilai akhir : "+nilai);
+if(nilai < 65){
+System.out.println("Anda remidi");
+} else {
+System.out.println("Anda tidak remidi");
+}
+}
+}
 ```
-        Masukkan Nilai:
-        65
-        Kamu Tidaklah Remidi karena nilai kamu:  65
->script diatas yaitu untuk mengetahui siswa melakukakn remidi atau tidak tetapi hanya dengan menginputkan nilai akhir,sebenarnya saya jugan pengen menginputkan nilai uas,uts,dan segala macam,tapi logika saya untuk membuat script nya belum sampai sana ilmu saya.
+        Masukkan nilai UAS:
+        90
+        Masukkan nilai UTS:
+        70
+        Masukkan nilai kuis:
+        20
+        Masukkan nilai tugas:
+        30
+        Nilai akhir : 65
+        Anda tidak remidi
+>script diatas yaitu untuk mengetahui siswa melakukakn remidi atau tidak saya tidak tau harus menjelaskan yang mana mungkin yang 40/100 itu artinya 40% kalo dijadikan pecahan agar lebih mudah ngitungny
 4. Sebuah toko memberikan diskon kepada pelanggannya dengan ketentuan sebagai berikut:
 
 | Total Belanja     | Potongan |
