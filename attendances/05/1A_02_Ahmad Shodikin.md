@@ -418,30 +418,29 @@ totalC = hargaC * jumlahC; //totalA diambil dari hargaA dikali jumlahA
 System.out.println("---------------------------------");
 System.out.println("\tStruk Total");
 System.out.println("---------------------------------");
-System.out.println("Nama Barang" + "\t\t" + "Harga" + "\t\t" + "Jumlah" + "\t\t" + "Total");
-System.out.println("Barang A" + "\t\t" + hargaA + "\t\t" + jumlahA + "\t\t" + totalA);
-System.out.println("Barang A" + "\t\t" + hargaB + "\t\t" + jumlahB + "\t\t" + totalB);
-System.out.println("Barang A" + "\t\t" + hargaC + "\t\t" + jumlahC + "\t\t" + totalC);
+System.out.println("Nama Barang" + "\t|\t" + "Harga" + "\t|\t" + "Jumlah" + "\t|\t" + "Total");
+System.out.println("Barang A" + "\t\t" + hargaA + "\t" + jumlahA + "\t\t" + totalA);
+System.out.println("Barang A" + "\t\t" + hargaB + "\t" + jumlahB + "\t\t" + totalB);
+System.out.println("Barang A" + "\t\t" + hargaC + "\t" + jumlahC + "\t\t" + totalC);
 //data yang dikeluarkan memanggil data dari variable nilai yang disimpan diatas
 
 //setelah mengeluarkan struk,sistem akan menghitung total brng
 totalBarang = totalA + totalB + totalC; //total brg diambil dr totalA+totalB+totalC
-System.out.println("Total : " + totalBarang); //setelah dilakukan hitung,data akan dikeluarkan sbg totalBarang
+System.out.println("Total\t: " + totalBarang); //setelah dilakukan hitung,data akan dikeluarkan sbg totalBarang
 
 //setelah data totalBarang ditemukan,akan dikalkulasi diskon sbg berikut
 if (totalBarang > 1000000) { //jika total brng lebih dari 1000000 maka akan di hitung total brng dikali 10persen
 	diskon = totalBarang * 10/100;
-	System.out.println("Diskon : " + diskon);
+	System.out.println("Diskon\t: " + diskon);
     } else if (totalBarang > 500000){ //jika total brng lebih dari 500000 maka akan dihitung total brng dikali 5persen
     	diskon = totalBarang * 5/100;
-    	System.out.println("Diskon : " + diskon);
+    	System.out.println("Diskon\t: " + diskon);
     } else if (totalBarang > 200000){ //jika total brng lebih dari 200000 maka akan dihitunh total brng dikali 2persen
     	diskon = totalBarang * 2/100;
-    	System.out.println("Diskon : " + diskon);
+    	System.out.println("Diskon\t: " + diskon);
     } //jika ditemukan kecocokan data pada pemilihan diatas,data akan di keluarka,,jika tidak data akan kosong 
  totalBayar = totalBarang - diskon; //sistem akan menghitung totalBayar dengan cara totalBarang dikurangi diskon yang ada,jika tidak maka akan kosong
  System.out.print("Total Bayar :" + totalBayar); // data akan mengeluarkan total bayar yang sudah di kalkukasi
-
 ```
     Masukkan harga barang A : 500000
     Masukkan jumlah barang A :1
@@ -450,12 +449,12 @@ if (totalBarang > 1000000) { //jika total brng lebih dari 1000000 maka akan di h
     Masukkan harga barang C : 250000
     Masukkan jumlah barang C :1
     ---------------------------------
-	        Struk Total
+	    Struk Total
     ---------------------------------
-    Nama Barang		Harga		Jumlah		Total
-    Barang A		500000.0		1.0		500000.0
-    Barang A		250000.0		1.0		250000.0
-    Barang A		250000.0		1.0		250000.0
-    Total : 1000000.0
-    Diskon : 50000.0
+    Nama Barang	|	Harga	|	Jumlah	|	Total
+    Barang A		500000.0	1.0		500000.0
+    Barang A		250000.0	1.0		250000.0
+    Barang A		250000.0	1.0		250000.0
+    Total	: 1000000.0
+    Diskon	: 50000.0
     Total Bayar :950000.0
