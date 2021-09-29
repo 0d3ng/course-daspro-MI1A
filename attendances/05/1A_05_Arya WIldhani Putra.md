@@ -306,13 +306,15 @@ switch(operator){
     ```
     operator = sc.next().chartAt(0);
     ```
-    untuk metode mengembalikan karakter pada indeks tertentu dalam sebuah fungsi atau input
+    untuk metode mengembalikan karakter pada indeks tertentu dalam sebuah fungsi atau input menjadi isi dari variabel operator
 
 ### Tugas
 
 #### Waktu pengerjaan Tugas: 140 menit
 
 1. Buatlah program untuk menginputkan dua buah bilangan bulat, kemudian mencetak salah satu bilangan yang nilainya terbesar.
+
+
 2. Perhatikan flowchart berikut ini:
 
 ![](images/02.png)
@@ -350,6 +352,137 @@ Total       :2400000
 Diskon      :240000.0
 Total Bayar :2160000.0
 ```
+
+
+```Java
+
+```
+
+
+```Java
+// nomor 1
+
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+int bil1,bil2;
+System.out.print("Masukkan bilangan pertama: ");
+bil1 = input.nextInt();
+System.out.print("Masukkan bilangan kedua: ");
+bil2 = input.nextInt();
+
+if(bil1>bil2){
+    System.out.print(bil1 + " Adalah bilangan terbesar");
+} else {
+    System.out.print(bil2 + " Adalah bilangan terbesar");
+}
+```
+
+    Masukkan bilangan pertama: 3
+    Masukkan bilangan kedua: 4
+    4 Adalah bilangan terbesar
+
+
+```Java
+// nomor 2 
+
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+int umur;
+System.out.print("Masukkan umur Anda: ");
+umur = input.nextInt();
+
+if(umur >=17){
+    System.out.print("Anda boleh Berkendara");
+} else {System.out.print("Anda tidak boleh berkendara"); }
+```
+
+    Masukkan umur Anda: 20
+    Anda boleh Berkendara
+
+
+```Java
+// nomor 3
+
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+double nilai;
+System.out.print("Masukkan nilai akhir mahasiswa : ");
+nilai = input.nextDouble();
+
+if(nilai <65){
+    System.out.print("Anda remidi");
+} System.out.print("Anda tidak tidak remidi");
+```
+
+    Masukkan nilai akhir mahasiswa : 80
+    Anda tidak tidak remidi
+
+
+```Java
+// nomor 4
+
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+double hargaA,hargaB,hargaC,totalBarang,jumlahA,jumlahB,jumlahC,totalA,totalB,totalC,totalBayar;
+double diskon = 0;
+
+System.out.print("Masukkan harga barang A : ");
+hargaA = input.nextDouble();
+System.out.print("Masukkan jumlah barang A :");
+jumlahA = input.nextDouble();
+System.out.print("Masukkan harga barang B : ");
+hargaB = input.nextDouble();
+System.out.print("Masukkan jumlah barang B :");
+jumlahB = input.nextDouble();
+System.out.print("Masukkan harga barang C : ");
+hargaC = input.nextDouble();
+System.out.print("Masukkan jumlah barang C :");
+jumlahC = input.nextDouble();
+
+totalA = hargaA * jumlahA;
+totalB = hargaB * jumlahB;
+totalC = hargaC * jumlahC;
+
+System.out.println("---------------------------------");
+System.out.println("\tStruk Total");
+System.out.println("---------------------------------");
+System.out.println("Nama Barang" + "\t\t\t" + "Harga" + "\t\t" + "Jumlah" + "\t\t" + "Total");
+System.out.println("Barang A" + "\t\t" + hargaA + "\t\t" + jumlahA + "\t\t" + totalA);
+System.out.println("Barang A" + "\t\t" + hargaB + "\t\t" + jumlahB + "\t\t" + totalB);
+System.out.println("Barang A" + "\t\t" + hargaC + "\t\t" + jumlahC + "\t\t" + totalC);
+
+totalBarang = totalA + totalB + totalC;
+System.out.println("Total : " + totalBarang);
+
+if (totalBarang > 1000000) {
+	diskon = totalBarang * 10/100;
+	System.out.println("Diskon : " + diskon);
+    } else if (totalBarang > 500000){
+    	diskon = totalBarang * 5/100;
+    	System.out.println("Diskon : " + diskon);
+    } else if (totalBarang > 200000){
+    	diskon = totalBarang * 2/100;
+    	System.out.println("Diskon : " + diskon);
+    } 
+ totalBayar = totalBarang - diskon;
+ System.out.print("Total Bayar :" + totalBayar);
+```
+
+    Masukkan harga barang A : 2000
+    Masukkan jumlah barang A :4
+    Masukkan harga barang B : 5000
+    Masukkan jumlah barang B :3
+    Masukkan harga barang C : 7000
+    Masukkan jumlah barang C :3
+    ---------------------------------
+    	Struk Total
+    ---------------------------------
+    Nama Barang			Harga		Jumlah		Total
+    Barang A		2000.0		4.0		8000.0
+    Barang A		5000.0		3.0		15000.0
+    Barang A		7000.0		3.0		21000.0
+    Total : 44000.0
+    Total Bayar :44000.0
 
 
 ```Java
