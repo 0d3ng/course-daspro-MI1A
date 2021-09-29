@@ -77,10 +77,13 @@ System.out.println(output);
 
 
 2. Jalankan dan amatilah hasilnya!
-Bilangan Ganjil
+
+
+    Bilangan Ganjil
 
 3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
-karena  tanda ":" memiliki fungsi yang sama seperti program sebelum dimodifikasi
+
+    karena  tanda ":" memiliki fungsi yang sama seperti program sebelum dimodifikasi
 
 #### Percobaan 2 : Penggunaan if else
 
@@ -98,7 +101,7 @@ System.out.print("Masukkan sebuah bilangan: ");
 nilai = input.nextInt();
 ```
 
-    Masukkan sebuah bilangan: 105
+    Masukkan sebuah bilangan: 11
 
 
 + Tambahkan sebuah kondisi untuk mengecek input pada variabel nilai
@@ -116,7 +119,7 @@ if(nilai >= 100){
 System.out.println("Hasil akhir nilai adalah "+nilai);
 ```
 
-    Hasil akhir nilai adalah 135
+    Hasil akhir nilai adalah 1
 
 
 + Jalankan program. Amati apa yang terjadi!
@@ -165,7 +168,9 @@ public class nilai{
 }
 
 Masukkan nilai pertama 100
+
 Masukkan nilai kedua 120
+
 110
 
 
