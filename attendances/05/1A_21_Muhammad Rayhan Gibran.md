@@ -43,13 +43,16 @@ bil = input.nextInt();
     Masukkan sebuah bilangan: 12
 
 
+###  Program di atas untuk menampung data int yang diinput melalui keyboard
+
 3. Buatlah struktur kondisi untuk mengecek apakah bilangan tersebut merupakan bilangan genap atau ganjil
 
     ![](images/04.png)
 
 
-```Java
 
+
+```Java
 if(bil%2 == 0){
         System.out.println("Bilangan Genap");
 }
@@ -60,6 +63,8 @@ else {
 
     Bilangan Genap
 
+
+### Program di atas untuk mengecek data yang diinput termasuk angak ganjil/genap
 
 ##### Pertanyaan
 1. Modifikasi program diatas dibagian struktur pemilihannya sehingga menjadi sebagai berikut:
@@ -76,6 +81,8 @@ System.out.println(output);
     bilangan Genap
 
 
+### Program di atas untuk mengecek data yang diinput termasuk angaka ganjil/genap
+
 2. Jalankan dan amatilah hasilnya!
 3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
 
@@ -84,12 +91,8 @@ System.out.println(output);
 #### Waktu percobaan : 40 menit
 
 ### JAWABAN
-2. Setelah dijalankan hasilnya sama dengan hasil program sebelum dimodifikasi 
-3. Karena sintaks tersebut merupakan shortcut dari program if else
 
-
-### JAWABAN
-2. Setelah dijalankan hasilnya sama dengan hasil program sebelum dimodifikasi 
+2. Setelah dijalankan hasilnya sama dengan hasil program sebelum dimodifikasi
 3. Karena sintaks tersebut merupakan shortcut dari program if else
 
 + Buatlah sebuah variabel nilai untuk menyimpan inputan dari keyboard
@@ -105,6 +108,8 @@ nilai = input.nextInt();
 
     Masukkan sebuah bilangan 12
 
+
+###  Program di atas untuk menampung data int yang diinput melalui keyboard
 
 + Tambahkan sebuah kondisi untuk mengecek input pada variabel nilai
 
@@ -124,11 +129,9 @@ System.out.println("Hasil akhir nilai adalah "+nilai);
     Hasil akhir nilai adalah 2
 
 
-+ Jalankan program. Amati apa yang terjadi!
+### Program di atas untuk membuat kondisi jika angka yang diinput lebih dari sama dengan 100 maka akan ditambah 10 jika selain itu maka dikurangi 10
 
-### 
-**Yang terjadi adalah jika nilai yang dimasukkan lebih dari sama dengan 100 maka akan
-ditambah 10 selain itu akan dikurangu 10
++ Jalankan program. Amati apa yang terjadi!
 
 ##### Pertanyaan
 1. Jelaskan fungsi kode program berikut:
@@ -140,31 +143,13 @@ ditambah 10 selain itu akan dikurangu 10
 
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
 
+### JAWABAN
 
-```Java
-//No.1
-import java.util.Scanner;
-int nilai;
-System.out.print("Masukkan sebuah bilangan ");
-nilai = input.nextInt();
-
-if(nilai >= 100){
-        nilai += 10;
-}
-else {
-    nilai -= 10;
-}
-System.out.println("Hasil akhir nilai adalah "+nilai);
-
-```
-
-    Masukkan sebuah bilangan 12
-    Hasil akhir nilai adalah 2
-
+1. Program di atas untuk membuat kondisi jika angka yang diinput lebih dari sama dengan 100 maka akan ditambah 10 jika selain itu maka dikurangi 10. funsi program tersebut adalah shorcut dari nilai = nilai + 10 dan nilai = nilai - 10
 
 
 ```Java
-//No.2
+//No.02
 int nilai1;
 int nilai2;
 int nilairata;
@@ -177,14 +162,14 @@ if(nilairata >= 100){
         nilairata -= 5;
 }
 System.out.println("Hasil akhir nilai adalah "+nilairata);
-
-
 ```
 
     Masukkan sebuah bilangan pertama 100
-    Masukkan sebuah bilangan kedua 100
-    Hasil akhir nilai adalah 95
+    Masukkan sebuah bilangan kedua 200
+    Hasil akhir nilai adalah 145
 
+
+2. Program di atas untuk membuat kondisi jika angka yang diinput lebih dari sama dengan 100 maka akan dikurangi 5 jika kurang dari 100 maka lansung di tampilkan angka yang diinput
 
 #### Percobaan 3 : Penggunaan if else-if else
 
@@ -206,8 +191,10 @@ umur = input.nextInt();
 
 ```
 
-    Masukkan Umur Anda 100
+    Masukkan Umur Anda 18
 
+
+### Program di atas untuk menampung data int yang diinput melalui keyboard
 
 + Kode untuk melakukan pengecekan variabel `umur`
 
@@ -232,9 +219,11 @@ else{
 }
 ```
 
-    lansia 
+    Dewasa 
 
 + Jalankan program dan amati apa yang terjadi!
+
+### Program diatas untuk megelompokkan umur
 
 ##### Percobaan 4 : Penggunaan switch-case
 
@@ -252,6 +241,8 @@ double angka1, angka2, hasil;
 char operator;
 ```
 
+### Program diatas untuk memuculkan fungsi  menginputkan data dan mendeklarasikan tipe data variabel
+
 3. Kode program untuk meminta inputan dari keyboard
 
     ![](images/11.png)
@@ -268,8 +259,10 @@ operator = sc.next().charAt(0);
 
     Masukkan angka pertama: 12
     Masukkan angka kedua: 12
-    Masukkan operator (+ - * /): +
+    Masukkan operator (+ - * /): *
 
+
+### Program diatas untuk menampung data int yang diinput dan menampung karakter unicode melalui keyboard  
 
 4. Kode di bawah ini untuk melakukan pengecekan operator yang digunakan sebelum dilakukan operasi aritmatika
 
@@ -283,24 +276,30 @@ switch(operator){
     System.out.println(angka1 + " + " + angka2 + " = " + hasil);
     break;
     case '-':
-    hasil = angka1 + angka2;
+    hasil = angka1 - angka2;
     System.out.println(angka1 + " - " + angka2 + " = " + hasil);
     break;
+    case '*':
+    hasil = angka1 * angka2;
+    System.out.println(angka1 + " * " + angka2 + " = " + hasil);
+    break;
     case '/':
-    hasil = angka1 + angka2;
+    hasil = angka1 / angka2;
     System.out.println(angka1 + " / " + angka2 + " = " + hasil);
     break;
     default:
     System.out.println("Operator yang anda masukkan salah");
 }
-
-
 ```
 
-    12.0 + 12.0 = 24.0
+    12.0 * 12.0 = 144.0
 
+
+### Program diatas untuk memproses operasi hitung sesuai aritmatika operator yang diinput ke program diatas  
 
 5. Jalankan program. Amati apa yang terjadi!
+
+### Yang terjadi adalah operasi yang diproses sesuai yang diinput.
 
 ##### Pertanyaan
 1. Jelaskan fungsi dari break dan default pada percobaan 4 diatas!
@@ -310,11 +309,11 @@ switch(operator){
     operator = sc.next().chartAt(0);
     ```
 
-### JAWABAN
+### 
 1. Fungsi dari break adalah agar sistem berhenti jika salah satu syarat terpenuhi
-2. fungsi perintah tersebut adalah untuk membuat inputan karakter unicode
+2. fungsi perintah tersebut adalah untuk menyimpan inputan berupa karakter unicode
 
-# Tugas
+### Tugas
 
 #### Waktu pengerjaan Tugas: 140 menit
 
@@ -356,3 +355,134 @@ Total       :2400000
 Diskon      :240000.0
 Total Bayar :2160000.0
 ```
+
+
+```Java
+//No.01
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+int umur;
+System.out.print("Masukkan umur anda : ");
+umur = input.nextInt();
+if(umur >= 17){
+    System.out.println("Boleh Berkendara");
+}
+else {
+    System.out.println("Tidak Boleh Berkendara");
+}
+```
+
+    Masukkan umur anda : 18
+    Boleh Berkendara
+
+
+### Program diatas untuk mengecek apakah user cukup umur untuk berkendara
+
+
+```Java
+//No.02
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+int nilaiuas;
+int nilaiuts;
+int nilaikuis;
+int nilaitugas;
+int nilaiakhir;
+System.out.print("Masukkan Nilai UAS   : ");
+nilaiuas = input.nextInt();
+System.out.print("Masukkan Nilai UTS   : ");
+nilaiuts = input.nextInt();
+System.out.print("Masukkan Nilai Kuis  : ");
+nilaikuis = input.nextInt();
+System.out.print("Masukkan Nilai Tugas : ");
+nilaitugas = input.nextInt();
+nilaiakhir = ((nilaiuas * 40 / 100) + (nilaiuts * 30 / 100) + (nilaikuis * 10 / 100) + (nilaitugas * 20 / 100));
+System.out.println("Nilai Akhir Anda     : " + nilaiakhir );
+if(nilaiakhir >= 65){
+        System.out.println("Anda Tidak Mengikuti Remidi");
+}
+else {
+    System.out.println("Anda Akan Mengikuti Remidi");
+}
+```
+
+    Masukkan Nilai UAS   : 93
+    Masukkan Nilai UTS   : 93
+    Masukkan Nilai Kuis  : 90
+    Masukkan Nilai Tugas : 95
+    Nilai Akhir Anda     : 92
+    Anda Tidak Mengikuti Remidi
+
+
+### Program diatas untuk mengecek jika nilai akhir user lebih dari sama dengan 65 maka tidak remidi selain itu maka mengikuti remidi
+
+
+```Java
+//No.03
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+long hargabarangA ;
+long jumlahbarangA;
+long hargabarangB;
+long jumlahbarangB;
+long hargabarangC;
+long jumlahbarangC;
+long total;
+long diskon;
+long totalbayar;
+System.out.print("Masukkan  Harga Barang  A  : ");
+hargabarangA = input.nextLong();
+System.out.print("Masukkan  Jumlah Barang A  : ");
+jumlahbarangA = input.nextLong();
+System.out.print("Masukkan  Harga Barang  B  : ");
+hargabarangB = input.nextLong();
+System.out.print("Masukkan  Jumlah Barang B  : ");
+jumlahbarangB = input.nextLong();
+System.out.print("Masukkan  Harga Barang  C  : ");
+hargabarangC = input.nextLong();
+System.out.print("Masukkan  Jumlah Barang C  : ");
+jumlahbarangC = input.nextLong();
+ System.out.println("---------------------------------------------");
+System.out.println("                 Struk Total                  ");
+ System.out.println("---------------------------------------------");
+ System.out.println("Nama Barang     |     Harga     |     Jumlah     |       Total");
+ System.out.format("Barang A              %s              %s            %s\n", hargabarangA, jumlahbarangA, (hargabarangA * jumlahbarangA));
+ System.out.format("Barang B              %s              %s            %s\n", hargabarangB, jumlahbarangB, (hargabarangB * jumlahbarangB));
+ System.out.format("Barang C              %s              %s            %s\n", hargabarangC, jumlahbarangC, (hargabarangC * jumlahbarangC));
+total = ((hargabarangA * jumlahbarangA) + (hargabarangB * jumlahbarangB) + (hargabarangC * jumlahbarangC));
+System.out.println("Total           : " + total);
+if (total > 1000000){
+diskon = (total * 10 /100);
+System.out.println("Diskon          : " + diskon);}
+
+else if(total > 500000){
+diskon = (total * 5 /100);
+System.out.println("Diskon          : " + diskon);}
+
+else if (total > 200000){
+diskon = (total * 2 /100);
+System.out.println("Diskon          : " + diskon);}
+
+totalbayar = (total - diskon);
+System.out.println("Total Bayar     : " + totalbayar);
+```
+
+    Masukkan  Harga Barang  A  : 120000
+    Masukkan  Jumlah Barang A  : 4
+    Masukkan  Harga Barang  B  : 110000
+    Masukkan  Jumlah Barang B  : 2
+    Masukkan  Harga Barang  C  : 100000
+    Masukkan  Jumlah Barang C  : 1
+    ---------------------------------------------
+                     Struk Total                  
+    ---------------------------------------------
+    Nama Barang     |     Harga     |     Jumlah     |       Total
+    Barang A              120000              4            480000
+    Barang B              110000              2            220000
+    Barang C              100000              1            100000
+    Total           : 800000
+    Diskon          : 40000
+    Total Bayar     : 760000
+
+
+# Program diatas untuk Menghitung diskon yang jika total pembelanjaan lebih dari 200 ribu maka didiskon 2%, jika lebih dari 500 ribu maka didiskon 5%, jika pemebelanjaan lebih dari 1 juta maka didiskon 10% dan untuk menghitung total yang harus dibayar pembeli.
