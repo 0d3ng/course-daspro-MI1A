@@ -37,11 +37,11 @@ Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks pemil
 import java.util.Scanner;
 Scanner input = new Scanner(System.in);
 int bil;
-System.out.print("Masukkan sebuah bilangan : ");
+System.out.print("Masukkan sebuah bilangan:  ");
 bil = input.nextInt();
 ```
 
-    Masukkan sebuah bilangan : 12
+    Masukkan sebuah bilangan:  12
 
 
 3. Buatlah struktur kondisi untuk mengecek apakah bilangan tersebut merupakan bilangan genap atau ganjil
@@ -51,9 +51,9 @@ bil = input.nextInt();
 
 ```Java
 // Ketik kode program di atas di bawah sini
-if(bil%2 == 0){
+if(bil % 2 == 0) {
     System.out.println("Bilangan Genap");
-}else{
+} else {
     System.out.println("Bilangan Ganjil");
 }
 ```
@@ -69,7 +69,7 @@ if(bil%2 == 0){
 
 ```Java
 // Ketik kode program di atas di bawah sini
-String output = (bil % 2 == 0) ? "Bilangan Genap":"Bilangan Ganjil";
+String output = (bil % 2 == 0) ? "Bilangan Genap" : "Bilangan Ganjil";
 System.out.println(output);
 ```
 
@@ -99,7 +99,7 @@ System.out.print("Masukkan sebuah bilangan : ");
 nilai = input.nextInt();
 ```
 
-    Masukkan sebuah bilangan : 20
+    Masukkan sebuah bilangan : 18
 
 
 + Tambahkan sebuah kondisi untuk mengecek input pada variabel nilai
@@ -117,7 +117,7 @@ if(nilai >= 100){
 System.out.println("Hasil akhir nilai adalah " +nilai);
 ```
 
-    Hasil akhir nilai adalah 10
+    Hasil akhir nilai adalah 8
 
 
 + Jalankan program. Amati apa yang terjadi!
@@ -133,8 +133,8 @@ System.out.println("Hasil akhir nilai adalah " +nilai);
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
 
 ### Jawab
-1. menambah 10 pada angka yang diinputkan
-2. mengurangi 10 pada angka yang diinputkan
+1. menambahkan nilai 10 & mengurangi nilai 10
+2. Kedua **ekspresi** tersebut dijalankan sebelum program berakhir
 
 #### Percobaan 3 : Penggunaan if else-if else
 
@@ -163,14 +163,13 @@ umur = input.nextInt();
 
 
 ```Java
-// Ketik kode program di atas di bawah sini
-if(umur>60)
+if(umur > 60)
     System.out.println("Lansia");
-else if(umur>45)
+else if(umur > 45)
     System.out.println("Tua");
-else if(umur>17)
+else if(umur > 17)
     System.out.println("Dewasa");
-else if(umur>5)
+else if(umur > 5)
     System.out.println("Anak-anak");
 else
     System.out.println("Balita");
@@ -213,9 +212,9 @@ System.out.print("Masukkan operator (+ - * /): ");
 operator = sc.next().charAt(0);
 ```
 
-    Masukkan angka pertama : 18
-    Masukkan angka kedua : 20
-    Masukkan operator (+ - * /): +
+    Masukkan angka pertama : 29
+    Masukkan angka kedua : 10
+    Masukkan operator (+ - * /): -
 
 
 4. Kode di bawah ini untuk melakukan pengecekan operator yang digunakan sebelum dilakukan operasi aritmatika
@@ -247,7 +246,7 @@ switch(operator){
 }
 ```
 
-    18.0 + 20.0 = 38.0
+    29.0 - 10.0 = 19.0
 
 
 5. Jalankan program. Amati apa yang terjadi!
@@ -261,8 +260,9 @@ switch(operator){
     ```
 
 ### Jawab
-1. untuk melakukan stop jika perintah yang diberikan sudah di rasa cukup untuk case tersebut
-2. mengambil sebuah karakter dari String
+   1. - break : Sebagai pemberhentian kode ketika satu kondisi bernilai `true`
+       - default : Sebagai pengganti `else` pada kondisi `if else`
+    2. Mencari karakter pertama pada `input` lalu menjadi isi dari variabel `operator`
 
 ### Tugas
 
@@ -306,3 +306,173 @@ Total       :2400000
 Diskon      :240000.0
 Total Bayar :2160000.0
 ```
+
+
+```Java
+// No.1
+import java.util.Scanner;
+Scanner in = new Scanner(System.in);
+int bil1, bil2;
+
+System.out.println("Masukkan bilangan 1: ");
+bil1 = in.nextInt();
+System.out.println("Masukkan bilangan 2: ");
+bil2 = in.nextInt();
+
+String output = (bil % 2 <= 0)? "Bilangan 1":"Bilangan 2" ;
+System.out.println("Bilangan terbesar adalah " +output);
+```
+
+    Masukkan bilangan 1: 
+    67
+    Masukkan bilangan 2: 
+    57
+    Bilangan terbesar adalah Bilangan 1
+
+
+### Penjelasan 
+1. Kode program diatas adalah menambahkan library Scanner, mendeklarasikan Scanner, menambahkan tipe data int dengan nilai bil1 dan bil 2. Perintah System.out.println(" ") digunakan untuk memunculkan tulisan yang ada pada tanda petik. in.nextInt digunakan untuk menyimpan data yang dimasukkan, kemudian ditambahkan ternery operator untuk memunculkan pilihan bilangan terbesar.
+
+
+```Java
+// No.2
+import java.util.Scanner;
+Scanner in = new Scanner(System.in);
+int umur;
+
+System.out.println("Masukkan umur anda: ");
+umur = in.nextInt();
+
+if(umur >= 17) {
+    System.out.println("Boleh berkendara");
+} else {
+    System.out.println("Tidak boleh berkendara");
+}
+```
+
+    Masukkan umur anda: 
+    18
+    Boleh berkendara
+
+
+### Penjelasan
+2. Maksud dari kode program diatas adalah menambahkan library Scanner, mendeklarasikan Scanner, menambahkan tipe data int dengan nilai umur. Perintah System.out.println(" ") digunakan untuk memunculkan tulisan yang ada pada tanda petik. in.nextInt digunakan untuk menyimpan data yang dimasukkan. if else merupakan pernyataan dari sebuah kondisi. Kondisi if digunakan untuk menyatakan jika pilihan pertama terpenuhi, kondisi else digunakan untuk menyatakan jika pilihan  sebelumnya tidak terpenuhi
+
+
+```Java
+// No.3
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+double uas, uts, kuis, tugas, nilai;
+
+System.out.println("Masukkan nilai UAS: ");
+uas = input.nextDouble();
+System.out.println("Masukkan nilai UTS: ");
+uts = input.nextDouble();
+System.out.println("Masukkan nilai kuis: ");
+kuis = input.nextDouble();
+System.out.println("Masukkan nilai tugas: ");
+tugas = input.nextDouble();
+uas = uas * 40/100;
+uts = uts * 30/100;
+kuis = kuis * 10/100;
+tugas = tugas * 20/100;
+
+nilai = uas + uts + kuis + tugas;
+
+System.out.println("Nilai akhir Anda: "+nilai);
+if(nilai < 65){
+System.out.println("Anda remidi");
+} else {
+System.out.println("Anda tidak remidi");
+}
+```
+
+    Masukkan nilai UAS: 
+    90
+    Masukkan nilai UTS: 
+    89
+    Masukkan nilai kuis: 
+    95
+    Masukkan nilai tugas: 
+    90
+    Nilai akhir Anda: 90.2
+    Anda tidak remidi
+
+
+### Penjelasan
+3. maksud dari kode program diatas adalah pertama kita menambahkan library Scanner, lalu mendeklarasikan Scanner, setelah itu menambahkan tipe data double dengan nilai uts, uas, kuis, tugas. perintah System.out.println(" ") digunakan untuk memunculkan tulisan yang ada pada tanda petik. lalu in.nextDouble digunakan untuk menyimpan data yang dimasukkan. kemudian untuk memberikan nilai, digunakan operator aritmatika. setelah itu untuk menghitung nilai akhir, digunakan operator aritmatika penjumlahan dengan menghitung nilai uts, uas, kuis, dan tugas. Setelah itu, kondisi if digunakan untuk menyatakan jika pilihan pertama terpenuhi, dan kondisi else digunakan untuk menyatakan jika pilihan sebelumnya tidak terpenuhi.
+
+
+```Java
+// No.4
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+double hargaA, hargaB, hargaC, total, diskon, bayar;
+int jumlahA, jumlahB, jumlahC;
+System.out.println("Masukkan harga barang A: ");
+hargaA = input.nextDouble();
+System.out.println("Masukkan jumlah barang A: ");
+jumlahA = input.nextInt();
+System.out.println("Masukkan harga barang B: ");
+hargaB = input.nextDouble();
+System.out.println("Masukkan jumlah barang B: ");
+jumlahB = input.nextInt();
+System.out.println("Masukkan harga barang C: ");
+hargaC = input.nextDouble();
+System.out.println("Masukkan jumlah barang C: ");
+jumlahC = input.nextInt();
+total = hargaA*jumlahA + hargaB*jumlahB + hargaC*jumlahC;
+
+if(total > 1000000){
+diskon = total * 10/100;
+} 
+else if(total > 500000){
+diskon = total * 5/100;
+}
+else if(total > 200000){
+diskon = total * 2/100;
+}
+else{
+diskon = 0;
+}
+
+bayar = total - diskon;
+System.out.println("----------------------------------------------------");
+System.out.println("                     Struk Total                    ");
+System.out.println("----------------------------------------------------");
+System.out.println("Nama Barang\t|\tHarga\t|\tJumlah\t|\tTotal");
+System.out.println(String.format("Barang A\t|\t%s\t|\t%s\t|\t%s",hargaA, jumlahA, hargaA*jumlahA));
+System.out.println(String.format("Barang B\t|\t%s\t|\t%s\t|\t%s",hargaB, jumlahB, hargaB*jumlahB));
+System.out.println(String.format("Barang C\t|\t%s\t|\t%s\t|\t%s",hargaC, jumlahC, hargaC*jumlahC));
+System.out.println("Total      : "+total);
+System.out.println("Diskon     : "+diskon);
+System.out.println("Total Bayar: "+bayar);
+```
+
+    Masukkan harga barang A: 
+    100000
+    Masukkan jumlah barang A: 
+    10
+    Masukkan harga barang B: 
+    250000
+    Masukkan jumlah barang B: 
+    5
+    Masukkan harga barang C: 
+    150000
+    Masukkan jumlah barang C: 
+    1
+    ----------------------------------------------------
+                         Struk Total                    
+    ----------------------------------------------------
+    Nama Barang	|	Harga	|	Jumlah	|	Total
+    Barang A	|	100000.0	|	10	|	1000000.0
+    Barang B	|	250000.0	|	5	|	1250000.0
+    Barang C	|	150000.0	|	1	|	150000.0
+    Total      : 2400000.0
+    Diskon     : 240000.0
+    Total Bayar: 2160000.0
+
+
+### Penjelasan
+4. maksud dari kode program diatas adalah pertama kita menambahkan library Scanner, lalu mendeklarasikan Scanner, lalu menambahkan variabel pada tipe data double dan int. lalu in.nextDouble digunakan untuk menyimpan data yang dimasukkan. perintah System.out.println(" ") digunakan untuk memunculkan tulisan yang ada pada tanda petik. lalu untuk menghitung nilai total, digunakan operator aritmatika. Perintah if else-if else digunakan untuk banyak kondisi yang lebih dari dua. Fungsi dari string.format digunakan untuk mengeluarkan data dan menggabungkan variabel. %s digunakan untuk memanggil variabel.
