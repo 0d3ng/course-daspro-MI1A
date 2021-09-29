@@ -376,7 +376,7 @@ niTugas = ss.nextInt() * 20 / 100;
 //menghitung Nilai Akhir dengan menjumlahkan semua Nilai
 niAkhir = niUAS + niUTS + niKuis + niTugas;
 
-//menggunakan sintaks pemilihan untuk menentukan remidi tidaknya
+//menggunakan sintaks pemilihan untuk menentukan mahasiswa remidi atau tidak
 if(niAkhir < 65)//Nilai Akhir kurang dari 65
 {
     System.out.println("Remidi");
