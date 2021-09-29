@@ -473,7 +473,7 @@ System.out.println(String.format("Barang A\t\t%s\t%s\t\t%s",hargaA, barangA, har
 
 System.out.println(String.format("Barang B\t\t%s\t%s\t\t%s",hargaB, barangB, hargaB*barangB));
 
-System.out.println(String.format("Barang A\t\t%s\t%s\t\t%s",hargaC, barangC, hargaC*barangC));
+System.out.println(String.format("Barang C\t\t%s\t%s\t\t%s",hargaC, barangC, hargaC*barangC));
 
 System.out.println("Total\t:" + total);
 
@@ -482,5 +482,7 @@ System.out.println("Diskon\t:" + (total * diskon);
 System.out.println("Total\t:" + totalBayar);
 
 in.close();
+
     }
+
 }
