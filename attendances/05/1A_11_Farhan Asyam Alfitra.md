@@ -314,6 +314,75 @@ switch(operator){
 
 3. Pada akhir semester seorang dosen menghitung nilai akhir dari mahasiswa yang terdiri dari nilai uas, uts, kuis, dan tugas. Nilai akhir didapatkan dari 40% nilai uas, 30% nilai uts, 10% nilai kuis, dan 20% nilai tugas. Jika nilai akhir dari mahasiswa dibawah 65 maka mahasiswa tersebut akan mendapatkan remidi. Buatlah program untuk membantu mengetahui mahasiswa yang mendapatkan remidi berdasarkan nilai akhir yang didapatkannya!
 
+import java.util.Scanner;
+
+public class nilaiakhir{
+
+	public static void main(String[] args){
+
+	Scanner in = new Scanner(System.in);
+
+	double uas, uts, kuis, tugas, nilaiAkhir;
+	System.out.println("Masukkan Nilai");
+	System.out.print("Nilai UAS : ");
+	uas = in.nextDouble();
+	System.out.print("Nilai UTS : ");
+	uts = in.nextDouble();
+	System.out.print("Nilai Kuis : ");
+	kuis = in.nextDouble();
+	System.out.print("Nilai Tugas : ");
+	tugas = in.nextDouble();
+
+	System.out.print("Nilai UAS: " + uas);
+	System.out.print("Nilai UTS: " + uts);
+	System.out.print("Nilai Kuis: " + kuis);
+	System.out.print("Nilai Tugas: " + tugas);
+
+	uas = uas * ((double) 40 / 100);
+	uts = uts * ((double) 30 / 100);
+	kuis = kuis * ((double) 10 / 100);
+	tugas = tugas * ((double) 20 / 100);
+
+	System.out.print("\nNilai UAS: " + uas);
+	System.out.print("Nilai UTS: " + uts);
+	System.out.print("Nilai Kuis: " + kuis);
+	System.out.print("Nilai Tugas: " + tugas);
+
+	nilaAkhir = uas + uts + kuis + tugas;
+
+	System.out.print("\nNilai Akhir: " + nilaiAkhir);
+	if(nilaiAkhir <= 65) {
+    		System.out.println("\nRemidi");
+	} else {
+    		System.out.println("\nTidak Remidi");
+}
+
+    }
+
+}
+
+
+Masukkan Nilai
+
+Nilai UAS : 80
+
+Nilai UTS : 90
+
+Nilai Kuis : 75
+
+Nilai Tugas : 90
+
+Nilai UAS: 80.0Nilai UTS: 90.0Nilai Kuis: 75.0Nilai Tugas: 90.0
+
+Nilai UAS: 32.0Nilai UTS: 27.0Nilai Kuis: 7.5Nilai Tugas: 18.0
+
+Nilai Akhir: 84.5
+
+Tidak Remidi
+
+
+
+
 4. Sebuah toko memberikan diskon kepada pelanggannya dengan ketentuan sebagai berikut:
 
 | Total Belanja     | Potongan |
@@ -343,3 +412,4 @@ Total       :2400000
 Diskon      :240000.0
 Total Bayar :2160000.0
 ```
+
