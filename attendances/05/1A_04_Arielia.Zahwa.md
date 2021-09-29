@@ -475,5 +475,5 @@ lalu menambahkan variabel pada tipe data double dan int. lalu in.nextDouble digu
 perintah System.out.println(" ") digunakan untuk memunculkan tulisan yang ada pada tanda petik. 
 lalu untuk menghitung nilai total, digunakan operator aritmatika. 
 perintah if else-if else digunakan untuk banyak kondisi yang lebih dari dua. 
-Fungsi dari string.format digunakan untuk mengeluarkan data dan menggabungkan variabel. %s digunakan untuk memanggil variabel..
+Fungsi dari string.format digunakan untuk mengeluarkan data dan menggabungkan variabel. %s digunakan untuk memanggil variabel...
 ```
