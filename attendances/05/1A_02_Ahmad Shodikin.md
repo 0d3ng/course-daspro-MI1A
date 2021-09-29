@@ -42,7 +42,9 @@ bil = input.nextInt();
 ```
 
     Masukkan sebuah bilangan: 20
-
+penjelasan code 
+    
+    pertama kita mengimport library scanner untuk inputan dan mendeklarasikannya,lalu membuat variable bil dengan tipe data interger,setelah itu kita membuat inputan untuk dimasukkan pada sistem.
 
 3. Buatlah struktur kondisi untuk mengecek apakah bilangan tersebut merupakan bilangan genap atau ganjil
 
@@ -60,6 +62,9 @@ if(bil%2 == 0){
 
     Bilangan Genap
 
+penjelasan code 
+
+    dengan code if else,kita membuat pilihan atau kondisi untuk menetukan apakah inputan bilangan ganjil atau genap dengan menggunakan modulus
 
 ##### Pertanyaan
 1. Modifikasi program diatas dibagian struktur pemilihannya sehingga menjadi sebagai berikut:
@@ -75,6 +80,9 @@ System.out.println(output);
 
     Bilangan Genap
 
+penjelasan code 
+
+    code tersebut menggunakan ternary option untuk membuat kondisi yang lebih simple dari if else diatas
 
 2. Jalankan dan amatilah hasilnya!
 3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
@@ -108,6 +116,10 @@ System.out.print("Hasil rata-rata nilai: " +rata2)
     Masukkan sebuah bilangan 2: 100
     Hasil rata-rata nilai: 100
 
+penjelasan code 
+
+    kita membuat variable nilai dngan tipe data interger dan melakukan inputan disertai dengan input.nextInt() untuk sebuah fungsi
+
 + Tambahkan sebuah kondisi untuk mengecek input pada variabel nilai
 
     ![](images/07.png)
@@ -123,6 +135,9 @@ System.out.println("Hasil akhir nilai adalah " +rata2);
 
     Hasil akhir nilai adalah 95
 
+penjelasan code 
+
+    setelah dimodifikasi di perintah nomor dibawah,dengan code if else,kita membuat pilihan atau kondisi untuk mengecek rata rata,jika rata rata lebih besar samadengan 100 maka nilai akan dikurangi 5 point.jika tidak lebih besar maka akan langsung dikeluarkan
 
 + Jalankan program. Amati apa yang terjadi!
 
@@ -163,6 +178,10 @@ umur = input.nextInt();
 
     Masukkan umur Anda: 18
 
+penjelasan code 
+
+    kita memanggil library scanner untuk menjalankan inputan, dan kita deklarasikan scanner inputnya lalu kita membuat variable umur dengan tipe data interger untuk tipe data angka, dan sistem akan mengeluarkan umur kita ditambah dengan inputan yang tadi telah disimpan.
+
 
 + Kode untuk melakukan pengecekan variabel `umur`
 
@@ -186,6 +205,10 @@ if(umur > 60)  {
 
     Dewasa
 
+penjelasan code 
+
+    dengan code if else if,kita membuat pilihan atau kondisi untuk menetukan berapa umur user,jika umur lebih dari 60 maka akan muncul outputan lansia,jika lebih dari 45 maka akan muncul outputan tua,jika lebih dari 17 maka akan muncul outputan dewasa,jika diatas 5 maka akan muncull anak-anak,jika tidak ada kondisi yang memenuhi maka akan muncul balita
+
 
 + Jalankan program dan amati apa yang terjadi!
 
@@ -206,6 +229,9 @@ Scanner sc = new Scanner(System.in);
 double angka1, angka2, hasil;
 char operator; 
 ```
+penjelasan code 
+
+    disini kita membuat deklarasi scanner,dan membuat variable angka1,angka2, hasil dengan tipe data double dan varibale operator dengan tipe data char untuk menentukan inputan/outputan dari setiap variable
 
 3. Kode program untuk meminta inputan dari keyboard
 
@@ -226,6 +252,9 @@ operator = sc.next().charAt(0);
     Masukkan angka kedua: 20
     Masukkan operator (+ -* /): +
 
+penjelasan code 
+
+    system.out.print berfungsi untuk mengeluarkan outputan dan kita sebagai user dapat memngembalikan inputan yang akan ditangkap oleh fungsi nextDouble, terdpat juga fungsi next().charAt adalah merubah tipedata menjadi character
 
 4. Kode di bawah ini untuk melakukan pengecekan operator yang digunakan sebelum dilakukan operasi aritmatika
 
@@ -257,6 +286,10 @@ System.out.println("Operator yang Anda masukkan salah");
 ```
 
     20.0+20.0=40.0
+
+penjelasan code 
+
+    ada swtich yang berguna membuat kondisi,atau memilih kondisi operator yang akan dijalankan,jia kita mengembalikan inputan dengan + maka case + akan dijalankan,fungsi break adalah untuk menghentikan case agar tidak terus berjalan kebawah. Jika tidak ada kecocokan dalam kondisi maka akan menjalankan fungsi perintah default yang akan mengeluarkan opeator yang anda masukkan salah sebagai pemberitahuan
 
 
 5. Jalankan program. Amati apa yang terjadi!
