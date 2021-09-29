@@ -130,25 +130,32 @@ System.out.println("Hasil akhir nilai adalah " + nilai);
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
 
 ```Java
-int nilaiRerata, nilai1, nilai2;
+int nilai1, nilai2;
+double nilaiRerata;
+/*
+menggunakan tipe data int dan double untuk variabel:
+nilai1(Nilai Pertama); nilai2(Nilai Kedua); nilaiRerata(Nilai rata-rata antara nilai Pertama dan Kedua);
+*/
 
+//input data nilai Pertama dan Kedua
 System.out.print("Masukkan nilai pertama: ");
 nilai1 = input.nextInt();
 System.out.print("Masukkan nilai kedua: ");
 nilai2 = input.nextInt();
 
-nilaiRerata = (nilai1 * nilai2) / 2;
+//menghitung Nilai rata-rata dengan menambah nilai Pertama dan Kedua kemudian dibagi 2
+nilaiRerata = (double)(nilai1 + nilai2) / 2;
 
-if(nilaiRerata >= 100)
+if(nilaiRerata >= 100)//Nilai rata-rata lebih dari atau sama dengan 100
 {
-    nilai -= 5;
+    nilaiRerata -= 5;//nilai rata rata dikurangi 5
 }
 System.out.println("Hasil akhir nilai adalah " + nilaiRerata);
 ```
 
-    Masukkan nilai pertama: 100
-    Masukkan nilai kedua: 2
-    Hasil akhir nilai adalah 95
+    Masukkan nilai pertama: 213
+    Masukkan nilai kedua: 214
+    Hasil akhir nilai adalah 208.5
 
 
 #### Percobaan 3 : Penggunaan if else-if else
@@ -287,21 +294,28 @@ switch(operator){
 1. Buatlah program untuk menginputkan dua buah bilangan bulat, kemudian mencetak salah satu bilangan yang nilainya terbesar.
 
 ```java
+//import fungsi Scanner java
 import java.util.Scanner;
 
 Scanner ss = new Scanner(System.in);
 int bil1, bil2;
+/*
+variabel ss sebagai alternatif program untuk input data
+bil1(Bilangan Pertama); bil2(Bilangan Kedua);
+*/
 
+//input data Bilangan
 System.out.print("Masukkan bilangan pertama: ");
 bil1 = ss.nextInt();
 System.out.print("Masukkan bilangan kedua: ");
 bil2 = ss.nextInt();
 
-if(bil1 > bil2)
+//menggunakan sintaks pemilihan untuk menentukan bilangan terbesar
+if(bil1 > bil2)//Bilangan Pertama lebih besar dari Bilangan Kedua
 {
     System.out.println("Bilangan terbesar adalah " + bil1);
 }
-else
+else//sebaliknya Bilangan Kedua lebih besar dari Bilangan Pertama
 {
     System.out.println("Bilangan terbesar adalah " + bil2);
 }
@@ -319,16 +333,19 @@ else
 > Buatlah program sesuai dengan flowchart diatas!
 
 ```Java
+//tipe data int untuk variabel umur
 int umur;
 
+//input data variabel umur
 System.out.print("Masukkan umur: ");
 umur = ss.nextInt();
 
-if(umur >= 17)
+//menggunakan sintaks pemilihan untuk menentukan boleh berkendara atau tidak
+if(umur >= 17)//umur lebih besar atau sama dengan 17
 {
     System.out.println("Boleh berkendara");
 }
-else
+else//umur lebih kecil dari 17
 {
     System.out.println("Tidak boleh berkendara");
 }
@@ -341,7 +358,12 @@ else
 
 ```Java
 int niUAS, niUTS, niKuis, niTugas, niAkhir;
+/*
+menggunakan tipe data int dengan variabel:
+niUAS(Nilai UAS); niUTS(Nilai UTS); niKuis(Nilai Kuis); niTugas(Nilai Tugas); niAkhir(Nilai Akhir);
+*/
 
+//input data semua nilai
 System.out.print("Masukkan nilai UAS: ");
 niUAS = ss.nextInt() * 40 / 100;
 System.out.print("Masukkan nilai UTS: ");
@@ -351,13 +373,15 @@ niKuis = ss.nextInt() * 10 / 100;
 System.out.print("Masukkan nilai Tugas: ");
 niTugas = ss.nextInt() * 20 / 100;
 
+//menghitung Nilai Akhir dengan menjumlahkan semua Nilai
 niAkhir = niUAS + niUTS + niKuis + niTugas;
 
-if(niAkhir < 65)
+//menggunakan sintaks pemilihan untuk menentukan remidi tidaknya
+if(niAkhir < 65)//Nilai Akhir kurang dari 65
 {
     System.out.println("Remidi");
 }
-else
+else//Nilai Akhir lebih dari atau sama dengan 65
 {
     System.out.println("Tidak remidi");
 }
@@ -402,6 +426,13 @@ Total Bayar :2160000.0
 ```Java
 double hA, hjA, hB, hjB, hC, hjC, hTotal, hDiskon, hBayar;
 int jA, jB, jC;
+/*
+menggunakan tipe data double dan int dengan variabel yang akan dimasukkan: 
+hA(Harga Barang A); jA(Jumlah Barang A yang dibeli); hjA(Harga Total Barang A setelah dikali dengan Jumlahnya);
+hB(Harga Barang B); jB(Jumlah Barang B yang dibeli); hjB(Harga Total Barang B setelah dikali dengan Jumlahnya);
+hC(Harga Barang C); jC(Jumlah Barang C yang dibeli); hjC(Harga Total Barang C setelah dikali dengan Jumlahnya);
+hTotal(Harga Total keseluruhan); hDiskon(Harga Diskon yang diperoleh); hBayar(Harga yang harus dibayar);
+*/
 
 System.out.print("Masukkan harga barang A\t: ");
 hA = ss.nextDouble();
@@ -420,38 +451,48 @@ hC = ss.nextDouble();
 System.out.print("Masukkan jumlah barang C: ");
 jC = ss.nextInt();
 hjC = hC * jC;
+/*
+program diatas untuk memasukkan input data variabel menggunakan Scanner ss pada no.1
+setelah memasukkan data, akan langsung dihitung Harga Total perBarangnya
+*/
 
+//selanjutnya menghitung Harga Total Keseluruhan dengan menjumlah semua Harga Total perBarangnya 
 hTotal = hjA + hjB + hjC;
 
-if(hTotal > 200000)
+//menggunakan sintaks pemilihan untuk menentukan Harga Diskon yang diperoleh
+if(hTotal > 200000)//jika Harga Total keseluruhan lebih dari 200 ribu
 {
-    hDiskon = hTotal * 2 / 100;
+    hDiskon = hTotal * 2 / 100;//2% dari Harga total keseluruhan
 }
-else if(hTotal > 500000)
+else if(hTotal > 500000)//jika Harga Total keseluruhan lebih dari 500 ribu
 {
-    hDiskon = hTotal * 5 / 100;
+    hDiskon = hTotal * 5 / 100;//5% dari Harga total keseluruhan
 }
-else if(hTotal > 1000000)
+else if(hTotal > 1000000)//jika Harga Total keseluruhan lebih dari 1 juta
 {
-    hDiskon = hTotal * 10 / 100;
+    hDiskon = hTotal * 10 / 100;//10% dari Harga total keseluruhan
 }
-else
+else//jika Harga Total keseluruhan kurang dari 200 ribu
 {
-    hDiskon = 0;
+    hDiskon = 0;//tidak mendapat diskon
 }
 
+//setelah itu menghitung Harga yang harus diBayar dengan mengurangi Harga Total keseluruhan dengan Harga diskon yang diperoleh
 hBayar = hTotal - hDiskon;
 
+//output menggunakan System.out.println
 System.out.println("---------------------------------------");
 System.out.println("              Struk total              ");
 System.out.println("---------------------------------------");
 System.out.println("Nama Barang | Harga   | Jumlah | Total ");
-System.out.println(String.format("Barang A     %s\t %s\t %s ", hA, jA, hjA));
-System.out.println(String.format("Barang A     %s\t %s\t %s ", hB, jB, hjB));
-System.out.println(String.format("Barang A     %s\t %s\t %s ", hC, jC, hjC));
+System.out.println(String.format("Barang A     %s\t %s\t %s", hA, jA, hjA));
+System.out.println(String.format("Barang A     %s\t %s\t %s", hB, jB, hjB));
+System.out.println(String.format("Barang A     %s\t %s\t %s", hC, jC, hjC));
+//String.format diatas digunakan untuk memasukkan data variabel ke %s didalam string yang dibuat
 System.out.println("Total: " + hTotal);
 System.out.println("Diskon: " + hDiskon);
 System.out.println("Bayar: " + hBayar);
+
 ```
 
     Masukkan harga barang A : 100000
