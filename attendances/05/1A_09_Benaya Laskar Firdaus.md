@@ -41,7 +41,6 @@ System.out.println("Masukkan sebuah bilangan:");
 bil = input.nextInt();
 
 ```
-
 #### Penjelasan Code
 Langkah pertama kita mengimport library scanner untuk inputan dan mendeklarasikannya,lalu membuat variable bil dengan tipe data interger,setelah itu kita membuat inputan untuk dimasukkan pada sistem.
 
@@ -396,10 +395,9 @@ Barang C            150000         1         150000
 Total       :2400000
 Diskon      :240000.0
 Total Bayar :2160000.0
-```
 
 ```Java
-
+// Ketik kode program di atas di bawah sini
 import java.util.Scanner;
 //menambahkan library scanner untuk inputan
 Scanner input = new Scanner(System.in);
