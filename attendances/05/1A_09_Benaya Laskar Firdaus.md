@@ -271,7 +271,7 @@ switch(operator){
 ```
 
 #### Penjelasan Code
-Adanya penggunaan kode swtich yang berguna membuat kondisi,atau memilih kondisi operator yang akan dijalankan,jia kita mengembalikan inputan dengan + maka case + akan dijalankan,fungsi break adalah untuk menghentikan case agar tidak terus berjalan kebawah. Jika tidak ada kecocokan dalam kondisi maka akan menjalankan fungsi perintah default yang akan mengeluarkan opeator yang anda masukkan salah sebagai pemberitahuan.
+Adanya penggunaan kode swtich yang berguna membuat kondisi,atau memilih kondisi operator yang akan dijalankan,jia kita mengembalikan inputan dengan + maka case + akan dijalankan,fungsi break adalah untuk menghentikan case agar tidak terus berjalan kebawah. Jika tidak ada kecocokan dalam kondisi maka akan menjalankan fungsi perintah default yang akan mengeluarkan opeator yang anda masukkan salah sebagai pemberitahuan output.
 
 
 5. Jalankan program. Amati apa yang terjadi!
