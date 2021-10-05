@@ -228,7 +228,7 @@ gajiBersih = (int) (penghasilan - (penghasilan * pajak));
 // 1. Karena tipe data Integer tidak mengeluarkan output belakang koma
 // 2. fungsinya ialah casting/mengubah tipedata dari hasil double/float menjadi integer
 // 3. fungsi equalsIgnoreCase untuk melakukan perbandingan antar string tanpa terpengaruh oleh kapital dan tidaknya huruf
-// 4. fungsi equals untuk melakukan perbandingan antar string dan terpengaruh oleh kapital dan tidaknya huruf2
+// 4. fungsi equals untuk melakukan perbandingan antar string dan terpengaruh oleh kapital dan tidaknya huruf
 ```
 
 ### Tugas
