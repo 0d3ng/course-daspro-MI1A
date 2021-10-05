@@ -37,11 +37,13 @@ Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks pemil
 import java.util.Scanner;
 Scanner input = new Scanner(System.in);
 int bil;
-System.out.print("Masukkan sebuah bilangan:  ");
+System.out.print("Masukan sebuah bilangan: ");
 bil = input.nextInt();
 ```
 
-    Masukkan sebuah bilangan:  25
+    Masukan sebuah bilangan: 
+
+     2
 
 
 3. Buatlah struktur kondisi untuk mengecek apakah bilangan tersebut merupakan bilangan genap atau ganjil
@@ -51,14 +53,14 @@ bil = input.nextInt();
 
 ```Java
 // Ketik kode program di atas di bawah sini
-if(bil % 2 == 0) {
+if(bil%2 == 0){
     System.out.println("Bilangan Genap");
-} else {
+}else{
     System.out.println("Bilangan Ganjil");
 }
 ```
 
-    Bilangan Ganjil
+    Bilangan Genap
 
 
 ##### Pertanyaan
@@ -69,12 +71,9 @@ if(bil % 2 == 0) {
 
 ```Java
 // Ketik kode program di atas di bawah sini
-String output = (bil % 2 == 0) ? "Bilangan Genap" : "Bilangan Ganjil";
+String output = (bil % 2 == 0) ? "Biangan Genap":"Bilangan Ganjil";
 System.out.println(output);
 ```
-
-    Bilangan Ganjil
-
 
 2. Jalankan dan amatilah hasilnya!
 3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
@@ -82,6 +81,11 @@ System.out.println(output);
 #### Percobaan 2 : Penggunaan if else
 
 #### Waktu percobaan : 40 menit
+
+
+```Java
+karena ternery operator merupakan bentuk sederhana dari if else
+```
 
 + Buatlah sebuah variabel nilai untuk menyimpan inputan dari keyboard
 
@@ -95,7 +99,9 @@ System.out.print("Masukkan sebuah bilangan: ");
 nilai = input.nextInt();
 ```
 
-    Masukkan sebuah bilangan: 20
+    Masukkan sebuah bilangan: 
+
+     8
 
 
 + Tambahkan sebuah kondisi untuk mengecek input pada variabel nilai
@@ -105,15 +111,15 @@ nilai = input.nextInt();
 
 ```Java
 // Ketik kode program di atas di bawah sini
-if(nilai >= 100) {
+if(nilai >= 100){
     nilai += 10;
-} else {
+}else{
     nilai -= 10;
 }
-System.out.println("Hasil akhir nilai adalah " + nilai);
+System.out.println("Hasil akhir nilai adalah "+nilai);
 ```
 
-    Hasil akhir nilai adalah 10
+    Hasil akhir nilai adalah -2
 
 
 + Jalankan program. Amati apa yang terjadi!
@@ -125,11 +131,43 @@ System.out.println("Hasil akhir nilai adalah " + nilai);
     nilai+=10;
     nilai-=10;
     ```
-    
-    - nilai +=10 (menambahkan nilai 10 pada variabel nilai)
-    - nilai -=10 (mengurangi nilai 10 pada variabel nilai)
-    
+
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
+
+
+```Java
+nilai+=10; artinya nilai variabel ditambah 10
+nilai-+10; artinya nilai variabel dikurang 10
+```
+
+
+```Java
+int nilai1,nilai2,nilai;
+System.out.print("Masukkan sebuah bilangan: ");
+nilai1 = input.nextInt();
+System.out.print("Masukkan sebuah bilangan: ");
+nilai2 = input.nextInt();
+nilai = (nilai1+nilai2)/2;
+if(nilai >= 100){
+nilai += 5;
+}else{
+    nilai -= 5;
+}
+System.out.println("Hasil akhir nilai adalah: "+ nilai);
+```
+
+    Masukkan sebuah bilangan: 
+
+     40
+
+
+    Masukkan sebuah bilangan: 
+
+     20
+
+
+    Hasil akhir nilai adalah: 25
+
 
 #### Percobaan 3 : Penggunaan if else-if else
 
@@ -144,8 +182,15 @@ System.out.println("Hasil akhir nilai adalah " + nilai);
 
 ```Java
 // Ketik kode program di atas di bawah sini
-
+int umur;
+System.out.print("Masukkan umur Anda: ");
+umur = input.nextInt();
 ```
+
+    Masukkan umur Anda: 
+
+     19
+
 
 + Kode untuk melakukan pengecekan variabel `umur`
 
@@ -154,8 +199,20 @@ System.out.println("Hasil akhir nilai adalah " + nilai);
 
 ```Java
 // Ketik kode program di atas di bawah sini
-
+if(umur > 60)
+    System.out.println("Lansia");
+else if (umur > 45)
+    System.out.println("Tua");
+else if (umur > 17)
+    System.out.println("Dewasa");
+else if (umur > 5)
+    System.out.println("Anak-anak");
+else
+     System.out.println("Balita");
 ```
+
+    Dewasa
+
 
 + Jalankan program dan amati apa yang terjadi!
 
@@ -171,7 +228,9 @@ System.out.println("Hasil akhir nilai adalah " + nilai);
 
 ```Java
 // Ketik kode program di atas di bawah sini
-
+Scanner sc = new Scanner(System.in);
+double angka1,angka2,hasil;
+char operator;
 ```
 
 3. Kode program untuk meminta inputan dari keyboard
@@ -181,8 +240,28 @@ System.out.println("Hasil akhir nilai adalah " + nilai);
 
 ```Java
 // Ketik kode program di atas di bawah sini
-
+System.out.print("Masukkan angka pertama: ");
+angka1 = sc.nextDouble();
+System.out.print("Masukkan angka kedua: ");
+angka2 = sc.nextDouble();
+System.out.print("Masukkan operator (+ - * /): ");
+operator = sc.next().charAt(0);
 ```
+
+    Masukkan angka pertama: 
+
+     2
+
+
+    Masukkan angka kedua: 
+
+     8
+
+
+    Masukkan operator (+ - * /): 
+
+     +
+
 
 4. Kode di bawah ini untuk melakukan pengecekan operator yang digunakan sebelum dilakukan operasi aritmatika
 
@@ -191,8 +270,30 @@ System.out.println("Hasil akhir nilai adalah " + nilai);
 
 ```Java
 // Ketik kode program di atas di bawah sini
-
+switch(operator) {
+    case '+':
+        hasil = angka1 + angka2;
+        System.out.println(angka1 + "+" + angka2 + "=" + hasil);
+    case '-':
+        hasil = angka1 - angka2;
+         System.out.println(angka1 + "-" + angka2 + "=" + hasil);
+      case '*':
+        hasil = angka1 * angka2;
+         System.out.println(angka1 + "*" + angka2 + "=" + hasil);
+      case '/':
+        hasil = angka1 / angka2;
+         System.out.println(angka1 + "/" + angka2 + "=" + hasil);
+    break;
+    default:
+    System.out.println("Operator yang anda masukkan salah");
+}
 ```
+
+    2.0+8.0=10.0
+    2.0-8.0=-6.0
+    2.0*8.0=16.0
+    2.0/8.0=0.25
+
 
 5. Jalankan program. Amati apa yang terjadi!
 
@@ -203,6 +304,17 @@ System.out.println("Hasil akhir nilai adalah " + nilai);
     ```
     operator = sc.next().chartAt(0);
     ```
+
+
+```Java
+fungsi dari break adalah agar perintah memberhentikan perintah pada case
+fungsi dari default adalah untuk saat nilai yang dimasukkan tidak cocok dengan case yg ada
+```
+
+
+```Java
+mengambil sebuah karakter dari sebuah string
+```
 
 ### Tugas
 
