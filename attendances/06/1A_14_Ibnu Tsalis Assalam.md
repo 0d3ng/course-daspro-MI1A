@@ -298,6 +298,9 @@ switch(opr){
     Inputkan bilangan kedua: 2.2
     3.4 / 2.2 = 1.5454545454545452
 
+>Penjelasan
+>
+>switch(opr) artinya kondisi variabel "opr" yang dimasukkan dan dilanjut ke case ' ': "pernyataan" untuk menentukan operasi dari hasil akhir. Saat variabel "opr" yang dimasukkan selain (+, -, *, /) maka akan masuk kedalam kondisi default.
 
 2. Dengan menggunakan tiga nilai yang mewakili panjang tiga sisi sebuah segitiga, tentukan apakah segitiga tersebut sama sisi (ketiga sisinya bernilai sama), sama kaki (kedua sisinya bernilai sama), atau sembarang (tidak ada sisi yang bernilai sama)! 
 
@@ -331,6 +334,10 @@ else
     Masukkan sisi kedua: 3
     Masukkan sisi ketiga: 2
     Segitiga sama kaki
+
+>Penjelasan
+>
+>Kondisi pertama menggunakan "&&" yaitu sisi 1 samadengan sisi 2 dan sisi 1 samadengan sisi 3. Menggunakan "||" untuk kondisi bila sisi 1 samadengan sisi 2 atau sisi 1 samadengan sisi 3, jika salah satu benar dan satu salah. else jika kesemua sisi tidak sama
 
 3. Warung Padang Gembira meminta Anda membuat sebuah program untuk menerima pesanan dari internet. Program yang Anda buat meminta user untuk memasukkan nama makanan dan harga. Setelah itu, user ditawarkan untuk menggunakan pengiriman ekspres. Jika pengguna menolak, maka jenis pengiriman yang digunakan adalah pengiriman reguler. Biaya pengiriman reguler untuk harga makanan kurang dari Rp 100.000 adalah Rp 20.000, sedangkan untuk harga makanan sama dengan atau lebih dari Rp 100.000 biaya pengirimannya adalah Rp 30.000. Untuk jenis pengiriman ekspres, tambahkan biaya tambahan sebesar Rp 25.000 dari standar biaya pengiriman reguler. Tampilkan struk yang berisi nama makanan yang dibeli + harga, biaya pengiriman, dan total yang harus dibayar!
 Contoh hasil output program:
@@ -418,6 +425,10 @@ System.out.println("TOTAL \t\t : Rp " + hTotal);
     Biaya Pengiriman : Rp 20000.0
     TOTAL 		     : Rp 25000.0
 
+> Penjelasan
+>
+> if(ekspress = " ") digunakan untuk menentukan pernyataan dari kondisi layanan ekspres yang dimasukkan pengguna. Didalamnya lagi terdapat kondisi dari "harga makanan" yang telah dimasukkan pengguna. Disetiap kondisi ditentukan biaya pengiriman yang berbeda-beda
+
 4. Perhatikan flowchart berikut ini!
 
 ![](images/01.png)
@@ -484,3 +495,7 @@ else
     Masukkan pendapatan per bulan: 2000000
     Masukkan jumlah tanggungan: 6
     Bukan penduduk miskin
+
+> Penjelasan
+>
+> if(umur >= ...) digunakan untuk menentukan pernyataan dari kondisi umur yang dimasukkan pengguna. Didalamnya dimasukkan perintah input dari status pengguna. Setelah itu terdapat kondisi dari "biaya" yang merupakan operasi dari input sebelumnya. Disetiap kondisi ditentukan antara penduduk miskin atau bukan
