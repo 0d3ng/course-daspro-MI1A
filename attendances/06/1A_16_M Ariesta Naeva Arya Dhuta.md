@@ -268,7 +268,8 @@ if(sisi1 == sisi2 && sisi1 == sisi3){
     Segitiga sembarang
 
 
-#### 3. Warung Padang Gembira meminta Anda membuat sebuah program untuk menerima pesanan dari internet. Program yang Anda buat meminta user untuk memasukkan nama makanan dan harga. Setelah itu, user ditawarkan untuk menggunakan pengiriman ekspres. Jika pengguna menolak, maka jenis pengiriman yang digunakan adalah pengiriman reguler. Biaya pengiriman reguler untuk harga makanan kurang dari Rp 100.000 adalah Rp 20.000, sedangkan untuk harga makanan sama dengan atau lebih dari Rp 100.000 biaya pengirimannya adalah Rp 30.000. Untuk jenis pengiriman ekspres, tambahkan biaya tambahan sebesar Rp 25.000 dari standar biaya pengiriman reguler. Tampilkan struk yang berisi nama makanan yang dibeli + harga, biaya pengiriman, dan total yang harus dibayar!
+3.Warung Padang Gembira meminta Anda membuat sebuah program untuk menerima pesanan dari internet. Program yang Anda buat meminta user untuk memasukkan nama makanan dan harga. Setelah itu, user ditawarkan untuk menggunakan pengiriman ekspres. Jika pengguna menolak, maka jenis pengiriman yang digunakan adalah pengiriman reguler. Biaya pengiriman reguler untuk harga makanan kurang dari Rp 100.000 adalah Rp 20.000, sedangkan untuk harga makanan sama dengan atau lebih dari Rp 100.000 biaya pengirimannya adalah Rp 30.000. Untuk jenis pengiriman ekspres, tambahkan biaya tambahan sebesar Rp 25.000 dari standar biaya pengiriman reguler. Tampilkan struk yang berisi nama makanan yang dibeli + harga, biaya pengiriman, dan total yang harus dibayar!
+
 Contoh hasil output program:
 
 ```
@@ -293,17 +294,8 @@ Beef bulgogi      Rp 115000
 Biaya pengiriman  Rp 45000
 TOTAL             Rp 123000
 
-```
 
 
-
-
-```Java
-
-```
-
-
-```Java
 
 ```
 
@@ -348,8 +340,6 @@ if(ekspres==0){
     }
 }
     
-
-
 ```
 
     Masukkan nama makanan: 
@@ -362,18 +352,6 @@ if(ekspres==0){
     Biaya Pengiriman: Rp.55.000 
     TOTAL 278000
 
-
-
-```Java
-GWEGE GWEMING
-```
-
-
-    |   GWEGE GWEMING;
-
-    Unresolved dependencies:
-
-       - class GWEGE
 
 
 # 4. Perhatikan flowchart berikut ini!
@@ -391,7 +369,7 @@ System.out.println("Masukkan Umur Ente: ");
 umur =input.nextInt();
 
 if(umur >=18){
-     Scanner input = new Scanner(System.in);
+     Scanner input = new Scanner(System.in); //saya menambahkan scanner baru karena setelah input int tidak bisa input string jadi saya tambahkan
      String kerja;
      System.out.println("Sudah Bekerja? ");
      kerja = input.nextLine();
@@ -424,6 +402,7 @@ if(umur >=18){
      }
 }
 ```
+        
 
     Masukkan Umur Ente: 
     18
