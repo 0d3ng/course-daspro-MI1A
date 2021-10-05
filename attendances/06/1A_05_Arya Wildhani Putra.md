@@ -111,7 +111,7 @@ if (nilai>= 0 && nilai <= 100){
     Nilai yang Anda masukkan kurang dari 0
 
 
-// Jawaban pertanyaan (2) 
+// Jawaban pertanyaan 2 
 Jelaskan fungsi sintaks if (nilai >= 0 && nilai <= 100)!
     fungsi tersbut menjelaskan juka nilai lebih besar samadengan 0 dan nilai kurangdari samadengan 100 
 
