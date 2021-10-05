@@ -20,7 +20,11 @@ Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks pemil
 1. Perhatikan flowchart dibawah ini!
 
     <p align="left">
+<<<<<<< HEAD
+    <img width="351" height="460" src="2131710156/01.png">
+=======
     <img width="351" height="460" src="images/01.png">
+>>>>>>> 92d0b3fe1f15e9008b2e773aa39361c49af18213
     </p>
     
 
@@ -51,6 +55,10 @@ bil = input.nextInt();
 
 ```Java
 // Ketik kode program di atas di bawah sini
+<<<<<<< HEAD
+
+=======
+>>>>>>> 92d0b3fe1f15e9008b2e773aa39361c49af18213
 if(bil%2 == 0){
     System.out.println("Bilangan Genap");
 }else{
@@ -77,6 +85,12 @@ System.out.println(output);
 
 
 2. Jalankan dan amatilah hasilnya!
+<<<<<<< HEAD
+Bilangan Ganjil
+
+3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
+karena  tanda ":" memiliki fungsi yang sama seperti program sebelum dimodifikasi
+=======
 
 
     Bilangan Ganjil
@@ -84,6 +98,7 @@ System.out.println(output);
 3. Jelaskan mengapa output program yang dimodifikasi sama dengan output program sebelum dimodifikasi!
 
     karena  tanda ":" memiliki fungsi yang sama seperti program sebelum dimodifikasi
+>>>>>>> 92d0b3fe1f15e9008b2e773aa39361c49af18213
 
 #### Percobaan 2 : Penggunaan if else
 
@@ -101,7 +116,11 @@ System.out.print("Masukkan sebuah bilangan: ");
 nilai = input.nextInt();
 ```
 
+<<<<<<< HEAD
+    Masukkan sebuah bilangan: 105
+=======
     Masukkan sebuah bilangan: 11
+>>>>>>> 92d0b3fe1f15e9008b2e773aa39361c49af18213
 
 
 + Tambahkan sebuah kondisi untuk mengecek input pada variabel nilai
@@ -119,7 +138,11 @@ if(nilai >= 100){
 System.out.println("Hasil akhir nilai adalah "+nilai);
 ```
 
+<<<<<<< HEAD
+    Hasil akhir nilai adalah 135
+=======
     Hasil akhir nilai adalah 1
+>>>>>>> 92d0b3fe1f15e9008b2e773aa39361c49af18213
 
 
 + Jalankan program. Amati apa yang terjadi!
@@ -143,6 +166,8 @@ System.out.println("Hasil akhir nilai adalah "+nilai);
 
 2. Modifikasilah program diatas dimana inputannya yang awalnya hanya satu kemudian diganti 2 inputan (misal : nilai1 dan nilai2), lakukan perhitungan rata-rata kedua nilai tersebut jika nilainya lebih dari sama dengan 100 maka dikurangi 5, sedangkan jika nilai rata-rata tersebut kurang dari 100 maka akan langsung dicetak!
 
+<<<<<<< HEAD
+=======
 import.java.util.Scanner
 
 public class nilai{
@@ -173,6 +198,7 @@ Masukkan nilai kedua 120
 
 110
 
+>>>>>>> 92d0b3fe1f15e9008b2e773aa39361c49af18213
 
 
 #### Percobaan 3 : Penggunaan if else-if else
@@ -244,6 +270,19 @@ char operator;
 
 ```Java
 // Ketik kode program di atas di bawah sini
+<<<<<<< HEAD
+System.out.print("Massukkan angka pertama: ");
+angka1 = sc.nextDouble();
+System.out.print("Massukkan angka kedua: ");
+angka2 = sc.nextDouble();
+System.out.print("Massukkan operator (+ - * /): ");
+operator = sc.next(). charAt(0);
+```
+
+    Massukkan angka pertama: 11
+    Massukkan angka kedua: 12
+    Massukkan operator (+ - * /): 13
+=======
 System.out.print("Masukkan angka pertama: ");
 angka1 = sc.nextDouble();
 System.out.print("Masukkan angka kedua: ");
@@ -255,6 +294,7 @@ operator = sc.next(). charAt(0);
     Masukkan angka pertama: 11
     Masukkan angka kedua: 12
     Masukkan operator (+ - * /): +
+>>>>>>> 92d0b3fe1f15e9008b2e773aa39361c49af18213
 
 
 4. Kode di bawah ini untuk melakukan pengecekan operator yang digunakan sebelum dilakukan operasi aritmatika
@@ -286,14 +326,22 @@ switch(operator){
 }
 ```
 
+<<<<<<< HEAD
+    Operator yang Anda masukkan salah
+=======
     23
+>>>>>>> 92d0b3fe1f15e9008b2e773aa39361c49af18213
 
 
 5. Jalankan program. Amati apa yang terjadi!
 
 ##### Pertanyaan
 1. Jelaskan fungsi dari break dan default pada percobaan 4 diatas!
+<<<<<<< HEAD
+ untuk memisahkan antara case agar tidak keluar bersamaan
+=======
  untuk memisahkan antar case 
+>>>>>>> 92d0b3fe1f15e9008b2e773aa39361c49af18213
 2. Jelaskan fungsi perintah kode program dibawah ini pada percobaan 4!
  mengambil huruf/karakter
 
@@ -314,6 +362,8 @@ switch(operator){
 
 3. Pada akhir semester seorang dosen menghitung nilai akhir dari mahasiswa yang terdiri dari nilai uas, uts, kuis, dan tugas. Nilai akhir didapatkan dari 40% nilai uas, 30% nilai uts, 10% nilai kuis, dan 20% nilai tugas. Jika nilai akhir dari mahasiswa dibawah 65 maka mahasiswa tersebut akan mendapatkan remidi. Buatlah program untuk membantu mengetahui mahasiswa yang mendapatkan remidi berdasarkan nilai akhir yang didapatkannya!
 
+<<<<<<< HEAD
+=======
 import java.util.Scanner;
 
 public class nilaiakhir{
@@ -383,6 +433,7 @@ Tidak Remidi
 
 
 
+>>>>>>> 92d0b3fe1f15e9008b2e773aa39361c49af18213
 4. Sebuah toko memberikan diskon kepada pelanggannya dengan ketentuan sebagai berikut:
 
 | Total Belanja     | Potongan |
@@ -412,6 +463,8 @@ Total       :2400000
 Diskon      :240000.0
 Total Bayar :2160000.0
 ```
+<<<<<<< HEAD
+=======
 
 import java.util.Scanner;
 
@@ -473,7 +526,7 @@ System.out.println(String.format("Barang A\t\t%s\t%s\t\t%s",hargaA, barangA, har
 
 System.out.println(String.format("Barang B\t\t%s\t%s\t\t%s",hargaB, barangB, hargaB*barangB));
 
-System.out.println(String.format("Barang A\t\t%s\t%s\t\t%s",hargaC, barangC, hargaC*barangC));
+System.out.println(String.format("Barang C\t\t%s\t%s\t\t%s",hargaC, barangC, hargaC*barangC));
 
 System.out.println("Total\t:" + total);
 
@@ -482,5 +535,8 @@ System.out.println("Diskon\t:" + (total * diskon);
 System.out.println("Total\t:" + totalBayar);
 
 in.close();
+
     }
+
 }
+>>>>>>> 92d0b3fe1f15e9008b2e773aa39361c49af18213
