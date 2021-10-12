@@ -79,7 +79,7 @@ System.out.print("Nilai faktorial bilangan tersebut adalah : " + faktorial);
 ```Java
 // Ketik kode program di atas di bawah sini
 faktorial = 1;
-System.out.println("=====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====");
+System.out.println("=====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN WHILE=====");
 System.out.print("Masukkan Bilangan: ");
 angka = input.nextInt();
 int i=1;
@@ -91,7 +91,7 @@ while(i<=angka)
 System.out.print("Nilai faktorial bilangan tersebut adalah : " + faktorial);
 ```
 
-    =====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====
+    =====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN WHILE=====
     Masukkan Bilangan: 6
     Nilai faktorial bilangan tersebut adalah : 720
 
@@ -105,7 +105,7 @@ System.out.print("Nilai faktorial bilangan tersebut adalah : " + faktorial);
 ```Java
 // Ketik kode program di atas di bawah sini
 faktorial = 1;
-System.out.println("=====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====");
+System.out.println("=====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN DO-WHILE=====");
 System.out.print("Masukkan Bilangan: ");
 angka = input.nextInt();
 int i=1;
@@ -117,7 +117,7 @@ while(i<=angka);
 System.out.print("Nilai faktorial bilangan tersebut adalah : " + faktorial);
 ```
 
-    =====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====
+    =====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN DO-WHILE=====
     Masukkan Bilangan: 5
     Nilai faktorial bilangan tersebut adalah : 120
 
@@ -145,7 +145,7 @@ System.out.println("=====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====");
 System.out.print("Masukkan Bilangan: ");
 angka = input.nextInt();
 System.out.print(angka + "Faktorial = 1");
-for(int i=2; i<=angka; i++)
+for(int i=2; i<=angka; i++)//i dimulai dengan 2 karena 1 sudah tertulis
 {
     faktorial *= i;
     System.out.printf("x%d",i);
@@ -155,7 +155,7 @@ System.out.print(" = " + faktorial);
 
     =====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====
     Masukkan Bilangan: 5
-    5Faktorial = 1x2x3x4x5x = 120
+    5Faktorial = 1x2x3x4x5 = 120
 
 #### Percobaan 2 : Keluar dari perulangan menggunakan break
 
