@@ -362,12 +362,22 @@ System.out.print("Angka genap dalam range tersebut adalah");
 for(int i=1;i<=bil;i++)
 {
     if(i%2!=0)continue;
+    /*
+        saat i modulus 2 hasilnya bukan 0 (ganjil), maka nilai i tidak akan dimasukkan ke program berikutnya
+    */
     System.out.printf(", %d",i);
     totalGenap += i;
 }
-avg = (double)(totalGenap-1) / jmlBilGenap;
-System.out.printf("\nHasil penjumlahan bilangan genap dari 1 sampai %d adalah %d",bil,totalGenap-1);
+totalGenap--;
+/*
+    decrement untuk mengurangi 1 nilai totalGenap agar nilai awal menjadi 0 dan output sesuai dengan keinginan
+*/
+avg = (double) totalGenap / jmlBilGenap;
+System.out.printf("\nHasil penjumlahan bilangan genap dari 1 sampai %d adalah %d",bil,totalGenap);
 System.out.printf("\nRata-rata bilangan genap dari 1 sampai %d adalah %.1f",bil,avg);
+/*
+    %f untuk format double, .1 untuk membulatkan nilai koma menjadi 1 desimal
+*/
 ```
 
     Masukkan angka: 10
@@ -389,8 +399,12 @@ int x, angka;
 
 System.out.print("Masukkan angka: ");
 angka = input.nextInt();
-for(x=1; x<=angka; x++) {
+for(x=1; x<=angka; x++) 
+{
     if (x%5==0) continue;
+    /*
+        saat x modulus 5 samadengan 0 (kelipatan 5) maka nilai x tidak akan dimasukkan ke program berikutnya
+    */
     System.out.println(x);
 }
 ```
@@ -414,7 +428,7 @@ for(x=1; x<=angka; x++) {
     19
 
 3. Buatlah sebuah program yang menampilkan deret bilangan fibonacci sebagai berikut. Dimana bilangan yang terletak di sebelah kanan adalah hasil penjumlahan dari 2 bilangan sebelumnya
-    
+
     <p align="left">
     <img width="451" height="226" src="images/fibo.png" align="left">
     </p>
@@ -424,13 +438,19 @@ for(x=1; x<=angka; x++) {
 ```Java
 // Ketik kode program disini
 int n1=0,n2=1,n3,i,count;
+/*
+    n1=0 dan n2=1 untuk nilai awal bilangan fibonacci
+*/
 
 System.out.print("Masukkan batas Fibonacci: ");
 count = input.nextInt();
-for(i=0;i<count;i++)   
+for(i=0; i<count; i++)   
 {
     n3=n1+n2;    
     System.out.printf("\nSum of: %d + %d = %d",n1,n2,n3);
+    /*
+        output setelah operasi n3, dilanjut memberi nilai n1 dan n2 yang baru dari operasi sebelumnya.
+    */
     n1=n2;    
     n2=n3;
 }
