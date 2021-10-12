@@ -259,7 +259,7 @@ System.out.print("Jumlah angka-angka yang telah dimasukkan : " + total);
 
 
 // Ketik jawaban disini
->Untuk perulangan
+>Untuk perulangan dengan nilai awal total samadengan 0 dan terus mengulang saat kondisi masih true (terpenuhi) 
 
 
 #### Percobaan 3 : Keluar dari step perulangan menggunakan continue
