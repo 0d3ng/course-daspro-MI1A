@@ -26,7 +26,6 @@ Mahasiswa memahami tentang operator logika; Mahasiswa mampu menyelesaikan permas
 
 
 ```Java
-// Ketik kode di sini
 import java.util.Scanner;
 Scanner input = new Scanner(System.in);
 int nilai;
@@ -34,7 +33,7 @@ System.out.print("Masukkan nilai ujian (0-100): ");
 nilai = input.nextInt();
 ```
 
-    Masukkan nilai ujian (0-100): 80
+    Masukkan nilai ujian (0-100): 125
 
 
 3. Buatlah struktur pengecekan kondisi bersarang. Pengecekan pertama digunakan untuk memastikan bahwa nilai yang dimasukkan berada pada rentang 0 – 100. Jika nilai berada pada rentang 0 – 100, maka akan dilakukan pengecekan status kelulusan mahasiswa, yaitu jika nilai di antara 90 – 100 maka nilainya A, jika nilai di antara 80 – 89 maka nilainya B, jika nilai di antara 60 – 79 maka nilainya C, jika nilai di antara 50 – 59 maka nilainya D, dan jika nilai di antara 0 – 49 maka nilainya E. Sedangkan jika nilai berada di luar rentang 0 – 100, maka ditampilkan informasi bahwa nilai yang dimasukkan tidak valid.
@@ -43,30 +42,27 @@ nilai = input.nextInt();
 
 
 ```Java
-// Ketik kode di sini
-if(nilai >=0 && nilai <= 100){
+if(nilai >= 0 && nilai <= 100){
     if(nilai >= 90 && nilai <=100){
-        System.out.println("Nilai A, EXCELLENT!");
-    } else if (nilai >= 80 && nilai <=89){
-        System.out.println("Nilai B, Pertahankan prestasi Anda!");
-    } else if (nilai >= 60 && nilai <=79){
-        System.out.println("Nilai C, Tingkatkan prestasi Anda!");
-    } else if (nilai >= 50 && nilai <=59){
-        System.out.println("Nilai D, Tingkatkan belajar Anda!");
+        System.out.println("NIlai A, MANTAP BROO!");
+    } else if (nilai >= 80 && nilai <= 89){
+        System.out.println("NIlai B, Pertahankan prestasi Anda!");
+    } else if (nilai >= 60 && nilai <= 79){
+        System.out.println("NIlai C, Tingkatkan prestasi Anda!");
+    } else if (nilai >= 50 && nilai <= 59){
+        System.out.println("NIlai D, Tingkatkan prestasi Anda!");
     } else {
-        System.out.println("Nilai E, Anda tidak lulus!");
+        System.out.println("NIlai E, Anda tisak lulus!");
     }
-} else{
-    System.out.println("Nilai yang anda masukkan tidak valid!");
+} else {
+    System.out.println("NIlai yang Anda masukkan tidak valid!");
 }
 ```
 
-    Nilai B, Pertahankan prestasi Anda!
+    NIlai yang Anda masukkan tidak valid!
 
 
 > Penjelasan kode program percobaan 1
-
-kode program 1 memiliki fungsi untuk membuat user dapat menginput nilai dan memberikan output berupa tanggapan dari nilai yang diinput, dengan cara membuat pernyataan dan kondisi pemilihan bersarang.
 
 ##### Pertanyaan
 
@@ -76,25 +72,67 @@ kode program 1 memiliki fungsi untuk membuat user dapat menginput nilai dan memb
 
 3. Ubah operator && menjadi || pada sintaks if (nilai >= 0 && nilai <= 100). Jalankan program dengan memasukkan nilai = 105. Amati apa yang terjadi! Mengapa hasilnya demikian?
 
-// Jawaban pertanyaan
-1.
-if (nilai < 0){
-    System.out.println("Nilai yang anda masukkan kurang dari 0");
+
+```Java
+if(nilai >= 0 && nilai <= 100){
+    if (nilai >= 90 && nilai <= 100){
+        System.out.println("Nilai A, EXCELLENT!");
+    } else if (nilai >= 80 && nilai <= 89){
+        System.out.println("Nilai B, Pertahankan Prestasi Anda!");
+    } else if (nilai >= 60 && nilai <= 79){
+        System.out.println("Nilai C, Tingkatkan prestasi Anda!");
+    } else if (nilai >= 50 && nilai <= 59){
+        System.out.println("Nilai D, Tingkatkan belajar Anda!");
+    } else {
+        System.out.println("Nilai E, Anda TIDAK LULUS!");
+    }
+} else if (nilai < 0){
+    System.out.println("Nilai yang Anda masukan kurang dari 0 !!!");
 } else if (nilai > 100){
-    System.out.println("Nilai yang anda masukkan lebih dari 100");
-} else if (nilai >= 90 && nilai <=100){
-    System.out.println("Nilai A, EXCELLENT!");
-} else if (nilai >= 80 && nilai <=89){
-    System.out.println("Nilai B, Pertahankan prestasi Anda!");
-} else if (nilai >= 60 && nilai <=79){
-    System.out.println("Nilai C, Tingkatkan prestasi Anda!");
-} else if (nilai >= 50 && nilai <=59){
-    System.out.println("Nilai D, Tingkatkan belajar Anda!");
+    System.out.println("Nilai yang Anda masukan lebih dari 100 !!!");
 } else {
-    System.out.println("Nilai E, Anda tidak lulus!");
+    System.out.println("Nilai yang Anda masukan tidak valid !!!");
 }
-2. sintaks if (nilai >= 0 && nilai <= 100) memiliki fungsi untuk menjalankan sebuah kode ketika kondisi kondisi input dari nilai memiliki value antara 0-100
-3. jika "&&" diubah menjadi "||" maka ketika memasukkan nilai lebih dari 100 atau kurang dari 0 maka output nya akan menjadi "Nilai E, Anda tidak lulus!" karena semua nilai yang diinput menjadi memenuhi kondisi yang pertama, sehingga akan selalu memenuhi salah satu kondisi kedua, dan output tidak akan pernah menjadi "Nilai yang Anda masukkan tidak valid!"
+```
+
+    Nilai yang Anda masukan lebih dari 100 !!!
+
+
+2.fungsi sintaks if (nilai >= 0 && nilai <= 100) adalah perintah untuk 
+  nilai inputan lebih dari sama dengan nol dan kurang dari sama dengan  seratus.
+
+
+```Java
+System.out.println("Nilai yang Anda masukkan kurang dari 0");
+} else {
+    if(nilai > 100) {
+        System.out.println("Nilai yang Anda masukkan lebih dari 100");
+    } else {
+        if(nilai >= 90 && nilai <= 100){
+            System.out.println("Nilai A, EXCELLENT!");
+        } else if (nilai >= 80 && nilai <= 89){
+            System.out.println("Nilai B, Pertahankan prestasi Anda!");
+        } else if (nilai >= 60 && nilai <= 79){
+            System.out.println("Nilai C, Tingkatkan prestasi Anda!");
+        } else if (nilai >= 50 && nilai <= 59){
+            System.out.println("Nilai D, Tingkatkan belajar Anda!");
+        } else {
+            System.out.println("Nilai E, Anda tidak lulus!");
+        }
+    }
+}
+```
+
+    Nilai yang Anda masukkan kurang dari 0
+
+
+
+    |   } else {
+
+    illegal start of statement
+
+    
+
 
 #### Percobaan 2
 
@@ -114,21 +152,20 @@ if (nilai < 0){
 
 
 ```Java
-// Ketik kode di sini
 import java.util.Scanner;
 Scanner input = new Scanner(System.in);
 String kategori;
 int penghasilan, gajiBersih;
 double pajak = 0;
 
-System.out.print("Masukkan kategori: ");
+System.out.print("Masukkan kategori : ");
 kategori = input.nextLine();
-System.out.print("Masukkan besarnya penghasilan: ");
+System.out.print("Masukkan besarnya penghasilan : ");
 penghasilan = input.nextInt();
 ```
 
-    Masukkan kategori: pebisnis
-    Masukkan besarnya penghasilan: 2000000
+    Masukkan kategori : pebisnis
+    Masukkan besarnya penghasilan : 2500000
 
 
 4. Buatlah struktur pengecekan kondisi bersarang. Pengecekan pertama digunakan untuk mengecek kategori (pekerja atau pebisnis). Selanjutnya dilakukan pengecekan kedua untuk menentukan besarnya pajak berdasarkan penghasilan yang telah dimasukkan.Kemudian tambahkan kode program untuk menghitung gaji bersih yang diterima setelah dipotong pajak!
@@ -138,8 +175,8 @@ penghasilan = input.nextInt();
 
 ```Java
 // Ketik kode di sini
-if(kategori.equalsIgnoreCase("pekerja")){
-    if(penghasilan <=2000000){
+if(kategori.equalsIgnoreCase ("pekerja")){
+    if (penghasilan <= 2000000){
         pajak = 0.1;
     } else if (penghasilan <= 3000000){
         pajak = 0.15;
@@ -147,8 +184,9 @@ if(kategori.equalsIgnoreCase("pekerja")){
         pajak = 0.2;
     }
     gajiBersih = (int) (penghasilan - (penghasilan * pajak));
-    System.out.println("Gaji bersih yang Anda terima: " + gajiBersih);
-} else if (kategori.equalsIgnoreCase("pebisnis")){
+    System.out.println("Gaji bersih yang Anda terima : "+ gajiBersih);
+    
+} else if (kategori.equalsIgnoreCase ("pebisnis")){
     if (penghasilan <= 2500000){
         pajak = 0.15;
     } else if (penghasilan <= 3500000){
@@ -157,20 +195,18 @@ if(kategori.equalsIgnoreCase("pekerja")){
         pajak = 0.25;
     }
     gajiBersih = (int) (penghasilan - (penghasilan * pajak));
-    System.out.println("Gaji bersih yang Anda terima: " + gajiBersih);
-} else  {
-    System.out.println("Kategori yang Anda masukkan salah!");
+    System.out.println("Gaji bersih yang Anda terima : "+ gajiBersih);
+} else {
+    System.out.println("Kategori yang Anda masukkan salah !!!");
 }
 ```
 
-    Gaji bersih yang Anda terima: 1700000
+    Gaji bersih yang Anda terima : 2125000
 
 
 5. Jalankan program di atas. Amati apa yang terjadi!
 
 > Penjelasan kode program percobaan 2
-
-kode program percobaan 2 adalah kode yang memiliki fungsi agar user dapat menghitung berapa gaji bersih yang diterima setelah pajak berdasarkan kategori pekerjaan mereka (pebisnis atau pekerja) dan penghasilan kotor mereka. Dengan cara menggunakan kondisi memanfaatkan string yang tidak sensitive case dan pajak berdasarkan penghasilan kemudian dikalkulasikan.
 
 ##### Pertanyaan
 
@@ -185,11 +221,49 @@ gajiBersih = (int) (penghasilan - (penghasilan * pajak));
 
 4.	Ubah equalsIgnoreCase menjadi equals, kemudian jalankan program dengan memasukkan kategori = pebisnis dan penghasilan = 2000000. Amati apa yang terjadi! Mengapa hasilnya demikian? Apa kegunaan dari equals?
 
-// Jawaban pertanyaan
-1. angka dibelakang koma tidak ditampilkan karena variabel memiliki tipe data int, yang berarti hanya bilangan bulat.
-2. fungsi dari (int) adalah untuk narrowing casting manual sehingga membuat semua kalkulasi dalam bentuk tipe data int.
-3. equalsIgnoreCase memiliki kegunaan untuk mencocokkan input string kategori namun tidak sensitive case, sehingga kode tidak menghiraukan upper case atau lower case dan mementingkan susunan karakternya sama.
-4. equals memiliki kegunaan untuk mencocokkan input string kategori namun sensitive case, sehingga program mencocokkan upper case dan lower case karakter.
+
+```Java
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
+String kategori;
+int penghasilan, gajiBersih;
+double pajak = 0;
+
+System.out.print("Masukkan kategori : ");
+kategori = input.nextLine();
+System.out.print("Masukkan besarnya penghasilan : ");
+penghasilan = input.nextInt();
+
+if(kategori.equals ("pekerja")){
+    if (penghasilan <= 2000000){
+        pajak = 0.1;
+    } else if (penghasilan <= 3000000){
+        pajak = 0.15;
+    } else {
+        pajak = 0.2;
+    }
+    gajiBersih = (int) (penghasilan - (penghasilan * pajak));
+    System.out.println("Gaji bersih yang Anda terima : "+ gajiBersih);
+    
+} else if (kategori.equals ("pebisnis")){
+    if (penghasilan <= 2500000){
+        pajak = 0.15;
+    } else if (penghasilan <= 3500000){
+        pajak = 0.2;
+    } else {
+        pajak = 0.25;
+    }
+    gajiBersih = (int) (penghasilan - (penghasilan * pajak));
+    System.out.println("Gaji bersih yang Anda terima : "+ gajiBersih);
+} else {
+    System.out.println("Kategori yang Anda masukkan salah !!!");
+}
+```
+
+    Masukkan kategori : pebisnis
+    Masukkan besarnya penghasilan : 2048485
+    Gaji bersih yang Anda terima : 1741212
+
 
 ### Tugas
 
@@ -208,88 +282,74 @@ Masukkan bilangan kedua: 4
 
 
 ```Java
-//ketik kode program dan lampirkan hasilnya disini
 import java.util.Scanner;
-Scanner input = new Scanner(System.in);
-double angka1, angka2, hasil;
+Scanner sc = new Scanner(System.in);
+double bil1, bil2, hasil;
 char operator;
 
-System.out.println("Masukkan bilangan pertama: ");
-angka1 = input.nextDouble();
-System.out.println("Masukkan operator (+, -, *, /): ");
-operator = input.next().charAt(0);
-System.out.println("Masukkan bilangan kedua: ");
-angka2 = input.nextDouble();
-switch(operator){
-    case '+': 
-    hasil = angka1 + angka2; 
-    System.out.println(angka1 + " + " + angka2 + " = " + hasil); 
-    break;  
-    case '-':
-    hasil = angka1 - angka2;
-    System.out.println(angka1 + " - " + angka2 + " = " + hasil);
-    break; 
-    case '*':
-    hasil = angka1 * angka2;
-    System.out.println(angka1 + " * " + angka2 + " = " + hasil); 
+System.out.print("Masukkan bilangan pertama : "); 
+bil1 = sc.nextDouble(); 
+System.out.print("Masukkan operator ( + - * / ) : ");
+operator = sc.next().charAt(0);
+System.out.print("Masukkan bilangan kedua : "); 
+bil2 = sc.nextDouble();
+
+switch(operator){ 
+    case '+' :
+        hasil = bil1 + bil2;
+        System.out.println(bil1 + " + " + bil2 + " = " + hasil);
     break;
-    case '/':
-    hasil = angka1 / angka2;
-    System.out.println(angka1 + " / " + angka2 + " = " + hasil);
+    case '-' :
+        hasil = bil1 - bil2;
+        System.out.println(bil1 + " — " + bil2 + " = " + hasil);
+    break;
+    case '*' :
+        hasil = bil1 * bil2;
+        System.out.println(bil1 + " * " + bil2 + " = " + hasil);
+    break;
+    case '/' :
+        hasil = bil1 / bil2; 
+        System.out.println(bil1 + " / " + bil2 + " = " + hasil);
     break;
     default:
-    System.out.println("Operator yang anda masukkan salah");
+        System.out.println("Operator yang Anda masukkan salah");
 }
 ```
 
-    Masukkan bilangan pertama: 
-    15
-    Masukkan operator (+, -, *, /): 
-    48
-    Masukkan bilangan kedua: 
-    35
-    Operator yang anda masukkan salah
+    Masukkan bilangan pertama : 50
+    Masukkan operator ( + - * / ) : *
+    Masukkan bilangan kedua : 4
+    50.0 * 4.0 = 200.0
 
 
 2. Dengan menggunakan tiga nilai yang mewakili panjang tiga sisi sebuah segitiga, tentukan apakah segitiga tersebut sama sisi (ketiga sisinya bernilai sama), sama kaki (kedua sisinya bernilai sama), atau sembarang (tidak ada sisi yang bernilai sama)! 
 
 
 ```Java
-//ketik kode program dan lampirkan hasilnya disini
 import java.util.Scanner;
 Scanner sc = new Scanner(System.in);
 double sisi1, sisi2, sisi3;
 
-System.out.println("------------------------------------");
-System.out.println("\tMenentukan Jenis Segitiga");
-System.out.println("------------------------------------");
-System.out.println("");
-System.out.println("Masukkan panjang sisi pertama: ");
+System.out.print("Masukkan sisi pertama : "); 
 sisi1 = sc.nextDouble();
-System.out.println("Masukkan panjang sisi kedua: ");
+System.out.print("Masukkan sisi kedua : "); 
 sisi2 = sc.nextDouble();
-System.out.println("Masukkan panjang sisi ketiga: ");
+System.out.print("Masukkan sisi ketiga : "); 
 sisi3 = sc.nextDouble();
-if(sisi1 == sisi2 && sisi2 == sisi3){
-    System.out.println("Segitiga tersebut adalah segitiga sama sisi");
-} else if(sisi1 == sisi2 || sisi2 == sisi3 || sisi1 == sisi3){
-    System.out.println("Segitiga tersebut adalah segitiga sama kaki");
-} else{
-    System.out.println("Segitiga tersebut adalah segitiga sembarang");
+
+if ((sisi1 == sisi2) && (sisi3 == sisi1)){
+    System.out.println("Segitiga Sama Sisi");
+} else if ((sisi1 == sisi2) || (sisi1 == sisi3) || (sisi2 == sisi3)){
+    System.out.println("Segitiga Sama Kaki");
+} else {
+    System.out.println("Segitiga Sembarang");
 }
 ```
 
-    ------------------------------------
-    	Menentukan Jenis Segitiga
-    ------------------------------------
-    
-    Masukkan panjang sisi pertama: 
-    12
-    Masukkan panjang sisi kedua: 
-    12
-    Masukkan panjang sisi ketiga: 
-    15
-    Segitiga tersebut adalah segitiga sama kaki
+    Masukkan sisi pertama : 25
+    Masukkan sisi kedua : 50
+    Masukkan sisi ketiga : 50
+    Segitiga Sama Kaki
 
 
 3. Warung Padang Gembira meminta Anda membuat sebuah program untuk menerima pesanan dari internet. Program yang Anda buat meminta user untuk memasukkan nama makanan dan harga. Setelah itu, user ditawarkan untuk menggunakan pengiriman ekspres. Jika pengguna menolak, maka jenis pengiriman yang digunakan adalah pengiriman reguler. Biaya pengiriman reguler untuk harga makanan kurang dari Rp 100.000 adalah Rp 20.000, sedangkan untuk harga makanan sama dengan atau lebih dari Rp 100.000 biaya pengirimannya adalah Rp 30.000. Untuk jenis pengiriman ekspres, tambahkan biaya tambahan sebesar Rp 25.000 dari standar biaya pengiriman reguler. Tampilkan struk yang berisi nama makanan yang dibeli + harga, biaya pengiriman, dan total yang harus dibayar!
@@ -323,47 +383,50 @@ TOTAL             Rp 123000
 
 
 ```Java
-//ketik kode program dan lampirkan hasilnya disini
 import java.util.Scanner;
 Scanner input = new Scanner(System.in);
-int hargaMakanan, jenisPengiriman, biayaPengiriman, total;
-String namaMakanan;
+int harga,total;
+String makanan, ekspres;
 
-System.out.print("Masukkan nama makanan: ");
-namaMakanan = input.nextLine();
-System.out.print("Masukkan harga makanan: ");
-hargaMakanan = input.nextInt();
-System.out.print("Apakah Anda ingin pengiriman ekspes (0 = tidak, 1 = iya)?");
-jenisPengiriman = input.nextInt();
-if(jenisPengiriman == 0){
-    biayaPengiriman = 30000;
-    total = hargaMakanan + biayaPengiriman;
-    System.out.println("");
-    System.out.println("STRUK PEMBELIAN");
-    System.out.println(namaMakanan + "\t\t\tRp" + hargaMakanan);
-    System.out.println("Biaya Pengiriman\tRp" + biayaPengiriman);
-    System.out.println("TOTAL\t\t\tRp" + total);
-} else if(jenisPengiriman == 1){
-    biayaPengiriman = 45000;
-    total = hargaMakanan + biayaPengiriman;
-    System.out.println("");
-    System.out.println("STRUK PEMBELIAN");
-    System.out.println(namaMakanan + "\t\t\tRp" + hargaMakanan);
-    System.out.println("Biaya Pengiriman\tRp" + biayaPengiriman);
-    System.out.println("TOTAL\t\t\tRp" + total);
-} else{
-    System.out.println("Disuruh masukin 0 atau 1 kok masukin yang lain, ya salah dong");
+System.out.println("Masukkan nama makanan: ");
+makanan = input.nextLine();
+System.out.print("Masukkan harga makanan: Rp. ");
+harga = input.nextInt();
+System.out.println("Apakah Anda ingin pengiriman ekspres? tekan 1 untuk tidak,tekan 2 untuk ya ");
+ekspres = input.nextLine();
+
+if(ekspres.equalsIgnoreCase("1")){
+    if(harga >= 100000){
+        System.out.println("STRUK PEMBELIAN");
+        System.out.println(String.format("%s Rp %s", makanan,harga));
+        System.out.println("Biaya Pengiriman: Rp.55.000 " );
+        System.out.println("TOTAL "+ (harga  + 55000));
+      }else if (harga <=100000){
+        System.out.println("STRUK PEMBELIAN");
+        System.out.println(String.format("%s Rp %s",makanan, harga));
+        System.out.println("Biaya Pengiriman: Rp.45.000 " );
+        System.out.println("TOTAL "+(harga + 45000));
+    }
+}
+if(ekspres.equalsIgnoreCase("2")){
+   if(harga >= 100000){
+        System.out.println("STRUK PEMBELIAN");
+        System.out.println(String.format("%s Rp %s", makanan,harga));
+        System.out.println("Biaya Pengiriman: Rp.30.000 " );
+        System.out.println("TOTAL "+ (harga  + 30000));
+      }else if (harga <=100000){
+        System.out.println("STRUK PEMBELIAN");
+        System.out.println(String.format("%s Rp %s",makanan, harga));
+        System.out.println("Biaya Pengiriman: Rp.20.000 " );
+        System.out.println("TOTAL "+(harga + 20000));
+    }
 }
 ```
 
-    Masukkan nama makanan: Java
-    Masukkan harga makanan: 12000
-    Apakah Anda ingin pengiriman ekspes (0 = tidak, 1 = iya)?0
-    
-    STRUK PEMBELIAN
-    Java			Rp12000
-    Biaya Pengiriman	Rp30000
-    TOTAL			Rp42000
+    Masukkan nama makanan: 
+    soto
+    Masukkan harga makanan: Rp. 25000
+    Apakah Anda ingin pengiriman ekspres? tekan 1 untuk tidak,tekan 2 untuk ya 
 
 
 4. Perhatikan flowchart berikut ini!
@@ -374,7 +437,6 @@ if(jenisPengiriman == 0){
 
 
 ```Java
-//ketik kode program dan lampirkan hasilnya disini
 import java.util.Scanner;
 Scanner input = new Scanner(System.in);
 int umur;
@@ -414,18 +476,13 @@ if(umur >= 18){
         System.out.print("Input yang anda masukkan salah, silahkan mengulangi program.");
     }
 }
-
-    
 ```
 
-    Masukkan umur Anda: 17
-    Apakah Anda berada dalam proses pendidikan (1 = ya, 0 = tidak)?0
+    Masukkan umur Anda: 19
+    Apakah Anda memiliki pekerjaan (1 = ya, 0 = tidak)?1
+    Masukkan pendapatan perbulan Anda: Rp250000
+    Masukkan berapa tanggunan keluarga anda (termasuk anda sendiri): 2000000
     Anda termasuk penduduk miskin, tetap semangat dan jangan menyerah
-
-
-```Java
-
-```
 
 
 ```Java
