@@ -25,7 +25,7 @@ Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks perul
     
 
 > Flowchart diatas digunakan untuk menghitung nilai faktorial, selanjutnya kita akan membuat programnya berdasarkan
-> flowchart di atas!
+> flowchart di atas!!!
 
 2. Tambahkan library Scanner, deklarasi Scanner, dan buat variabel angka untuk menampung data yang diinput melalui keyboard
 
