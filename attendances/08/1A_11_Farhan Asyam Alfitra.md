@@ -35,8 +35,12 @@ import java.util.Scanner;
 Scanner input = new Scanner(System.in);
 
 String kategori;
-int penghasilan;
+int penghasilan, pemilihan,  penghasilansetahun, keluarga, totalharta, totalV = 0;
 double pajak = 0;
+short namaKekayaan, namaHarta, vharta;
+short pendidikan;
+int Sma, kuliah;
+
 
 System.out.print("Pengusaha atau Tidak: ");
 kategori = input.nextLine();
@@ -44,10 +48,85 @@ kategori = input.nextLine();
 if(kategori.equalsIgnoreCase ("Pengusaha")){
     System.out.print("Berapa Penghasilan Anda Dalam Setahun: ");
     penghasilan = input.nextInt();
-    else if 
+    } else {
+        pengusahasetahun = input.nextInt();
+        pajakhasil = penghasilansetahun * 0,15
         }
-} else if (kategori.equalsIgnoreCase ("Tidak")){
-    
+
+    do{
+	System.out.print("Masukkan harta yang dimiliki:");
+	namaHarta = input.nextShort();
+	System.out.print("Masukkan nilai jual " + Harta + " saat ini ");
+	vHarta = input.nextInt();
+	totalV  = totalV + vHarta;
+	System.out.print("Apakah masih ada yang ingin ditambahkan (1 untuk ya)");
+	pemilihan=input.nextInt;
+	} while (pemilihan = 1 );{
+		System.out.print("Terima kasih");
+	}
+	System.out.print("Apakah anda berkeluarga? (1 untuk ya, 0 untuk tidak");
+	keluarga = input.nextInt();
+	if(keluarga=1){
+		short pendidikan;
+		System.out.print("Apa pendidikan terakhir anda?");
+		pendidikan=input.nextShort();
+		int sma;
+		System.out.print("Berapa anak anda yang SMA?");
+		sma=input.nextInt();
+		int kuliah;
+		System.out.print("Berapa anak anda yang kuliah?");
+		kuliah=input.nextInt();
+		if(kuliah >= 1 && sma >= 1 && totalV >50000000){
+			int pajak;
+			pajak=(totalV * 0,10)+pajakPenghasilan;
+			System.print.out("pajak anda: "+pajak);
+		} else{
+			int pajak;
+			pajak =(totalV * 0,5)+pajakPenghasilan;
+			System.print.out("pajak anda: "+pajak);
+		}
+		
+	} else {
+		int pajak;
+		pajak =(totalV * 0,5)+pajakPenghasilan;
+		System.print.out("pajak anda: "+pajak);
+	}
+		
+} else if (usaha = 0){
+	do{
+	System.out.print("Masukkan harta yang anda miliki:");
+	namaHarta = input.nextShort();
+	System.out.print("Masukkan nilai jual " + harta + " saat ini!");
+	vHarta = input.nextInt();
+	totalV  = totalV + vHarta;
+	System.out.print("Apakah masih ada harta yang harus diinput? (1 untuk ya)");
+	pemilihan=input.nextInt;
+	} while (pemilihan = 1);{
+		System.out.print("Terima kasih");
+	}
+	System.out.print("Apakah anda sudah berkeluarga? (1 untuk ya, 0 untuk tidak");
+	keluarga=input.nextInt();
+	if(keluarga=1){
+		System.out.print("Apa pendidikan terakhir anda?");
+		pendidikan=input.nextShort();
+		System.out.print("Berapa anak anda yang SMA?");
+		sma=input.nextInt();
+		System.out.print("Berapa anak anda yang kuliah?");
+		kuliah=input.nextInt();
+		if(kuliah >= 1 && sma >= 1 && totalV >50000000){
+			pajak =totalV * 0,10;
+			System.print.out("pajak anda: "+ pajak);
+		} else{
+			pajak = totalV * 0,5;
+			System.print.out("pajak anda: "+ pajak);
+		}
+		
+	} else {
+		pajak = totalV * 0,5;
+		System.print.out("pajak anda: "+ pajak);
+	}
+} else {
+	System.out.print("Anda Salah Memasukkan Angka");
 }
 ```
 
