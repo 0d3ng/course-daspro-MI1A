@@ -60,7 +60,7 @@ if(usaha.equalsIgnoreCase("Ya")){
             }else{
                 System.out.println("Anda tidak wajib Pajak");
         }
-        }else(tingkatPendidikanequalsIgnoreCase("SD & SMP")){
+        }else(tingkatPendidikan.equalsIgnoreCase("SD & SMP")){
             if(totalHarta <= 50000000){
                 pajak = totalHarta * 5 % 100;
                 setelahPajak = pajakAwal + pajak;
