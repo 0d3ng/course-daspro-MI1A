@@ -41,6 +41,7 @@ short namaKekayaan, namaHarta, vharta;
 short pendidikan;
 int Sma, kuliah;
 
+
 System.out.print("Pengusaha atau Tidak: ");
 kategori = input.nextLine();
 
