@@ -34,7 +34,7 @@ kode program pada cell yang telah disediakan dan jangan lupa untuk menjalankan h
 import java.util.Scanner;
 Scanner in = new Scanner(System.in);
 int hasil1Tahun, jmlhAnak, totalHarta, nilaiJual, pajak, setelahPajak, pajakAwal, stlhPajakAwal;   
-String usaha, keluarga, tingkatPendidikan, hartaKekayaan;  
+String usaha, tingkatPendidikan, hartaKekayaan;  
 System.out.println("Program Perhitungan Pajak");
 System.out.print("Apakah sudah memiliki usaha (Ya / Tidak)? ");
 usaha = in.nextLine();
