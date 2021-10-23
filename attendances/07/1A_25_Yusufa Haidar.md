@@ -339,6 +339,7 @@ Jika dalam percobaan 2 kita menggunakan break untuk menghentikan kode program, d
 if(angka>=50) continue sebagai syarat dalam operasi di kode program
 total+=angka sebagai operasi perhitungan dalam kode program
 count++ sebagai increment pada tiap putaran didalam kode program
+Apabila angka yang diinput lebih dari sama dengan 50 maka akan terlewati / tidak terbaca 
 ```
 
 ### Tugas
