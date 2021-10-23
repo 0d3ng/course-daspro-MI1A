@@ -1,6 +1,7 @@
 Identitas Diri
 
 Nim : 2131710071
+
 Nama: Diva Gracia Salmanta Candra
 
 ### Soal UTS 2021-2022
@@ -33,10 +34,12 @@ jumlah = input.nextInt();
 System.out.print("Masukkan harga barang : ");
 harga = input.nextInt();
 
-if(jumlah == 3){
+if(barang.equalsIgnoreCase ("minuman")){
+    if(jumlah == 3){
     diskon = harga * 5 / 100;
-} else {
+    } else {
     diskon = 0;
+}
 }
 
 System.out.println("Apakah Anda mau beli kantong plastik? (0=tidak, 1=ya)");
@@ -63,9 +66,10 @@ System.out.print("Total belanja yang perlu Anda bayar adalah " +total);
     1
     Total belanja yang perlu Anda bayar adalah 59200
 
-## Penjelasan kode
+# Penjelasan kode
+- Barangnya adalah minuman maka lanjut ke penyaringan if berikutnya
 - Karena inputan jumlah barang sama dengan 3 maka pembeli mendapat diskon senilai 5% dari harga minuman (5% dari 20000 adalah 1000 maka pembeli mendapat diskon 1000)
-- Ketika ditanya mengenai kantong plastik, pembeli menginput 1 yg artinya mau membeli. Jadi total yang harus dibayarnya yaitu harga minuman dikali jumlah minuman kemudian dikurangi diskon dan ditambah dengan 200 karena mau membeli kantong plastik (sesuai inputan, harganya 20000 dengan jumlah 3 dan ia mendapat diskon 1000 kemudia ditambah harga plastik 200 : 20000 * 3 - 1000 + 200 = 592000) 
+- Ketika ditanya mengenai kantong plastik, pembeli menginput 1 yg artinya mau membeli. Jadi total yang harus dibayarnya yaitu harga minuman dikali jumlah minuman kemudian dikurangi diskon dan ditambah dengan 200 karena mau membeli kantong plastik (sesuai inputan, harganya 20000 dengan jumlah 3 dan ia mendapat diskon 1000 kemudia ditambah harga plastik 200 : 20000 * 3 - 1000 + 200 = 592000)
 - Jumlah pembayaran tidak sama dengan satu juta maka pembeli tidak perlu membayar PPN.
 
 2.	Seorang yang akan membayar pajak perlu dihitung semua harta kekayaan atau penghasilan. Kriteria yang dapat dihitung adalah sebagai berikut
