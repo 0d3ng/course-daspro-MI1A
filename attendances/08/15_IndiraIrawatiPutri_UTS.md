@@ -1,8 +1,8 @@
 Identitas Diri
 
-Nim : [2131710136]
+Nim : [2131710022]
 
-Nama: [Galur Arasy Lumintang]
+Nama: [Indira Irawati Putri]
 
 ### Soal UTS 2021-2022
 Waktu: 90 menit
