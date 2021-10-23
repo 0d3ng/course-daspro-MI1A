@@ -1,8 +1,8 @@
 Identitas Diri
 
-Nim : [Isikan NIM Anda]
+Nim : [2131710038]
 
-Nama: [Isikan Nama Anda]
+Nama: [Yusufa Haidar]
 
 ### Soal UTS 2021-2022
 Waktu: 90 menit
