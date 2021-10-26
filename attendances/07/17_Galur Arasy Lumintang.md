@@ -33,24 +33,16 @@ Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks perul
 
 
 ```Java
-// Ketik kode program di bawah sini
 import java.util.Scanner;
-Scanner input = new Scanner(System.in);
-int i, angka, faktorial;
-faktorial = 1;
 ```
+
 3. Buatlah deklarasi dan inisialisasi variabel faktorial sesuai dengan flowchart diatas
 
 
 ```Java
 // Ketik kode program di bawah sini
-System.out.print("Input angka: ");
-angka = input.nextInt();
-for(int i = 1; i<=angka; i++){
-    faktorial = faktorial * i;
-    System.out.printf("i = %d hasilnya adalah %d\n" ,i, faktorial);
-}
-System.out.println("Hasilnya adalah "+faktorial);
+Scanner in = new Scanner(System.in);
+int angka, faktorial = 1;
 ```
 
 4. Tambahkan struktur perulangan untuk menghitung hasil faktorial sebuah nilai yang diinputkan menggunakan for
@@ -64,15 +56,22 @@ System.out.println("Hasilnya adalah "+faktorial);
 // Ketik kode program di atas di bawah sini
 System.out.println("=====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====");
 System.out.print("Masukkan Bilangan : ");
-angka = input.nextInt();
-for(int i=1; i<=angka; i++)
-    faktorial*=i;
-System.out.print("Nilai faktorial bilangan tersebut adalah : "+ faktorial);
+angka = in.nextInt();
+for(int i=1; i <= angka; i++) {
+faktorial *=i;
+System.out.printf("nilai i = %d adalah %d\n", i, faktorial);
+}
+System.out.print("Nilai faktorial bilangan tersebut adalah : " + faktorial);
 ```
 
     =====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====
-    Masukkan Bilangan : 15
-    Nilai faktorial bilangan tersebut adalah : 2004310016
+    Masukkan Bilangan : 5
+    nilai i = 1 adalah 1
+    nilai i = 2 adalah 2
+    nilai i = 3 adalah 6
+    nilai i = 4 adalah 24
+    nilai i = 5 adalah 120
+    Nilai faktorial bilangan tersebut adalah : 120
 
 5. Ubah nilai variabel faktorial seperti semula. Kemudian gunakan struktur perulangan while untuk menghitung hasil faktorial sebuah nilai yang diinputkan
     
@@ -83,21 +82,26 @@ System.out.print("Nilai faktorial bilangan tersebut adalah : "+ faktorial);
 
 ```Java
 // Ketik kode program di atas di bawah sini
-faktorial=1;
+faktorial = 1;
+int i = 1;
 System.out.println("=====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====");
 System.out.print("Masukkan Bilangan : ");
-angka = input.nextInt();
-int i=1;
-while(i<=angka){
-    faktorial*=i;
-    i++;
+angka = in.nextInt();
+while(i <= angka) {
+faktorial *=i; i++;
+    System.out.printf("nilai i = %d adalah %d\n", i, faktorial);
 }
-System.out.print("Nilai faktorial bilangan tersebut adalah : "+ faktorial);
+System.out.print("Nilai faktorial bilangan tersebut adalah : " + faktorial);
 ```
 
     =====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====
-    Masukkan Bilangan : 12
-    Nilai faktorial bilangan tersebut adalah : 479001600
+    Masukkan Bilangan : 5
+    nilai i = 2 adalah 1
+    nilai i = 3 adalah 2
+    nilai i = 4 adalah 6
+    nilai i = 5 adalah 24
+    nilai i = 6 adalah 120
+    Nilai faktorial bilangan tersebut adalah : 120
 
 6. Kembalikan lagi nilai variabel faktorial seperti semula. Gunakan struktur perulangan do-while untuk menghitung hasil faktorial sebuah nilai yang diinputkan
     
@@ -108,22 +112,27 @@ System.out.print("Nilai faktorial bilangan tersebut adalah : "+ faktorial);
 
 ```Java
 // Ketik kode program di atas di bawah sini
-faktorial=1;
+faktorial = 1;
+int i = 1;
 System.out.println("=====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====");
 System.out.print("Masukkan Bilangan : ");
-angka = input.nextInt();
-int i=1;
-do{
-    faktorial*=i;
-    i++;
+angka = in.nextInt();
+do{    
+    faktorial *=i; i++;
+    System.out.printf("nilai i = %d adalah %d\n", i, faktorial);
 }
-while(i<=angka);
-System.out.print("Nilai faktorial bilangan tersebut adalah : "+ faktorial);
+while(i <= angka);
+System.out.print("Nilai faktorial bilangan tersebut adalah : " + faktorial);
 ```
 
     =====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====
-    Masukkan Bilangan : 11
-    Nilai faktorial bilangan tersebut adalah : 39916800
+    Masukkan Bilangan : 5
+    nilai i = 2 adalah 1
+    nilai i = 3 adalah 2
+    nilai i = 4 adalah 6
+    nilai i = 5 adalah 24
+    nilai i = 6 adalah 120
+    Nilai faktorial bilangan tersebut adalah : 120
 
 ##### Pertanyaan
 1. Pada program diatas, apakah kegunaan baris berikut?
@@ -134,7 +143,7 @@ System.out.print("Nilai faktorial bilangan tersebut adalah : "+ faktorial);
 
 ```Java
 // Ketik jawaban disini
-Sebagai operasi untuk menghitung nilai faktorial dalam kode program
+// ekuivalen dengan faktorial = faktorial * i;
 ```
 
 2. Modifikasi program diatas dibagian struktur pemilihannya sehingga hasilnya menjadi seperti di bawah ini:
@@ -145,9 +154,8 @@ Sebagai operasi untuk menghitung nilai faktorial dalam kode program
 
 ```Java
 // Ketik kode program di atas di bawah sini
-import java.util.Scanner;
-Scanner in = new Scanner(System.in);
-int angka, faktorial = 1, i = 1;
+faktorial = 1;
+int i = 1;
 String fmt = "";
 System.out.println("=====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====");
 System.out.print("Masukkan Bilangan : ");
@@ -164,13 +172,15 @@ System.out.printf(" = %d", faktorial);
 
     =====PROGRAM MENGHITUNG NILAI FAKTORIAL DENGAN FOR=====
     Masukkan Bilangan : 5
-    5Faktorial = 1x2x3x4x5 = 5
+    5Faktorial = 1x2x3x4x5 = 120
 
-Kode Program diatas menggunakan kode program perulangan for dengan memodifikasi bagian struktur pemilihannya menjadi
 
-Masukkan Bilangan : 5
 
-5Faktorial = 1x2x3x4x5 = 5
+
+    java.io.PrintStream@ab1915b
+
+
+
 #### Percobaan 2 : Keluar dari perulangan menggunakan break
 
 #### Waktu percobaan : 40 menit
@@ -184,22 +194,23 @@ Masukkan Bilangan : 5
 ```Java
 // Ketik kode program di atas di bawah sini
 Scanner input=new Scanner(System.in);
-int angka, total;
+int angka,total;
 System.out.println("===PROGRAM FOR LOOP DENGAN BREAK===");
 for(total=0;true;){
-    System.out.print("Masukkan Bilangan : ");
-    angka=input.nextInt();
-    total+=angka;
-    if(total>50) break;
+System.out.print("Masukkan Bilangan : ");
+angka=input.nextInt();
+total+=angka;
+if(total>50) break;
 }
 System.out.println("Jumlah angka-angka yang telah dimasukkan : "+total);
 ```
 
     ===PROGRAM FOR LOOP DENGAN BREAK===
-    Masukkan Bilangan : 20
-    Masukkan Bilangan : 21
-    Masukkan Bilangan : 22
-    Jumlah angka-angka yang telah dimasukkan : 63
+    Masukkan Bilangan : 50
+    Masukkan Bilangan : 2
+    Jumlah angka-angka yang telah dimasukkan : 52
+
+
 2. Buat perulangan yang sama dengan struktur perulangan while
 <p align="left">
     <img width="696" height="124" src="images/while2.jpg" align="left">
@@ -210,21 +221,21 @@ System.out.println("Jumlah angka-angka yang telah dimasukkan : "+total);
 // Ketik kode program di atas di bawah sini
 int angka,total;
 System.out.println("===PROGRAM FOR LOOP DENGAN BREAK===");
-total=0;
 while(true){
-    System.out.print("Masukkan Bilangan : ");
-    angka=input.nextInt();
-    total+=angka;
-    if(total>50) break;
+System.out.print("Masukkan Bilangan : ");
+angka=input.nextInt();
+total+=angka;
+if(total>50) break;
 }
 System.out.println("Jumlah angka-angka yang telah dimasukkan : "+total);
 ```
 
     ===PROGRAM FOR LOOP DENGAN BREAK===
-    Masukkan Bilangan : 15
-    Masukkan Bilangan : 20
-    Masukkan Bilangan : 25
-    Jumlah angka-angka yang telah dimasukkan : 60
+    Masukkan Bilangan : 50
+    Masukkan Bilangan : 50
+    Jumlah angka-angka yang telah dimasukkan : 100
+
+
 3. Tuliskan perulangan diatas dalam struktur do-while
     <p align="left">
     <img width="696" height="124" src="images/dowhile2.jpg" align="left">
@@ -235,9 +246,8 @@ System.out.println("Jumlah angka-angka yang telah dimasukkan : "+total);
 // Ketik kode program di atas di bawah sini
 int angka,total;
 System.out.println("===PROGRAM FOR LOOP DENGAN BREAK===");
-total=0;
-do
-{
+total = 0;
+do {
     System.out.print("Masukkan Bilangan : ");
     angka=input.nextInt();
     total+=angka;
@@ -248,18 +258,28 @@ System.out.println("Jumlah angka-angka yang telah dimasukkan : "+total);
 ```
 
     ===PROGRAM FOR LOOP DENGAN BREAK===
-    Masukkan Bilangan : 10
-    Masukkan Bilangan : 15
-    Masukkan Bilangan : 20
-    Masukkan Bilangan : 30
-    Jumlah angka-angka yang telah dimasukkan : 75
+    Masukkan Bilangan : 50
+    Masukkan Bilangan : 2
+    Jumlah angka-angka yang telah dimasukkan : 52
+
+
 ##### Pertanyaan
 1. Jelaskan fungsi kode program yang telah dibuat pada percobaan diatas!
 
 
 ```Java
 // Ketik jawaban disini
-Kode program diatas merupakan kode program yang sama dengan percobaan 1 hanya saja dalam percobaan 2 kode program ditujukan untuk keluar dari perulangan dengan menggunakan Break
+int angka,total; // Deklarasi variabel angka, total
+System.out.println("===PROGRAM FOR LOOP DENGAN BREAK==="); // Output header
+total = 0; // Assignment variabel total
+do { // kode blok program yang akan dijalankan
+    System.out.print("Masukkan Bilangan : "); // Output label input
+    angka=input.nextInt(); // Assignment variabel angka berdasarkan input
+    total+=angka; // Assignment variabel total dengan penjumlahan total dengan angka
+    if(total>50) break; // Jika nilai total lebih dari 50 maka perulangan akan berhenti
+}
+while(true); // Perulangan tak terhenti, dikarenakan kondisi bernilai konstanta true
+System.out.println("Jumlah angka-angka yang telah dimasukkan : "+total); // Output Total
 ```
 
 2. Jelaskan fungsi kode berikut!
@@ -271,8 +291,8 @@ Kode program diatas merupakan kode program yang sama dengan percobaan 1 hanya sa
 
 ```Java
 // Ketik jawaban disini
-total=0 sebagai inisialisasi dalam kode program
-true sebagai syarat perulangan dalam kode program
+// Infinite Looping
+// Maksudnya adalah jika ekspresi ke dua bernilai true, maka program akan dijalankan berulang kali tanpa jeda
 ```
 
 #### Percobaan 3 : Keluar dari step perulangan menggunakan continue
@@ -288,35 +308,46 @@ true sebagai syarat perulangan dalam kode program
 
 ```Java
 // Ketik kode program di atas di bawah sini
-Scanner input=new Scanner(System.in);
+Scanner input = new Scanner(System.in);
 int angka, total, count;
 double avg;
 count = 0;
-System.out.println("===PROGRAM FOR LOOP DENGAN BREAK===");
+System.out.println("===PROGRAM FOR LOOP DENGAN CONTINUE===");
 for(int i=0;i<5;i++){
-    System.out.print("Masukkan Bilangan : ");
-    angka=input.nextInt();
-    if(angka>=50) continue;
-    total+=angka;
-    count++;
+System.out.print("Masukkan Bilangan : ");
+angka=input.nextInt();
+System.out.println(total);
+if(angka>=50) continue;
+total+=angka;
+count++;
+System.out.println(total);
 }
 System.out.println("Jumlah angka-angka yang kurang dari 50: "+total);
 avg=(double)total/count;
 System.out.println("Rata-rata angka yang kurang dari 50: "+avg);
 ```
 
-    ===PROGRAM FOR LOOP DENGAN BREAK===
+    ===PROGRAM FOR LOOP DENGAN CONTINUE===
+    Masukkan Bilangan : 50
+    0
+    Masukkan Bilangan : 60
+    0
     Masukkan Bilangan : 10
-    Masukkan Bilangan : 15
-    Masukkan Bilangan : 5
+    0
+    10
     Masukkan Bilangan : 20
-    Masukkan Bilangan : 21
-    Jumlah angka-angka yang kurang dari 50: 71
-    Rata-rata angka yang kurang dari 50: 14.2
+    10
+    30
+    Masukkan Bilangan : 30
+    30
+    60
+    Jumlah angka-angka yang kurang dari 50: 60
+    Rata-rata angka yang kurang dari 50: 20.0
+
+
 
 ```Java
 5. Jalankan program. Amati apa yang terjadi!
-Kode program akan berjalan, tetapi apabila ketika kita memasukkan angka 50 dalam bilangan maka angka tersebut tidak akan dihitung dalam operasi, karena fungsi continue adalah untuk men-skip kode program sesuai syarat.
 ```
 
 ##### Pertanyaan
@@ -324,8 +355,13 @@ Kode program akan berjalan, tetapi apabila ketika kita memasukkan angka 50 dalam
 
 
 ```Java
-// Ketik jawaban disini
-Jika dalam percobaan 2 kita menggunakan break untuk menghentikan kode program, dipercobaan 3 kita menggunakan continue untuk men-skip sebuah kode program, tetapi kode program tersebut masih dilanjutkan.
+/* Ketik jawaban disini
+
+Percobaan 2
+Menggunakan break sebagai pemberhenti loop
+
+Percobaan 3
+Menggunakan continue yang berfungsi untuk melewati kode program jika suatu kondisi terpenuhi
 ```
 
 2. Jelaskan apa fungsi perintah kode program dibawah ini?
@@ -335,11 +371,13 @@ Jika dalam percobaan 2 kita menggunakan break untuk menghentikan kode program, d
 
 
 ```Java
-// Ketik jawaban disini
-if(angka>=50) continue sebagai syarat dalam operasi di kode program
-total+=angka sebagai operasi perhitungan dalam kode program
-count++ sebagai increment pada tiap putaran didalam kode program
-Apabila angka yang diinput lebih dari sama dengan 50 maka akan terlewati / tidak terbaca 
+/* Ketik jawaban disini
+Jika angka lebih dari sama dengan 50 maka proses perulangan pada saat itu juga akan langsung kembali
+mulai dari awal baris program perulangan
+
+total+=angka; count++;
+maka yang akan terjadi adalah variabel total ditambah dengan variabel angka, 
+lalu pada variabel count akan terjadi increment
 ```
 
 ### Tugas
@@ -361,31 +399,40 @@ Contoh:
 
 ```Java
 // Ketik kode program disini
-Scanner in=new Scanner(System.in);
+import java.util.Scanner;
+Scanner in = new Scanner(System.in);
 int bil, jmlBilGenap, totalGenap = 1;
 double avg;
+
 System.out.print("Masukkan angka: ");
 bil = in.nextInt();
-jmlBilGenap = bil / 2;
-System.out.printf("Banyaknya bilangan genap dari 1 sampai %d adalah %d\n",bil,jmlBilGenap);
-System.out.print("Angka genap dalam range tersebut adalah");
-for(int i=1;i<=bil;i++){
-    if(i%2!=0)continue;
-    System.out.printf(", %d",i);
+jmlBilGenap = bil/2;
+System.out.printf("Jumlah Bilangan Genap dari 1 sampai %d adalah ", jmlBilGenap);
+
+System.out.print("\nAngka genap dalam range tersebut adalah");
+for(int i = 1; i <= bil; i++) {
+    if(i % 2 != 0) continue;
+    System.out.printf(", %d", i);
     totalGenap += i;
 }
-avg = (double)(totalGenap-1) / jmlBilGenap;
-System.out.printf("\nHasil penjumlahan bilangan genap dari 1 sampai %d adalah %d",bil,totalGenap-1);
-System.out.printf("\nRata-rata bilangan genap dari 1 sampai %d adalah %.1f",bil,avg);
+avg= totalGenap/jmlBilGenap;
+System.out.printf("\nHasil Penjumlahan bilangan genap dari 1 sampai %d adalah %d\n", bil, totalGenap -1);
+System.out.printf("Rata-rata bilangan genap dari 1 sampai %d adalah %.1f\n", bil, avg);
 ```
 
     Masukkan angka: 10
-    Banyaknya bilangan genap dari 1 sampai 10 adalah 5
+    Jumlah Bilangan Genap dari 1 sampai 5 adalah 
     Angka genap dalam range tersebut adalah, 2, 4, 6, 8, 10
-    Hasil penjumlahan bilangan genap dari 1 sampai 10 adalah 30
+    Hasil Penjumlahan bilangan genap dari 1 sampai 10 adalah 30
     Rata-rata bilangan genap dari 1 sampai 10 adalah 6.0
 
-Kode Program diatas menggunakan perulangan for dimana variabel data terdiri dari bil, jmlBilGenap, totalGenap, dan avg. Lalu int i=1 sebagai inisialisasi dimulainya kode program, i<=bil sebagai batas perulangan, dan i++ sebagai increment. Lalu if(i%2!=0)continue sebagai kondisi untuk ditampilkannya nilai genap dalam kode program.
+
+
+
+
+    java.io.PrintStream@427beef9
+
+
 
 2. Buatlah program untuk menampilkan angka 1 hingga angka masukan pengguna secara berurutan dan melompati angka kelipatan 5. Seperti tampilan di bawah ini
 <p align="left">
@@ -396,14 +443,14 @@ Kode Program diatas menggunakan perulangan for dimana variabel data terdiri dari
 ```Java
 // Ketik kode program disini
 import java.util.Scanner;
-Scanner input = new Scanner(System.in);
-int x;
-for (x=1; x<=19; x++){
-    if(x%5==0) continue;
-System.out.printf("%s\n",x);
-}
+Scanner in = new Scanner(System.in);
+System.out.print("Masukkan angka: ");
+int i = 1,angka = in.nextInt();
+
+for(;i <= angka; i++) if(i % 5 != 0) System.out.printf("%d\n", i);    
 ```
 
+    Masukkan angka: 19
     1
     2
     3
@@ -421,7 +468,6 @@ System.out.printf("%s\n",x);
     18
     19
 
-Kode program diatas menggunakan perulangan for dimana x sebagai variabel data, exp1 = x=1 (sebagai inisialisasi), exp2 = x<=19 (sebagai batas nilai dalam kode program), exp3= x++ sebagai increment dalam kode program lalu System.out.printf("%s\n",x) sebagai penunjuk hasil kode program agar berbentuk baris
 
 3. Buatlah sebuah program yang menampilkan deret bilangan fibonacci sebagai berikut. Dimana bilangan yang terletak di sebelah kanan adalah hasil penjumlahan dari 2 bilangan sebelumnya
  <p align="left">
@@ -433,41 +479,31 @@ Kode program diatas menggunakan perulangan for dimana x sebagai variabel data, e
 ```Java
 // Ketik kode program disini
 import java.util.Scanner;
-Scanner input = new Scanner(System.in);
-    Scanner input = new Scanner(System.in);
-    System.out.print("Masukan Jumlah Deret Fibonacci: ");
-    int n = input.nextInt();
-    long fib[] = new long[n];
-         fib[0] = 0; fib[1] = 1;
-         
-        for(int i = 2; i < n; i++) {
-            fib[i] = fib[i-1] + fib[i-2];
+        int bilangan, simpananSementara, prosesDijalankan, hasilAkhir;
+        Scanner in = new Scanner(System.in);
+        System.out.print("Masukan banyak bilangan yang mau ditampilkan: ");
+        bilangan = in.nextInt();
+        simpananSementara = 1;
+        prosesDijalankan = 1;
+        hasilAkhir = 1;
+        for (int i =1; i <= bilangan; i++){
+            System.out.printf("sumof: %d + %d = %d\n",simpananSementara,prosesDijalankan,hasilAkhir);
+            hasilAkhir = simpananSementara + prosesDijalankan;
+            simpananSementara = prosesDijalankan;
+            prosesDijalankan = hasilAkhir;
+            if(hasilAkhir > bilangan) break;
         }
-         
-        for(int i = 0; i < n; i++) {
-            System.out.print(fib[i] +  " ");
-}
 ```
 
-    Masukan Jumlah Deret Fibonacci: 12
-    0 1 1 2 3 5 8 13 21 34 55 89 
+    Masukan banyak bilangan yang mau ditampilkan: 89
+    sumof: 1 + 1 = 1
+    sumof: 1 + 2 = 2
+    sumof: 2 + 3 = 3
+    sumof: 3 + 5 = 5
+    sumof: 5 + 8 = 8
+    sumof: 8 + 13 = 13
+    sumof: 13 + 21 = 21
+    sumof: 21 + 34 = 34
+    sumof: 34 + 55 = 55
+    sumof: 55 + 89 = 89
 
-Kode program diatas menggunakan perulangan for lalu sintak
-
-fib[0] = 0; fib[1] = 1;
-
-digunakan untuk menginisialisasikan nilai dari indek 0 adalah 0 dan nilai dari indek 1 adalah 1 lalu untuk sintak
-
-for(int i = 2; i < n; i++) {
-
-fib[i] = fib[i-1] + fib[i-2];
-
-   }
-
-for (int i = 0; i < n; i++) {
-
-       System.out.print(fib[i] +  " ");
-
-} 
-
-digunakan untuk memproses bilangan fibonacci
