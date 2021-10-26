@@ -90,8 +90,8 @@ import java.math.BigDecimal;
 //     }
     System.out.println("-------------------------------------------------------");    
     System.out.println("Penghasilan anda: Rp." + penghasilan);    
-    System.out.println("Pajak yang harus anda bayar: Rp." + penghasilan * 0.15);
-```
+    System.out.println(": Rp." + penghasilan * 0.15);
+```p
 
     Anda memiliki usaha? (ya/tidak): ya
     
