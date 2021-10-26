@@ -6,7 +6,7 @@
   <dd>Indira Irawati Putri</dd>
     
   <dt>Kelas :</dt>
-  <dd>1A-MI</dd>
+  <dd>1A-D3MI</dd>
 </dl>
 
 
