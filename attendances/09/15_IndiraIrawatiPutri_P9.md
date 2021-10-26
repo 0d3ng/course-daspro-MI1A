@@ -146,6 +146,7 @@ for (i=1;i<=nilai ;i++ )
         System.out.print("*");
     }
     System.out.println();
+    
   }
 ```
 
