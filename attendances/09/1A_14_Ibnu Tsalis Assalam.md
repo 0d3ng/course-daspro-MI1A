@@ -148,7 +148,7 @@ while(i <= N){
         System.out.print("*");
         j++;
     }
-    System.out.println();
+    System.out.println();//penambahan enter/ next line
     i++;
 }
 ```
@@ -209,7 +209,7 @@ int N = sc.nextInt();
 
 for(int i = 1; i <= N; i++){
     for(int j = 1; j <= i; j++){
-        System.out.print(i);
+        System.out.print(i);//mengganti j menjadi i
     }
     System.out.println();
 }
@@ -289,13 +289,16 @@ do{
         int answer = input.nextInt();
         input.nextLine();
         
-        if(answer < number){
+        if(answer < number)//artinya input pengguna lebih kecil dari angka random
+        {
             System.out.println("Tebakan Anda lebih kecil dari angka yang dimaksud!");
         }
-        else if(answer > number){
+        else if(answer > number)////artinya input pengguna lebih besar dari angka random
+        {
             System.out.println("Tebakan Anda lebih besar dari angka yang dimaksud!");
         }
-        else{
+        else//input pengguna tidak kurang dan tidak lebih, atau sama dengan angka random
+        {
             System.out.println("Yay... tebakan Anda benar... Selamat!!!");
             success = true;
         }
@@ -323,7 +326,7 @@ do{
 do{
     int number = random.nextInt(10) + 1;
     boolean success = false;
-    int i = 1;
+    int i = 0;//inisial i diawal
     
     do{
         System.out.print("Tebak angka (1-10) : ");
@@ -333,12 +336,14 @@ do{
         if(answer == number){
             System.out.println("Yay... tebakan Anda benar... Selamat!!!");
             success = true;
+            break;//agar jika input ke10 benar tidak masuk ke pernyataan berikutnya
         }
-        i++;
-        if(i == 11){
+        i++;//penambahan i disetiap loop
+        if(i == 10)//artinya sudah input 10x
+        {
             System.out.println("Maaf Anda gagal menebak angka sebanyak 10x");
-            success = true;
-    }
+            break;//break loop
+        }
     } while(!success);
     
     
@@ -444,7 +449,7 @@ System.out.print("Masukkan nilai N : ");
 N = sc.nextInt();
 
 for(int i = 1; i <= N; i++){
-    for (int j = 1; j <= (N - i); j++){
+    for(int j = 1; j <= (N - i); j++){
         System.out.print(" ");
     }   
     for(int k = 0; k != (2 * i - 1); k++){
