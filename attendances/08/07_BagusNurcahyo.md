@@ -1,8 +1,8 @@
-## Identitas Diri
+Identitas Diri
 
-Nim : 2131710142
+Nim : [2131710120]
 
-Nama: Selly Amelia Putri
+Nama: [BagusNurcahyo]
 
 ### Soal UTS 2021-2022
 Waktu: 90 menit
@@ -33,76 +33,55 @@ kode program pada cell yang telah disediakan dan jangan lupa untuk menjalankan h
 // tulis jawaban di sini
 import java.util.Scanner;
 import java.math.BigDecimal;  
-
     Scanner in = new Scanner(System.in);
     Boolean usaha = false;
-    double penghasilan, pajak = 0;
-    String bendaGerak;
-    double nilaiJualBendaGerak;
+    double penghasilan, nilaiJualBendaGerak, pajak = 0;
+    String bendaBergerak;
     String perhiasan;
     double nilaiJualPerhiasan;
-    System.out.print("Anda memiliki usaha? (ya/tidak): ");
+    System.out.print("Apakah anda memiliki usaha?(ya/tidak): ");
 
     while(true) {
         String temp = in.nextLine();
         if(temp.equalsIgnoreCase("Ya")) {
             usaha = true;
-            System.out.print("\nMasukkan Penghasilan dalam 1 Tahun?: ");
+            System.out.println("Berapakah penghasilan anda dalam 1 tahun?: ");
             penghasilan = in.nextDouble();
-            in.nextLine(); // handlebug
+            in.nextLine();
             break;
         } else if(temp.equalsIgnoreCase("Tidak")) {
             break;
         } else System.out.println("Maaf, input anda salah");
     }
     
-    System.out.print("Harta kekayaan berupa benda gerak (Mobil, Sepeda Motor): ");
-    bendaGerak = in.nextLine();
-    System.out.print("Nilai jual saat ini: ");
+    System.out.print("Masukkan harta kekayaan berupa benda bergerak (Mobil, sepeda motor): ");
+    bendaBergerak = in.nextLine();
+    System.out.print("Masukkan nilai jual saat ini: ");
 
     nilaiJualBendaGerak = in.nextDouble();
     penghasilan += nilaiJualBendaGerak;
     
-    System.out.print("Harta kekayaan berupa perhiasan: ");
+    System.out.print("Masukkan harta kekayaan berupa perhiasan: ");
     perhiasan = in.nextLine();
-    in.nextLine(); // handlebug
-    System.out.print("Nilai jual saat ini: ");
+    in.nextLine();
+    System.out.print("Masukkan nilai jual saat ini: ");
     nilaiJualPerhiasan = in.nextDouble();
     penghasilan+= nilaiJualPerhiasan;
-    
-//     System.out.println("Apakah anda sudah berkeluarga? (ya/tidak): ");
-
-//     int jumlahAnak;
-//     String[] pendidikanAnak;
-//     while(true) {
-//         if(temp.equalsIgnoreCase("Ya")) {
-//             System.out.println("Jumlah anak?");
-//             jumlahAnak = in.nextInt();
-//             for(int i = 0; i < jumlahAnak; i++) {
-//                 System.out.println("Tingkat pendidikan anak ke" + (i+=1) + "(SD,SMP,SMA,Kuliah)");
-//                 if(temp.equalsIgnoreCase("SMA") ) {
-//                     pendidikanAnak[i] = "SMA";
-//                 }
-//             }
-//             break;
-//         } else if(temp.equalsIgnoreCase("Tidak")) break;
-//         else System.out.println("Maaf, input anda salah");
-//     }
-    System.out.println("-------------------------------------------------------");    
+    System.out.println("=======================================================");    
     System.out.println("Penghasilan anda: Rp." + penghasilan);    
-    System.out.println(": Rp." + penghasilan * 0.15);
-```p
+    System.out.println("Pajak yang harus anda bayar: Rp." + penghasilan * 0.15);
+```
 
-    Anda memiliki usaha? (ya/tidak): ya
+    Apakah anda memiliki usaha? (ya/tidak): ya
     
-    Masukkan Penghasilan dalam 1 Tahun?: 5000000
-    Harta kekayaan berupa benda gerak (Mobil, Sepeda Motor): Mobil
-    Nilai jual saat ini: 8000000
-    Harta kekayaan berupa perhiasan: kalung
-    Nilai jual saat ini: 900000
-    -------------------------------------------------------
-    Penghasilan anda: Rp.1.39E7
-    Pajak yang harus anda bayar: Rp.2085000.0
+    Berapakah penghasilan anda dalam 1 tahun?: 10000000
+    Masukkan harta kekayaan berupa benda bergerak (Mobil, sepeda motor): mobil
+    Masukkan nilai jual saat ini: 1000
+    Masukkan harta kekayaan berupa perhiasan: kalung
+    Masukkan nilai jual saat ini: 5000
+    =======================================================
+    Penghasilan anda: 1.0006E7
+    Pajak yang harus anda bayar: 1500900.0
 
 
 > **Kerjakan secara individu, segala bentuk yang mengarah kepada kecurangan akan mendapatkan nilai 0.**

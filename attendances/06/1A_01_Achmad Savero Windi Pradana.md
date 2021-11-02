@@ -303,7 +303,15 @@ public class Percobaan1Vero{
 	}
 }
 ```
-
+```
+Masukan angka pertama :
+1
+Masukan angka kedua :
+1
+Masukan operator(+ - * /) :
++
+1.0 + 1.0 = 2.0
+```
 2. Dengan menggunakan tiga nilai yang mewakili panjang tiga sisi sebuah segitiga, tentukan apakah segitiga tersebut sama sisi (ketiga sisinya bernilai sama), sama kaki (kedua sisinya bernilai sama), atau sembarang (tidak ada sisi yang bernilai sama)! 
 
 
@@ -338,6 +346,12 @@ else
 } 
 
 
+```
+```
+sisi1= 7
+sisi2= 8
+sisi3= 7
+Segitiga Sama Kaki
 ```
 
 3. Warung Padang Gembira meminta Anda membuat sebuah program untuk menerima pesanan dari internet. Program yang Anda buat meminta user untuk memasukkan nama makanan dan harga. Setelah itu, user ditawarkan untuk menggunakan pengiriman ekspres. Jika pengguna menolak, maka jenis pengiriman yang digunakan adalah pengiriman reguler. Biaya pengiriman reguler untuk harga makanan kurang dari Rp 100.000 adalah Rp 20.000, sedangkan untuk harga makanan sama dengan atau lebih dari Rp 100.000 biaya pengirimannya adalah Rp 30.000. Untuk jenis pengiriman ekspres, tambahkan biaya tambahan sebesar Rp 25.000 dari standar biaya pengiriman reguler. Tampilkan struk yang berisi nama makanan yang dibeli + harga, biaya pengiriman, dan total yang harus dibayar!
@@ -387,7 +401,7 @@ public static void main(String[] args) {
         System.out.println("Apakah Anda ingin pengiriman ekspres? tekan iya untuk iya,tekan tidak untuk tidak? ");
         ekspres = input.nextInt();
 
-        if (ekspres == 1) {
+        if (ekspres == iya) {
             if (harga >= 100000) {
                 System.out.println("STRUK PEMBELIAN");
                 System.out.println(String.format("%s Rp %s", makanan, harga));
@@ -399,7 +413,7 @@ public static void main(String[] args) {
                 System.out.println("Biaya Pengiriman: Rp.45.000 ");
                 System.out.println("TOTAL " + (harga + 45000));
             }
-        } else if (ekspres == 0) {
+        } else if (ekspres == tidak) {
             if (harga >= 100000) {
                 System.out.println("STRUK PEMBELIAN");
                 System.out.println(String.format("%s Rp %s", makanan, harga));
@@ -416,6 +430,16 @@ public static void main(String[] args) {
 }
 ```
 
+```
+Masukkan nama makanan : Tuna salad
+Masukkan harga makanan : Rp.11500
+Apakah anda ingin pengiriman ekspres? tekan iya untuk iya,tekan tidak untuk tidak?
+iya
+STRUK PEMBELIAN 
+Tuna salad Rp 11500
+Biaya Pengiriman: Rp.55.000
+TOTAL 170000
+```
 4. Perhatikan flowchart berikut ini!
 
 ![](images/01.png)
