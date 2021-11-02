@@ -367,7 +367,7 @@ variabel "lulus" dan "gagal" untuk menentukan jumlah setiap mahasiswa yang lulus
 Yang digunakan untuk menghitung rata2 
 yaitu total dibagi jumlah keseluruhan mahasiswa lulus atau gagal
 */
-
+```
 
 ### Percobaan 4: Pencarian menggunakan Array
 Pada praktikum ini, akan dilakukan percobaan untuk mencari lokasi/indeks sebuah angka dalam array. Sesuai dengan flowchart di bawah ini:
