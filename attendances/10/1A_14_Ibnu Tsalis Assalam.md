@@ -336,8 +336,8 @@ for(int i = 0;i < nilaiMHS.length; i++){
         gagal++;
     }
 }
-rataLulus = totalLulus / (nilaiMHS.length - gagal);
-rataGagal = totalGagal / (nilaiMHS.length - lulus);
+rataLulus = totalLulus / lulus;
+rataGagal = totalGagal / gagal;
 System.out.printf("Rata-rata nilai mahasiswa yang lulus adalah %.2f\n",rataLulus);
 System.out.printf("Rata-rata nilai mahasiswa yang gagal adalah %.2f\n",rataGagal);
 ```
@@ -361,6 +361,12 @@ System.out.printf("Rata-rata nilai mahasiswa yang gagal adalah %.2f\n",rataGagal
 
     java.io.PrintStream@6f92d0cb
 
+```Java
+/*
+variabel "lulus" dan "gagal" untuk menentukan jumlah setiap mahasiswa yang lulus dan gagal.
+Yang digunakan untuk menghitung rata2 
+yaitu total dibagi jumlah keseluruhan mahasiswa lulus atau gagal
+*/
 
 
 ### Percobaan 4: Pencarian menggunakan Array
