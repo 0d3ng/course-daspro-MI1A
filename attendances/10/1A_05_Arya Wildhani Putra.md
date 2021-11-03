@@ -19,7 +19,7 @@
 
 ```Java
 // Tulis Kode program Percobaan 1 Langkah 2 di atas
-int[] bil = new int[4];
+int[] bil=new int[4];
 ```
 
 2. Isi masing-masing elemen array bil tadi dengan angka 5, 12, 7, 20.
@@ -28,6 +28,7 @@ int[] bil = new int[4];
 
 ```Java
 // Tulis Kode program Percobaan 1 Langkah 3 di atas
+
 bil[0] = 5;
 bil[1] = 12;
 bil[2] = 7;
@@ -47,6 +48,14 @@ bil[3] = 20;
 
 ```Java
 // Tulis Kode program Percobaan 1 Langkah 4
+
+int[] bil=new int[4];
+
+bil[0] = 5;
+bil[1] = 12;
+bil[2] = 7;
+bil[3] = 20;
+
 System.out.println(bil[0]);
 System.out.println(bil[1]);
 System.out.println(bil[2]);
@@ -65,8 +74,8 @@ System.out.println(bil[3]);
 
 ```Java
 // Tulis Jawaban no 1 disini
-// Terbesar= indeks ke 3
-// Terkecil= indeks ke 1
+terbesar bil[3]=20
+terkecil bil[0]=5
 ```
 
 2. Jika Isi masing-masing elemen array bil diubah dengan angka 5.0, 12867, 7.5, 2000000. Apa yang terjadi? Mengapa bisa demikian?
@@ -74,8 +83,28 @@ System.out.println(bil[3]);
 
 ```Java
 // Tulis Jawaban no 2 yang disini
-// Error karena bilangan tersebut tidak termasuk tipe data integer
+
+int[] bil=new int[4];
+
+bil[0] = 5.0;    // tidak bisa karena tipe data int tidak mencangkup range angka tersebut 
+bil[1] = 12867;
+bil[2] = 7.5;
+bil[3] = 2000000;
+
+System.out.println(bil[0]);
+System.out.println(bil[1]);
+System.out.println(bil[2]);
+System.out.println(bil[3]);
+
 ```
+
+
+    |   bil[0] = 5.0;
+
+    incompatible types: possible lossy conversion from double to int
+
+    
+
 
 3. Ubah statement pada langkah No 3 menjadi seperti berikut
 ![Gambar pertanyaan 3](images/P1T3.png)
@@ -84,9 +113,16 @@ Apa keluaran dari program? Mengapa bisa demikian?
 
 ```Java
 // Tulis Jawaban no 3 yang disini
-for(int i=0; i<4; i++){
-    System.out.println(bil[i]);
-}
+
+int[] bil=new int[4];
+
+bil[0] = 5;
+bil[1] = 12;
+bil[2] = 7;
+bil[3] = 20;
+
+for(int i=0; i<4; i++)
+    System.out.println(bil[i])
 ```
 
     5
@@ -95,14 +131,16 @@ for(int i=0; i<4; i++){
     20
 
 
-
-```Java
-// output sama karena i dimulai dari 0,1,2,3
-```
-
 ### Percobaan 2: Meminta Inputan Pengguna untuk Mengisi Elemen Array
 1. Pada percobaan ke-2 akan dilakukan percobaan yang meminta inputan pengguna untuk mengisi elemen array seperti pada flowchart berikut
 ![Gambar Flowchart](images/FCpercobaan2.png)
+
+
+```Java
+// Tulis Kode program Percobaan 2 Langkah 1 di atas
+
+
+```
 
 2. Import dan deklarasikan Scanner untuk keperluan input. 
 ![Gambar import scanner](images/P2L2.png)
@@ -110,8 +148,9 @@ for(int i=0; i<4; i++){
 
 ```Java
 // Tulis Kode program Percobaan 2 Langkah 1 di atas
+
 import java.util.Scanner;
-Scanner sc = new Scanner(System.in);
+Scanner sc = new Scanner (System.in);
 ```
 
 3. Buat array bertipe integer dengan nama nilaiUAS, dengan kapasitas 6 elemen.
@@ -120,7 +159,8 @@ Scanner sc = new Scanner(System.in);
 
 ```Java
 // Tulis Kode program Percobaan 2 Langkah 3 di atas
-int nilaiUAS[] = new int[6];
+int[] nilaiUAS = new int [6]
+
 ```
 
 4. Menggunakan perulangan, buat input untuk mengisi elemen dari array nilaiUAS.
@@ -129,18 +169,19 @@ int nilaiUAS[] = new int[6];
 
 ```Java
 // Tulis Kode program Percobaan 2 Langkah 4 di atas
-for(int i = 0;i < 6; i++){
-    System.out.printf("Masukkan Nilai UAS ke-%d: ",i);
+
+for(int i = 0; i < 6; i++){
+    System.out.print("masukkan nilai UAS ke-" + i + ": ");
     nilaiUAS[i] = sc.nextInt();
 }
 ```
 
-    Masukkan Nilai UAS ke-0: 88
-    Masukkan Nilai UAS ke-1: 99
-    Masukkan Nilai UAS ke-2: 99
-    Masukkan Nilai UAS ke-3: 99
-    Masukkan Nilai UAS ke-4: 99
-    Masukkan Nilai UAS ke-5: 99
+    masukkan nilai UAS ke-0: 90
+    masukkan nilai UAS ke-1: 66
+    masukkan nilai UAS ke-2: 80
+    masukkan nilai UAS ke-3: 78
+    masukkan nilai UAS ke-4: 67
+    masukkan nilai UAS ke-5: 56
 
 
 5. Menggunakan perulangan, tampilkan semua isi elemen dari array nilaiUAS.
@@ -150,16 +191,16 @@ for(int i = 0;i < 6; i++){
 ```Java
 // Tulis Kode program Percobaan 2 Langkah 5 di atas
 for(int i = 0; i < 6; i++){
-    System.out.printf("Nilai UAS ke-%d adalah: %d\n",i,nilaiUAS[i]);
-}
+     System.out.println("Nilai UAS ke-" + i + " adalah: " + nilaiUAS[i]);
+ }
 ```
 
-    Nilai UAS ke-0 adalah: 88
-    Nilai UAS ke-1 adalah: 99
-    Nilai UAS ke-2 adalah: 99
-    Nilai UAS ke-3 adalah: 99
-    Nilai UAS ke-4 adalah: 99
-    Nilai UAS ke-5 adalah: 99
+    Nilai UAS ke-0 adalah: 90
+    Nilai UAS ke-1 adalah: 66
+    Nilai UAS ke-2 adalah: 80
+    Nilai UAS ke-3 adalah: 78
+    Nilai UAS ke-4 adalah: 67
+    Nilai UAS ke-5 adalah: 56
 
 
 #### Pertanyaan
@@ -171,26 +212,23 @@ Jalankan program, apakah terjadi perubahan? Mengapa demikian?
 
 ```Java
 // Tulis Jawaban nomor 1 disini
-for(int i = 0;i < nilaiUAS.length; i++){
-    System.out.printf("Masukkan Nilai UAS ke-%d: ",i);
+import java.util.Scanner;
+Scanner sc = new Scanner (System.in);
+
+int[] nilaiUAS = new int [6];
+
+for(int i = 0; i < nilaiUAS.length; i++){
+    System.out.print("masukkan nilai UAS ke-" + i + ": ");
     nilaiUAS[i] = sc.nextInt();
 }
 ```
-
-    Masukkan Nilai UAS ke-0: 60
-    Masukkan Nilai UAS ke-1: 65
-    Masukkan Nilai UAS ke-2: 70
-    Masukkan Nilai UAS ke-3: 88
-    Masukkan Nilai UAS ke-4: 88
-    Masukkan Nilai UAS ke-5: 88
-
 
 2. Apa kegunaan dari `nilaiUAS.length`? 
 
 
 ```Java
 // Tulis Jawaban nomor 2 disini
-// Untuk mengganti kondisi batas loop dengan panjang array
+fungsi length digunakan untuk memeriksa panjang pada variabel tersebut
 ```
 
 3. Ubah statement pada langkah No 5 menjadi seperti berikut ini sehingga program hanya menampilkan status mahasiswa yang lulus saja:
@@ -200,23 +238,23 @@ Jalankan program dan Jelaskan alur program!
 
 ```Java
 // Tulis Jawaban nomor 3 disini
+
+import java.util.Scanner;
+Scanner sc = new Scanner (System.in);
+
+int[] nilaiUAS = new int [6];
+
 for(int i = 0; i < nilaiUAS.length; i++){
-    if(nilaiUAS[i] > 70){
-        System.out.printf("Mahasiswa ke-%d lulus\n",i);
-    }
+    System.out.print("Masukkan nilai UAS ke-" + i + ": ");
+    nilaiUAS[i] = sc.nextInt();
 }
-```
 
-    Mahasiswa ke-3 lulus
-    Mahasiswa ke-4 lulus
-    Mahasiswa ke-5 lulus
-
-
-
-```Java
-/*
-Program menampilkan mahasiswa yang nilainya melebihi 70 akan lulus
-*/
+ for(int i = 0; i < nilaiUAS.length; i++){
+     if(nilaiUAS[i] > 70){
+         System.out.println("Mahasiswa ke-" + i +" Lulus");        
+     }
+     
+ }
 ```
 
 ### Percobaan 3: Melakukan Operasi Aritmatika terhadap Elemen Array
@@ -231,6 +269,7 @@ Pada praktikum ini, akan dilakukan percobaan untuk menjumlahkan Array. Program a
 // Tulis Kode program Percobaan 3 Langkah 1 di atas, disini
 import java.util.Scanner;
 Scanner sc = new Scanner(System.in);
+
 ```
 
 2. Buat array nilaiMHS bertipe integer dengan kapasitas 10. Kemudian deklarasikan variable total dan rata seperti gambar berikut ini
@@ -252,22 +291,22 @@ double rata;
 
 ```Java
 // Tulis Kode program Percobaan 3 Langkah 3 di atas, disini
-for(int i = 0;i < nilaiMHS.length; i++){
-    System.out.printf("Masukkan Nilai Mahasiswa ke-%2d: ",(i+1));
+for(int i = 0; i < nilaiMHS.length; i++){
+    System.out.print("Masukkan nilai MAhasiswa ke-"+(i+1)+":");
     nilaiMHS[i] = sc.nextInt();
 }
 ```
 
-    Masukkan Nilai Mahasiswa ke- 1: 80
-    Masukkan Nilai Mahasiswa ke- 2: 88
-    Masukkan Nilai Mahasiswa ke- 3: 88
-    Masukkan Nilai Mahasiswa ke- 4: 88
-    Masukkan Nilai Mahasiswa ke- 5: 88
-    Masukkan Nilai Mahasiswa ke- 6: 88
-    Masukkan Nilai Mahasiswa ke- 7: 70
-    Masukkan Nilai Mahasiswa ke- 8: 60
-    Masukkan Nilai Mahasiswa ke- 9: 60
-    Masukkan Nilai Mahasiswa ke-10: 66
+    Masukkan nilai MAhasiswa ke-1:90
+    Masukkan nilai MAhasiswa ke-2:78
+    Masukkan nilai MAhasiswa ke-3:66
+    Masukkan nilai MAhasiswa ke-4:78
+    Masukkan nilai MAhasiswa ke-5:67
+    Masukkan nilai MAhasiswa ke-6:56
+    Masukkan nilai MAhasiswa ke-7:67
+    Masukkan nilai MAhasiswa ke-8:56
+    Masukkan nilai MAhasiswa ke-9:90
+    Masukkan nilai MAhasiswa ke-10:88
 
 
 4. Menggunakan perulangan untuk menghitung jumlah keseluruhan nilai.
@@ -277,8 +316,8 @@ for(int i = 0;i < nilaiMHS.length; i++){
 
 ```Java
 // Tulis Kode program Percobaan 3 Langkah 4 di atas, disini
-for(int i = 0;i < nilaiMHS.length; i++){
-    total += nilaiMHS[i];
+for(int i = 0 ; i < nilaiMHS.length; i++){
+    total+=nilaiMHS[i];
 }
 ```
 
@@ -289,18 +328,12 @@ for(int i = 0;i < nilaiMHS.length; i++){
 
 ```Java
 // Tulis Kode program Percobaan 3 Langkah 3 di atas, disini
-rata = total / nilaiMHS.length;
-System.out.printf("Rata-rata nilai mahasiswa adalah %.2f\n",rata);
+
+rata= total/nilaiMHS.length;
+System.out.println("Rata-rata nilai mahasiswa adalah "+rata);
 ```
 
-    Rata-rata nilai mahasiswa adalah 77.60
-
-
-
-
-
-    java.io.PrintStream@64d664a
-
+    Rata-rata nilai mahasiswa adalah 73.6
 
 
 #### Pertanyaan 
@@ -309,7 +342,8 @@ System.out.printf("Rata-rata nilai mahasiswa adalah %.2f\n",rata);
 
 ```Java
 // Tulis jawaban no 1 disini
-// Agar dapat menghitung data yang dibutuhkan setelah loop untuk menghitung rata2 
+
+karena tidak masuk ke dalam cangkupan for, tidak perlu juga berada di dalam for 
 ```
 
 2. Modifikasi program pada percobaan 3 sehingga bisa mengeluarkan output  seperti gambar berikut ini!
@@ -318,58 +352,55 @@ syarat lulus nilai >70
 
 
 ```Java
-// Tulis jawaban no 2 disini
+
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+
 double totalLulus, totalGagal, rataLulus, rataGagal;
-int nilaiMHS[] = new int[10];
-int lulus = 0, gagal = 0;
+int nilaiMHS[]= new int[10];
+int a=0, b=0;
 
 for(int i = 0;i < nilaiMHS.length; i++){
-    System.out.printf("Masukkan Nilai Mahasiswa ke-%2d: ",(i+1));
+    System.out.printf("Masukkan NIlai Mahasiswa ke-%2d : ", (i+1));
     nilaiMHS[i] = sc.nextInt();
 }
 for(int i = 0;i < nilaiMHS.length; i++){
-    if(nilaiMHS[i] > 70){
-        totalLulus += nilaiMHS[i];
-        lulus++;
+    if(nilaiMHS[i] > 70){ 
+        totalLulus += nilaiMHS [i];
+        a++;   
     } else{
         totalGagal += nilaiMHS[i];
-        gagal++;
+        b++;  
     }
 }
-rataLulus = totalLulus / lulus;
-rataGagal = totalGagal / gagal;
-System.out.printf("Rata-rata nilai mahasiswa yang lulus adalah %.2f\n",rataLulus);
-System.out.printf("Rata-rata nilai mahasiswa yang gagal adalah %.2f\n",rataGagal);
+rataLulus = totalLulus / (nilaiMHS.length - a);
+rataGagal = totalGagal / (nilaiMHS.length - b);
+System.out.printf("Rata-rata nilai mahasiswa yang lulus adalah %.2f\n ", rataLulus);
+System.out.printf("Rata-rata nilai mahasiswa yang gagal adalah %.2f\n ", rataGagal);    
 ```
 
-    Masukkan Nilai Mahasiswa ke- 1: 90
-    Masukkan Nilai Mahasiswa ke- 2: 95
-    Masukkan Nilai Mahasiswa ke- 3: 80
-    Masukkan Nilai Mahasiswa ke- 4: 85
-    Masukkan Nilai Mahasiswa ke- 5: 70
-    Masukkan Nilai Mahasiswa ke- 6: 75
-    Masukkan Nilai Mahasiswa ke- 7: 60
-    Masukkan Nilai Mahasiswa ke- 8: 65
-    Masukkan Nilai Mahasiswa ke- 9: 50
-    Masukkan Nilai Mahasiswa ke-10: 55
-    Rata-rata nilai mahasiswa yang lulus adalah 85.00
-    Rata-rata nilai mahasiswa yang gagal adalah 60.00
+    Masukkan NIlai Mahasiswa ke- 1 : 90
+    Masukkan NIlai Mahasiswa ke- 2 : 80
+    Masukkan NIlai Mahasiswa ke- 3 : 100
+    Masukkan NIlai Mahasiswa ke- 4 : 70
+    Masukkan NIlai Mahasiswa ke- 5 : 60
+    Masukkan NIlai Mahasiswa ke- 6 : 40
+    Masukkan NIlai Mahasiswa ke- 7 : 50
+    Masukkan NIlai Mahasiswa ke- 8 : 20
+    Masukkan NIlai Mahasiswa ke- 9 : 10
+    Masukkan NIlai Mahasiswa ke-10 : 30
+    Rata-rata nilai mahasiswa yang lulus adalah 38.57
+     Rata-rata nilai mahasiswa yang gagal adalah 93.33
+     
 
 
 
 
+    java.io.PrintStream@125deb4e
 
-    java.io.PrintStream@6f92d0cb
 
-```Java
-/*
-variabel "lulus" dan "gagal" untuk menentukan jumlah setiap mahasiswa yang lulus dan gagal.
-Yang digunakan untuk menghitung rata2 
-yaitu total dibagi jumlah keseluruhan mahasiswa lulus atau gagal
-*/
-```
 
-### Percobaan 4: Pencarian menggunakan Array
+###### Percobaan 4: Pencarian menggunakan Array
 Pada praktikum ini, akan dilakukan percobaan untuk mencari lokasi/indeks sebuah angka dalam array. Sesuai dengan flowchart di bawah ini:
 ![Gambar flowchart searching](images/FCpercobaan4.png) 
 
@@ -380,7 +411,7 @@ Pada praktikum ini, akan dilakukan percobaan untuk mencari lokasi/indeks sebuah 
 
 ```Java
 // Tulis Kode program Percobaan 4 Langkah 1 di atas, disini
-int[] arr = {6,4,1,9,7,3,2,8};
+int[] arr = {6, 4, 1, 9, 7, 3, 2, 8};
 int key = 3;
 int hasil = -1;
 ```
@@ -392,9 +423,9 @@ int hasil = -1;
 
 ```Java
 // Tulis Kode program Percobaan 4 Langkah 2 di atas, disini
-for(int i = 0; i < arr.length; i++){
-    if(key == arr[i]){
-        hasil = i;
+for(int i=0; i<arr.length; i++){
+    if(key==arr[i]){
+        hasil=i;
         break;
     }
 }
@@ -407,7 +438,7 @@ for(int i = 0; i < arr.length; i++){
 
 ```Java
 // Tulis Kode program Percobaan 4 Langkah 3 di atas, disini
-System.out.println("Key ada di array ke-"+hasil);
+System.out.println("Key ada di array ke-" +hasil);
 ```
 
     Key ada di array ke-5
@@ -419,7 +450,8 @@ System.out.println("Key ada di array ke-"+hasil);
 
 ```Java
 // Tulis jawaban no 1 disini
-// Menghentikan loop
+
+untuk keluar dari perulangan tersebut 
 ```
 
 2. Modifikasi program pada percobaan 4 sehingga key yang dicari adalah angka 5. Kemudian jalankan program, amati hasilnya! Jelaskan penyebab dari hasil tersebut! 
@@ -427,29 +459,25 @@ System.out.println("Key ada di array ke-"+hasil);
 
 ```Java
 // Tulis jawaban no 2 disini
-int[] arr = {6,4,1,9,7,3,2,8};
+
+int[] arr = {6, 4, 1, 9, 7, 3, 2, 8};
 int key = 5;
 int hasil = -1;
 
-for(int i = 0; i < arr.length; i++){
-    if(key == arr[i]){
-        hasil = i;
+for(int i=0; i<arr.length; i++){
+    if(key==arr[i]){
+        hasil=i;
         break;
     }
 }
-System.out.println("Key ada di array ke-"+hasil);
+
+System.out.println("Key ada di array ke-" +hasil); 
+//  hasilnya adalah -1 karena 5 tidak ada di dalam array tersebut  atau langsung hasilnya 
+
 ```
 
     Key ada di array ke--1
 
-
-
-```Java
-/*
-Hasil ada di array ke "-1" karena tidak ada data yang berisikan angka 5 disana. 
-Output menjadi nilai dari variabel hasil diawal.
-*/
-```
 
 ### Percobaan 5: Pengurutan bilangan menggunakan Array
 Pada praktikum ini, akan dilakukan percobaan untuk mengurutkan angka dalam array. Sesuai dengan flowchart di bawah ini:
@@ -460,18 +488,17 @@ Pada praktikum ini, akan dilakukan percobaan untuk mengurutkan angka dalam array
 
 ```Java
 // Tulis Kode program Percobaan 5 Langkah 1 disini
-int[] arr = {16, 4, 10, 90, 27, 3, 12, 28};
-int temp = 0;
+ int[] arr = {16, 4, 10, 90, 27, 3, 12, 28};
+int temp = 0
+    
 ```
-
-2. Menggunakan perulangan, lakukan pengurutan bilangan dengan menukar posisi indeks tersebut dengan indeks berikutnya. Perulangan dilakukan untuk menukar posisi berulang kali. 
-![Gambar sorting](images/P5L2.png)
 
 
 ```Java
 // Tulis Kode program Percobaan 5 Langkah 2 di atas, disini
+
 for(int i = 0; i < arr.length; i++){
-    for(int j = 1; j < (arr.length - i); j++){
+    for(int j = 1; j < (arr.length-i); j++){
         if(arr[j-1] > arr[j]){
             temp = arr[j-1];
             arr[j-1] = arr[j];
@@ -481,12 +508,16 @@ for(int i = 0; i < arr.length; i++){
 }
 ```
 
+2. Menggunakan perulangan, lakukan pengurutan bilangan dengan menukar posisi indeks tersebut dengan indeks berikutnya. Perulangan dilakukan untuk menukar posisi berulang kali. 
+![Gambar sorting](images/P5L2.png)
+
 3. Tampilkan hasil pengurutan dengan menggunakan perulangan
 ![Gambar print](images/P5L3.png)
 
 
 ```Java
 // Tulis Kode program Percobaan 5 Langkah 3 di atas, disini
+
 System.out.println("Hasil pengurutan: ");
 for(int i = 0; i < arr.length; i++)
     System.out.println(arr[i]);
@@ -503,6 +534,11 @@ for(int i = 0; i < arr.length; i++)
     90
 
 
+
+```Java
+
+```
+
 ## Tugas
 ### Soal 1
 Buatlah program yang **sesuai** dengan alur _flowchart_ di bawah ini
@@ -513,70 +549,66 @@ Flowchart diatas menggambarkan alur program yang membaca 10 masukan pengguna ber
 
 ```Java
 /* Jawaban Soal 1 disini */
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+
 int checkNum[] = new int[10];
 int evenNum[] = new int[10];
 int oddNum[] = new int[10];
-int cEven, cOdd = 0;
-
-for(int i = 0; i < checkNum.length; i++){
-    System.out.printf("Masukkan Number ke-%d: ",i);
+int cEven, cOdd=0;
+    
+for(int i=0; i<checkNum.length; i++){
+    System.out.print("Masukkan angka :");
     checkNum[i] = sc.nextInt();
 }
-for(int j = 0; j < checkNum.length; j++){
-    if(checkNum[j] % 2 == 0){
+
+for(int j=0; j<checkNum.length; j++){
+    if(checkNum[j]%2==0){
         evenNum[cEven] = checkNum[j];
         cEven++;
-    } else{
+    }else{
         oddNum[cOdd] = checkNum[j];
         cOdd++;
     }
 }
-System.out.printf("\nJumlah genap ada %d, dan jumlah ganjil ada %d",cEven,cOdd);
-System.out.print("\nBilangan genap adalah\n");
+
+System.out.printf("\nJumlah genap ada , dan jumlah ganjil ada ", cEven,cOdd);
+System.out.print("nBilangan genap adalah\n ");
 for(int i = 0; i < cEven; i++){
-    System.out.printf("- %d\n",evenNum[i]);
+    System.out.printf("- %d\n", evenNum[i]);
+    
 }
-System.out.print("\nBilangan ganjil adalah\n");
+System.out.print("\nBilangan genap adalah\n");
 for(int i = 0; i < cOdd; i++){
-    System.out.printf("- %d\n",oddNum[i]);
+    System.out.printf("- %d\n", oddNum[i]);
 }
 ```
 
-    Masukkan Number ke-0: 12
-    Masukkan Number ke-1: 32
-    Masukkan Number ke-2: 44
-    Masukkan Number ke-3: 11
-    Masukkan Number ke-4: 101
-    Masukkan Number ke-5: 200
-    Masukkan Number ke-6: 211
-    Masukkan Number ke-7: 200
-    Masukkan Number ke-8: 311
-    Masukkan Number ke-9: 321
+    Masukkan angka :10
+    Masukkan angka :21
+    Masukkan angka :23
+    Masukkan angka :34
+    Masukkan angka :56
+    Masukkan angka :45
+    Masukkan angka :35
+    Masukkan angka :56
+    Masukkan angka :34
+    Masukkan angka :65
     
-    Jumlah genap ada 5, dan jumlah ganjil ada 5
+    Jumlah gebap ada , dan jumlah ganjil ada nBilangan genap adalah
+     - 10
+    - 34
+    - 56
+    - 56
+    - 34
+    
     Bilangan genap adalah
-    - 12
-    - 32
-    - 44
-    - 200
-    - 200
-    
-    Bilangan ganjil adalah
-    - 11
-    - 101
-    - 211
-    - 311
-    - 321
+    - 21
+    - 23
+    - 45
+    - 35
+    - 65
 
-
-
-```Java
-/*
-Program akan meminta pengguna untuk memasukkan angka sebanyak 10x sesuai dengan panjang array "checkNum[]".
-Kemudian angka tadi dicek jika hasil bagi dengan 2 adalah 0 (genap) maka data akan disimpan. dan sebaliknya.
-Setelah itu ditampilkan jumlah angka ganjil genap beserta setiap bilangannya.
-*/
-```
 
 ### Soal 2
 Buatlah program yang terdapat array dengan jumlah elemen 5, buatlah input untuk mengisi elemen array tersebut, kemudian tampilkan isi array tersebut dengan urutan terbalik. Seperti ilustrasi gambar dibawah ini.
@@ -585,78 +617,68 @@ Buatlah program yang terdapat array dengan jumlah elemen 5, buatlah input untuk 
 
 ```Java
 /* Jawaban Soal 2 disini */
-int isiArray[] = new int[5];
 
-for(int i = 0;i < isiArray.length; i++){
-    System.out.printf("Masukkan elemen array ke-%d: ",i);
-    isiArray[i] = sc.nextInt();
-}
-System.out.print("Isi array dengan urutan biasa: ");
-for(int i = 0;i < isiArray.length; i++){
-    System.out.print(isiArray[i]+" ");
-}
-System.out.print("Isi array dengan urutan terbalik: ");
-for(int i = (isiArray.length-1) ;i >= 0; i--){
-    System.out.print(isiArray[i]+" ");
-}
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+
+    int array[];
+    array = new int[5];
+        for (int i = 0; i < array.length; i++) {
+        System.out.print("Masukkan Angka : ");
+        array[i]=sc.nextInt();
+        }
+    System.out.print("Hasil Terbalik : ");
+    for(int i = array.length-1; i>=0; i--){
+        System.out.print(array[i]+", ");
+    }
+
 ```
 
-    Masukkan elemen array ke-0: 12
-    Masukkan elemen array ke-1: 32
-    Masukkan elemen array ke-2: 22
-    Masukkan elemen array ke-3: 21
-    Masukkan elemen array ke-4: 44
-    Isi array dengan urutan biasa: 12 32 22 21 44
-    Isi array dengan urutan terbalik: 44 21 22 32 12 
+    Masukkan Angka : 6
+    Masukkan Angka : 5
+    Masukkan Angka : 4
+    Masukkan Angka : 3
+    Masukkan Angka : 2
+    Hasil Terbalik : 2, 3, 4, 5, 6, 
 
-
-```Java
-/*
-Program akan meminta pengguna untuk memasukkan angka sebanyak 5x sesuai dengan panjang array "isiArray[]".
-Pertama akan ditampilkan urutan masukan pengguna,
-Kemudian angka tadi akan ditampilkan secara terbalik dengan loop yang dimulai dari indeks ke 5 atau "isiArray[4]".
-*/
-```
-
-### Soal 3
+# Soal 3
 Buatlah program yang menerima input jumlah elemen array, inputkan isi arraynya, kemudian tampilkan bilangan terbesar dari isi elemen arraynya. Contoh hasil program:
 ![Soal 3](images/t3.png)
 
 
 ```Java
 /* Jawaban Soal 3 disini */
-int isi,terbesar = 0;
 
-System.out.print("Masukkan isi array: ");
-isi = sc.nextInt();
-
-int isiArray[] = new int[isi];
-
-for(int i = 0;i < isiArray.length; i++){
-    System.out.printf("Masukkan elemen array ke-%d: ",i);
-    isiArray[i] = sc.nextInt();
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+int max = 0;
+System.out.print("masukkan nilai array: ");
+int n = sc.nextInt();
+int[] nilaiMHS = new int[n];
+ int total = 0;
+ double rata;
+for(int i=0; i<nilaiMHS.length; i++){
+         System.out.print("Masukkan elemen array ke-"+i+": ");
+         nilaiMHS[i]=sc.nextInt();
+     }
+for(int i=0; i<nilaiMHS.length; i++){
+         if (nilaiMHS[i] > max) {
+          max = nilaiMHS[i];
+     }
 }
-for(int i = 0; i < isiArray.length; i++){
-    if(isiArray[i] > terbesar){
-        terbesar = isiArray[i];
-    }
-}
-System.out.print("Bilangan terbesar adalah " + terbesar);
+System.out.println("bilangan terbesar adalah " + max);
 ```
 
-    Masukkan isi array: 5
-    Masukkan elemen array ke-0: 33
-    Masukkan elemen array ke-1: 43
-    Masukkan elemen array ke-2: 21
-    Masukkan elemen array ke-3: 4
-    Masukkan elemen array ke-4: 44
-    Bilangan terbesar adalah 44
+    masukkan nilai array: 5
+    Masukkan elemen array ke-0: 25
+    Masukkan elemen array ke-1: 78
+    Masukkan elemen array ke-2: 12
+    Masukkan elemen array ke-3: 63
+    Masukkan elemen array ke-4: 99
+    bilangan terbesar adalah 99
+
 
 
 ```Java
-/*
-Program akan meminta pengguna untuk memasukkan banyak angka yang akan diisi.
-Kemudian program akan meminta pengguna untuk memasukkan bilangan sebanyak sesuai dengan banyak angka yang diisi sebelumnya.
-Setelah itu bilangan tadi akan dicek satu persatu apakah lebih besar dari variabel "terbesar". jika iya akan membuat variabel "terbesar" baru yang bernilai bilangan tadi.
-*/
+
 ```
