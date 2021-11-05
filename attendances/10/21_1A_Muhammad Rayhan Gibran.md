@@ -60,7 +60,7 @@ System.out.println(bil[3]);
     7
     20
 
-> Sintaks diatas digunakan untuk mencetak data dalam array yang sudah dimasukkan
+> Sintaks diatas digunakan untuk mencetak data dalam array yang sudah dimasukkan.
 
 #### Pertanyaan
 
@@ -445,7 +445,7 @@ System.out.println("key ada di array ke-"+hasil);
 
     key ada di array ke--1
 
-> Program Meenghasilkan -1 karena data angka lima tidak ada di dalam array jadi komputer mencetak -1 karena sebelumnya dideklarasikan bahwa hasil sama dengan -1
+> Program Meenghasilkan -1 karena data angka lima tidak ada di dalam array jadi komputer mencetak -1 karena sebelumnya dideklarasikan bahwa hasil sama dengan -1.
 
 ```Java
 
@@ -592,7 +592,7 @@ for(int i=0; i<cEven; i++){
     Bilangan Genap  : 8
     Bilangan Genap  : 10
 
-> Program diatas memmpunyai fungsi untuk membedakan dan mencetak mana data angka yang ganjil mana yang genap dengan menggunakan perulagan dan if else
+> Program diatas memmpunyai fungsi untuk membedakan dan mencetak mana data angka yang ganjil mana yang genap dengan menggunakan perulangan dan if else.
 
 ### Soal 2
 
