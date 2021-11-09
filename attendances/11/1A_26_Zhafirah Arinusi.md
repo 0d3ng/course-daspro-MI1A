@@ -1,0 +1,412 @@
+# JOBSHEET 11. ARRAY 2
+
+## Tujuan
+* Mahasiswa mampu memahami pembuatan array dua dimensi
+* Mahasiswa mampu menyelesaikan studi kasus dengan memanfaatkan array dua dimensi
+
+## Alat dan Bahan
+* PC/Laptop
+* Browser
+* Koneksi internet
+* Anaconda3 + Java kernel (opsional)
+
+## Praktikum
+
+### Percobaan 1: Deklarasi, Inisialisasi, dan Menampilkan Array 2 Dimensi
+Pada Percobaan 1, kode program yang dibuat digunakan untuk menyimpan nilai praktikum dari 2 orang mahasiswa pada 3 mata kuliah yang berbeda.
+1.	Buat array bertipe **integer** dengan nama **nilai** dengan kapasitas baris 2 elemen (menyatakan jumlah mahasiswa) dan kolom 3 elemen (menyatakan jumlah mata kuliah)
+![Gambar 1](images/percobaan1-1.PNG)
+
+
+```Java
+// Tuliskan kode program Percobaan 1 Langkah 1
+int[][] nilai = new int[2][3]; // sebagai deklarasi dan instansiasi array
+```
+
+2. Isi masing-masing elemen array **nilai** sebagai berikut:
+![Gambar 2](images/percobaan1-2.PNG)
+
+
+```Java
+// Tuliskan kode program Percobaan 1 Langkah 2
+nilai[0][0] = 75;
+nilai[0][1] = 90;
+nilai[0][2] = 88;
+nilai[1][0] = 79;
+nilai[1][1] = 82;
+nilai[1][2] = 67; // sebagai inisialisai array
+```
+
+
+
+
+    67
+
+
+
+3. Tampilkan semua isi elemen array **nilai**
+![Gambar 3](images/percobaan1-3.PNG)
+
+
+```Java
+// Tuliskan kode program Percobaan 1 Langkah 2
+System.out.println(nilai[0][0] + " " + nilai[0][1] + " " + nilai[0][2]);
+System.out.println(nilai[1][0] + " " + nilai[1][1] + " " + nilai[1][2]); // untuk menampilkan elemen array dalam bentuk baris dan kolom
+```
+
+    75 90 88
+    79 82 67
+
+
+#### Pertanyaan
+1. Apakah pengisian elemen array harus dilakukan secara berurutan mulai dari indeks 0? Jelaskan!
+
+// Tuliskan jawaban nomor 1
+
+Tidak, karena dalam pengisian yang penting indeksnya jelas sehingga pada saat mencari elemennya mudah.
+
+2. Lakukan modifikasi pada Percobaan 1 Langkah 3 untuk menampilkan semua isi elemen array **nilai** menggunakan perulangan *for*
+
+
+```Java
+// Tuliskan jawaban nomor 2
+for (int i = 0; i < nilai.length; i++) {
+    for (int j = 0; j < nilai[0].length; j++) {
+        System.out.print(nilai[i][j] + " ");
+    }
+    System.out.println();
+}
+// untuk menampilkan elemen array menggunakan perulangan for
+```
+
+    75 90 88 
+    79 82 67 
+
+
+### Percobaan 2: Mengisi Elemen Array 2 Dimensi Menggunakan Input Keyboard
+Pada Percobaan 2, kode program yang dibuat digunakan untuk menyimpan nilai rating restoran yang terdaftar pada aplikasi pemesanan makanan online. Rating diberikan oleh 4 orang pengguna kepada 2 restoran yang terdaftar.
+1. Import dan deklarasikan Scanner dengan nama **sc**
+![Gambar 4](images/percobaan2-1.jpg)
+
+
+```Java
+// Tuliskan kode program Percobaan 2 Langkah 1
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in); // sebagai deklarasi scanner untuk inputan menggunakan keyboard
+```
+
+2.	Buat array bertipe **integer** dengan nama **rating** dengan kapasitas baris 4 elemen (menyatakan jumlah pengguna) dan kolom 2 elemen (menyatakan jumlah restoran)
+![Gambar 5](images/percobaan2-2.PNG)
+
+
+```Java
+// Tuliskan kode program Percobaan 2 Langkah 2
+int[][] rating = new int[4][2]; // untuk deklarasi dan instansiasi array
+```
+
+3. Dengan menggunakan perulangan *for*, buat input untuk mengisi elemen array **rating**
+![Gambar 6](images/percobaan2-3.PNG)
+
+
+```Java
+// Tuliskan kode program Percobaan 2 Langkah 3
+for (int j = 0; j < rating.length; j++){
+    for (int i = 0; i < rating[0].length; i++){
+        System.out.print("Masukkan rating pengguna " + j + " untuk restoran " + i + " : ");
+        rating[j][i] = sc.nextInt();
+    }
+    System.out.println("");
+}
+// untuk mengisi elemen array menggunakan perulangan for
+```
+
+    Masukkan rating pengguna 0 untuk restoran 0 : 7
+    Masukkan rating pengguna 0 untuk restoran 1 : 7
+    
+    Masukkan rating pengguna 1 untuk restoran 0 : 8
+    Masukkan rating pengguna 1 untuk restoran 1 : 8
+    
+    Masukkan rating pengguna 2 untuk restoran 0 : 9
+    Masukkan rating pengguna 2 untuk restoran 1 : 9
+    
+    Masukkan rating pengguna 3 untuk restoran 0 : 8
+    Masukkan rating pengguna 3 untuk restoran 1 : 8
+    
+
+
+4. Dengan menggunakan perulangan *for-each*, tampilkan semua isi elemen dari array **rating**
+![Gambar 7](images/percobaan2-4.PNG)
+
+
+```Java
+// Tuliskan kode program Percobaan 2 Langkah 4
+for (int[] rtg : rating) {
+    for (int r : rtg) {
+        System.out.print(r + " ");
+    }
+    System.out.println("");
+}
+// untuk menampilkan elemen array dengan menggunakan perulangan for-each
+```
+
+    7 7 
+    8 8 
+    9 9 
+    8 8 
+
+
+#### Pertanyaan
+1. Pada Percobaan 2 Langkah 3, dapatkah posisi i ditukar dengan posisi j? Jelaskan alasannya!
+
+// Tuliskan jawaban nomor 1
+
+Ya dapat, karena i dan j merupakan nama variabel yang dapat diganti ganti.
+
+2. Tambahkan kode program untuk menentukan banyaknya baris dan kolom elemen array secara dinamis (baris dan kolom ditentukan saat program berjalan melalui input keyboard)!
+
+
+```Java
+// Tuliskan jawaban nomor 2
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in); // untuk deklarasi scanner dan mengisi inputan dari keyboard
+
+System.out.print("Masukkan panjang baris array: ");
+int x = sc.nextInt(); // untuk mengisi panjang baris sesuai inputan pengguna
+System.out.print("Masukkan panjang kolom array: ");
+int y = sc.nextInt(); // untuk mengisi panjang kolom sesuai inputan pengguna
+int[][] rating = new int[x][y]; // sebagai deklarasi dan instansiasi array
+
+for (int i=0; i<rating.length; i++){ 
+    for (int j=0; j<rating[0].length; j++){ 
+        System.out.print("Masukkan rating pengguna "+ i + " untuk restoran " + j + " : "); 
+        rating[i][j] = sc.nextInt(); 
+    }
+    System.out.println("");
+}
+// untuk mengisi elemen array sesuai dengan panjang baris dan kolom yang telah di inputkan
+```
+
+    Masukkan panjang baris array: 2
+    Masukkan panjang kolom array: 3
+    Masukkan rating pengguna 0 untuk restoran 0 : 7
+    Masukkan rating pengguna 0 untuk restoran 1 : 7
+    Masukkan rating pengguna 0 untuk restoran 2 : 8
+    
+    Masukkan rating pengguna 1 untuk restoran 0 : 8
+    Masukkan rating pengguna 1 untuk restoran 1 : 9
+    Masukkan rating pengguna 1 untuk restoran 2 : 9
+    
+
+
+### Percobaan 3: Melakukan Operasi Aritmatika pada Elemen Array 2 Dimensi
+Pada Percobaan 3, kode program yang dibuat digunakan untuk menghitung nilai rata-rata harga setiap bahan pokok selama 1 semester. Terdapat 3 bahan pokok yang dicatat harganya setiap akhir bulan. Program dibuat berdasarkan flowchart berikut.
+![Gambar 8](images/percobaan3.jpg)
+1. Import dan deklarasikan Scanner dengan nama **sc**
+![Gambar 9](images/percobaan3-1.jpg)
+
+
+```Java
+// Tuliskan kode program Percobaan 3 Langkah 1
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in); // sebagai deklarasi scanner dan mengisi inputan dari pengguna
+```
+
+2.	Buat array bertipe **integer** dengan nama **harga** dengan kapasitas baris 3 elemen (menyatakan jumlah bahan pokok) dan kolom 6 elemen (menyatakan jumlah bulan). Deklarasikan juga variabel **total** dan **rata** bertipe **double**
+![Gambar 10](images/percobaan3-2.PNG)
+
+
+```Java
+// Tuliskan kode program Percobaan 3 Langkah 2
+int [] [] harga = new int[3][6];
+double total, rata; // sebagai deklarasi dan instansiasi array
+```
+
+3. Dengan menggunakan perulangan *for*, buat input untuk mengisi elemen array **harga**. Kemudian, perhitungan total harga dilakukan untuk setiap bulan (kolom) pada setiap bahan pokok (baris). Setelah itu, nilai rata-rata dihitung untuk setiap bahan pokok (tiap satu baris) dan ditampilkan
+![Gambar 11](images/percobaan3-3.PNG)
+
+
+```Java
+// Tuliskan kode program Percobaan 3 Langkah 3
+for (int i = 0; i < harga.length; i++) {
+    total = 0;
+    rata = 0;
+    for (int j = 0; j < harga[0].length; j++) {
+        System.out.printf("Masukkan harga[%d] [%d]: ", i, j);
+        harga[i][j] = sc.nextInt();
+        total += harga[i][j]; // untuk menghitung total harga bahan pokok selama 1 bulan
+    }
+    rata = total / harga[0].length; // untuk menghitung rata-rata dari total harga bahan pokok selama 1 bulan
+    System.out.printf("Rata-rata harga bahan ke-%d adalah %.2f\n", i, rata); // untuk menampilkan rata-rata harga barang pokok
+}
+```
+
+    Masukkan harga[0] [0]: 1000
+    Masukkan harga[0] [1]: 2000
+    Masukkan harga[0] [2]: 3000
+    Masukkan harga[0] [3]: 4000
+    Masukkan harga[0] [4]: 5000
+    Masukkan harga[0] [5]: 6000
+    Rata-rata harga bahan ke-0 adalah 3500.00
+    Masukkan harga[1] [0]: 4000
+    Masukkan harga[1] [1]: 5000
+    Masukkan harga[1] [2]: 3000
+    Masukkan harga[1] [3]: 5000
+    Masukkan harga[1] [4]: 3000
+    Masukkan harga[1] [5]: 1000
+    Rata-rata harga bahan ke-1 adalah 3500.00
+    Masukkan harga[2] [0]: 1000
+    Masukkan harga[2] [1]: 3000
+    Masukkan harga[2] [2]: 9000
+    Masukkan harga[2] [3]: 8000
+    Masukkan harga[2] [4]: 4000
+    Masukkan harga[2] [5]: 6000
+    Rata-rata harga bahan ke-2 adalah 5166.67
+
+
+#### Pertanyaan
+1. Jelaskan fungsi dari **rata = total / harga[0].length**!
+
+// Tuliskan jawaban nomor 1
+
+Berfungsi untuk menghitung rata-rata dari total dibagi banyaknya data per kolom.
+
+2. Mengapa insialisasi variabel **total = 0** dan **rata = 0** berada di dalam perulangan *for* yang pertama? Menurut Anda, apa yang terjadi jika inisialisasi kedua variabel tersebut diletakkan di luar perulangan *for* (setelah deklarasi array)?
+
+// Tuliskan jawaban nomor 2
+
+Karena jika diletakkan pada perulangan yang kedua perhitungan rata-ratanya tidak sesuai. 
+Jika diletakkan diluar perulangan for, perhitungan rata-ratanya juga tidak sesuai.
+
+## Tugas
+
+1. Perhatikan flowchart berikut.
+![Gambar 12](images/tugas-1.jpg)
+Buat kode program sesuai dengan flowchart tersebut untuk mencari suhu tertinggi yang dicatat dari 5 kota di Jepang selama 7 hari berturut-turut!
+
+
+```Java
+// Tuliskan jawaban nomor 1
+import java.util.Scanner;
+Scanner s = new Scanner(System.in); // sebagai deklarasi scanner dan untuk mengisi inputan dari pengguna
+
+double[][] suhu = new double [5][7]; // sebagai deklarasi dan instansiasi array
+int x,y;
+double max = 0; // sebagai deklarasi variabel
+
+for (int x = 0; x < suhu.length; x++){
+    for (int y = 0; y < suhu[0].length; y++){
+        System.out.print("Masukkan suhu " + (x+1) + " hari ke " + (y+1) + " : ");
+        suhu[x][y] = s.nextDouble(); // untuk mengisi suhu sesuai inputan pengguna menggunakan perulangan
+        if(suhu[x][y] > max){
+            max = suhu[x][y]; // untuk menyatakan jika suhu yang dimasukkan merupakan yang tertinggi maka akan ditampilkan
+        }
+    }
+    System.out.println();
+}
+System.out.print("Suhu tertinggi selama 7 hari di 5 kota yang ada di Jepang adalah " + max); // untuk menampilkan suhu tertinggi
+```
+
+    Masukkan suhu 1 hari ke 1 : 15
+    Masukkan suhu 1 hari ke 2 : 16
+    Masukkan suhu 1 hari ke 3 : 18
+    Masukkan suhu 1 hari ke 4 : 19
+    Masukkan suhu 1 hari ke 5 : 20
+    Masukkan suhu 1 hari ke 6 : 22
+    Masukkan suhu 1 hari ke 7 : 28
+    
+    Masukkan suhu 2 hari ke 1 : 25
+    Masukkan suhu 2 hari ke 2 : 24
+    Masukkan suhu 2 hari ke 3 : 25
+    Masukkan suhu 2 hari ke 4 : 29
+    Masukkan suhu 2 hari ke 5 : 28
+    Masukkan suhu 2 hari ke 6 : 21
+    Masukkan suhu 2 hari ke 7 : 23
+    
+    Masukkan suhu 3 hari ke 1 : 25
+    Masukkan suhu 3 hari ke 2 : 26
+    Masukkan suhu 3 hari ke 3 : 32
+    Masukkan suhu 3 hari ke 4 : 28
+    Masukkan suhu 3 hari ke 5 : 27
+    Masukkan suhu 3 hari ke 6 : 28
+    Masukkan suhu 3 hari ke 7 : 21
+    
+    Masukkan suhu 4 hari ke 1 : 19
+    Masukkan suhu 4 hari ke 2 : 18
+    Masukkan suhu 4 hari ke 3 : 17
+    Masukkan suhu 4 hari ke 4 : 18
+    Masukkan suhu 4 hari ke 5 : 27
+    Masukkan suhu 4 hari ke 6 : 28
+    Masukkan suhu 4 hari ke 7 : 27
+    
+    Masukkan suhu 5 hari ke 1 : 25
+    Masukkan suhu 5 hari ke 2 : 23
+    Masukkan suhu 5 hari ke 3 : 21
+    Masukkan suhu 5 hari ke 4 : 20
+    Masukkan suhu 5 hari ke 5 : 19
+    Masukkan suhu 5 hari ke 6 : 25
+    Masukkan suhu 5 hari ke 7 : 28
+    
+    Suhu tertinggi selama 7 hari di 5 kota yang ada di Jepang adalah 32.0
+
+2. Terdapat hasil pencatatan data lima mahasiswa yang berisi informasi mengenai umur, berat badan (kg), dan tinggi badan (cm). Data tersebut disimpan ke dalam array dua dimensi.
+![Gambar 13](images/tugas-2.PNG)
+*Keterangan: penyimpanan nilai dapat dilakukan melalui inisialisasi menggunakan operator assignment*
+ * Tampilkan *berat badan terendah* di antara kelima mahasiswa tersebut
+ * Tampilkan *rata-rata tinggi badan* dari kelima mahasiswa tersebut
+ * Tampilkan nama mahasiswa dengan *umur tertua* di antara kelima mahasiswa tersebut
+
+
+```Java
+// Tuliskan jawaban nomor 2
+int[][] dataMhs = {
+    {19, 51, 155},
+    {18, 55, 163},
+    {18, 45, 153},
+    {20, 46, 158},
+    {19, 58, 160}
+}; // sebagai deklarasi dan instansiasi array
+
+int i,j;
+int minbb=100; // sebagai deklarasi variabel
+
+for(i=0; i<dataMhs.length; i++){ // sebagai outer loop yang merepresentasikan baris
+    for(j=0; j<dataMhs[1].length; j++){ // sebagai inner yang merepresentasikan kolom
+        if(dataMhs[i][1] < minbb){ // untuk menyatakan jika elemen array pada kolom ke 1 merupakan angka yang terkecil maka akan ditampilkan
+            minbb = dataMhs[i][1];
+        }
+    }
+}
+System.out.print("Berat badan terendah dari kelima mahasiswa tersebut yaitu " + minbb); // untuk menampilkan berat badan terendah
+
+double totaltb = 0;
+double ratatb = 0; // sebagai deklarasi variabel
+for(i=0; i<dataMhs.length; i++){
+    for(j=0; j<dataMhs[0].length; j++){
+    if(j == 2) // untuk menyatakan jika kondisi berada di indeks ke 2
+        totaltb += dataMhs[i][j]; // untuk menghitung total tinggi badan
+    }
+}
+ratatb = totaltb / dataMhs.length; // untuk menghitung rata-rata tinggi badan
+System.out.printf('\n' + "Total tinggi badan = " + totaltb); // untuk menampilkan total tinggi badan
+System.out.print('\n'+ "Rerata tinggi badan dari kelima mahasiswa tersebut yaitu " + ratatb); 
+// unutuk menampilkan rata-rata tinggi badan
+
+String[] nama = {"Desi", "Rofan", "Lala", "Beky", "Ega"}; // sebagai deklarasi variabel
+
+int indeks;
+int tua=0;
+for(i=0; i<dataMhs.length; i++){
+    for(j=0; j<dataMhs[0].length; j++){
+        if(dataMhs[i][0] > tua){
+            tua = dataMhs[i][0];
+            indeks = i;
+        }
+    }
+}
+System.out.print('\n'+"Umur tertua dari kelima mahasiswa tersebut yaitu " +tua +" bernama " + nama[indeks]);
+```
+
+    Berat badan terendah dari kelima mahasiswa tersebut yaitu 45
+    Total tinggi badan = 789.0
+    Rerata tinggi badan dari kelima mahasiswa tersebut yaitu 157.8
+    Umur tertua dari kelima mahasiswa tersebut yaitu 20 bernama Beky
