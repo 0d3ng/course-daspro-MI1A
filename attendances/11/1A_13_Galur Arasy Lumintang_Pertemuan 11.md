@@ -200,20 +200,20 @@ for(int i = 0; i < rating.length; i++) {
 
 
 ```Java
-System.out.print("Masukkan jumlah kolom: ");
-int kolom = sc.nextInt();
 System.out.print("Masukkan jumlah baris: ");
 int baris = sc.nextInt();
-int[][] rating = new int[kolom][baris];
+System.out.print("Masukkan jumlah kolom: ");
+int kolom = sc.nextInt();
+int[][] rating = new int[baris][kolom];
 
-System.out.println("Jumlah baris sekarang adalah: " + rating[0].length);
-System.out.println("Jumlah kolom sekarang adalah: " + rating.length);
+System.out.println("Jumlah baris sekarang adalah: " + rating.length);
+System.out.println("Jumlah kolom sekarang adalah: " + rating[0].length);
 ```
 
-    Masukkan jumlah kolom: 5
     Masukkan jumlah baris: 10
+    Masukkan jumlah kolom: 20
     Jumlah baris sekarang adalah: 10
-    Jumlah kolom sekarang adalah: 5
+    Jumlah kolom sekarang adalah: 20
     
 
 ### Percobaan 3: Melakukan Operasi Aritmatika pada Elemen Array 2 Dimensi
