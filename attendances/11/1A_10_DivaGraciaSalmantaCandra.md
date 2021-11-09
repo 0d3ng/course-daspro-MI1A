@@ -276,21 +276,21 @@ Buat kode program sesuai dengan flowchart tersebut untuk mencari suhu tertinggi 
 import java.util.Scanner;
 Scanner sc = new Scanner(System.in);
 
-double[][] suhu = new double [5][7];
+double[][] suhu = new double [5][7]; //inisialisasi array suhu bertipe double dengan jumlah 5 baris dan 7 kolom
 int x,y;
-double max=0;
+double max=0; //deklarasi variabel max=0
 
-for(x=0; x<suhu.length; x++){
-    for(y=0; y<suhu[0].length; y++){
+for(x=0; x<suhu.length; x++){ //outer loop. looping setiap baris
+    for(y=0; y<suhu[0].length; y++){ //inner loop. looping setiap kolom
         System.out.print("Masukkan suhu kota " +(x+1) +" hari ke " +(y+1) + " : ");
-        suhu[x][y] = sc.nextDouble();
-        if(suhu[x][y]>max){
-            max = suhu[x][y];
+        suhu[x][y] = sc.nextDouble(); //inputan dimasukkan ke dalam array suhu
+        if(suhu[x][y]>max){ 
+            max = suhu[x][y]; //jika nilai inputan lebih besar dari nilai dalam variabel max maka inputan tersebut dimasukkan ke dalam variabel max
         }
     }
     System.out.println();
 }
-System.out.print("Suhu tertinggi dari 5 kota di Jepang selama 7 hari berturut-turut adalah "+ max);
+System.out.print("Suhu tertinggi dari 5 kota di Jepang selama 7 hari berturut-turut adalah "+ max); //menampilkan suhu tertinggi
 ```
 
     Masukkan suhu kota 1 hari ke 1 : 18
@@ -345,6 +345,7 @@ System.out.print("Suhu tertinggi dari 5 kota di Jepang selama 7 hari berturut-tu
 
 ```Java
 // Tuliskan jawaban nomor 2
+//inisialisasi array dataMhs beserta pengisian elemen 
 int[][] dataMhs = {
     {19, 51, 155},
     {18, 55, 163},
@@ -355,10 +356,10 @@ int[][] dataMhs = {
 
 int i,j;
 int minbb=100;
-for(i=0; i<dataMhs.length; i++){
-    for(j=0; j<dataMhs[1].length; j++){
+for(i=0; i<dataMhs.length; i++){ //outer loop. looping setiap baris
+    for(j=0; j<dataMhs[1].length; j++){ //inner loop. looping kolom berindeks 1
         if(dataMhs[i][1] < minbb){
-            minbb = dataMhs[i][1];
+            minbb = dataMhs[i][1]; //jika nilai suatu elemen lebih kecil dari nilai dalam variabel min maka elemen tersebut dimasukkan ke dalam variabel min
         }
     }
 }
@@ -367,24 +368,24 @@ System.out.print("Berat badan terendah dari kelima mahasiswa tersebut yaitu " + 
 double totaltb = 0;
 double ratatb = 0;
 for(i=0; i<dataMhs.length; i++){
-    for(j=0; j<dataMhs[0].length; j++){
-    if(j == 2)
-        totaltb += dataMhs[i][j];
+    for(j=0; j<dataMhs[0].length; j++){ //inner loop. looping setiap kolom
+    if(j == 2) //statement di bawah ini hanya akan dieksekusi jika kolom berindeks 2
+        totaltb += dataMhs[i][j]; //menjumlahkan setiap data dalam kolom 2
     }
 }
-ratatb = totaltb / dataMhs.length;
+ratatb = totaltb / dataMhs.length; 
 System.out.printf('\n' + "Total tinggi badan = " + totaltb);
 System.out.print('\n'+ "Rerata tinggi badan dari kelima mahasiswa tersebut yaitu " + ratatb);
 
-String[] nama = {"Desi", "Rofan", "Lala", "Beky", "Ega"};
+String[] nama = {"Desi", "Rofan", "Lala", "Beky", "Ega"}; //inisialisasi array nama
 
 int indeks;
 int tua=0;
 for(i=0; i<dataMhs.length; i++){
     for(j=0; j<dataMhs[0].length; j++){
         if(dataMhs[i][0] > tua){
-            tua = dataMhs[i][0];
-            indeks = i;
+            tua = dataMhs[i][0]; //jika nilai suatu elemen lebih besar dari nilai dalam variabel tua maka elemen tersebut dimasukkan ke dalam variabel tua
+            indeks = i; //memasukkan indeks baris yang elemennya masuk dalam variabel tua ke variabel indeks 
         }
     }
 }
