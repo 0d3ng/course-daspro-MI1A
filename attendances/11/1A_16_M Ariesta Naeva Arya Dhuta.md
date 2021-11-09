@@ -376,7 +376,7 @@ int keseluruhan[][] = {{19,51,155},
                      {20,46,158},
                      {19,58,160}};//mendeklarasi variabel array sekalian datanya
 String nama [] = {"Desi", "Rofan", "Lala", "Beky", "Ega"};
-String sepuh = "a";
+String sepuh ;
 int beratRendah = 2000;
 int umurTua = 0;
 double rataTinggi;
