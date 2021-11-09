@@ -375,10 +375,13 @@ int keseluruhan[][] = {{19,51,155},
                      {18,45,153},
                      {20,46,158},
                      {19,58,160}};//mendeklarasi variabel array sekalian datanya
+String nama [] = {"Desi", "Rofan", "Lala", "Beky", "Ega"};
+String sepuh ;
 int beratRendah = 2000;
 int umurTua = 0;
 double rataTinggi;
 int totalTinggi;
+
 
 for(int i = 0;i<keseluruhan.length; i++){
     for(int j = 0;j<keseluruhan[0].length; j++){
@@ -388,21 +391,24 @@ for(int i = 0;i<keseluruhan.length; i++){
         }
         if(keseluruhan[i][0]>umurTua){
             umurTua = keseluruhan[i][0];//perulangan untuk mencari umur paling tua
+            sepuh = nama[i] ;//untuk mencari nama dengan umur tertinggi sekalian mencari umur tertua karena baris nya sama yang di cari seperti itu
         }
         
+        }
+     totalTinggi += keseluruhan[i][2];//untuk menjumlah total semua tinggi mahasiswa
     }
-    totalTinggi += keseluruhan[i][2];//untuk menjumlah total semua tinggi mahasiswa
     
-}
+   
+
 rataTinggi = totalTinggi/keseluruhan.length;//jumlah total tinggi yang di atas dibagi keseluruhan.length yang berarti dibagi 5
 System.out.print("Berat badan terendah adalah : "+beratRendah);
 System.out.println("\nRata-rata tinggi badan adalah : "+rataTinggi);
-System.out.print("Umur tertua adalah : "+umurTua);
+System.out.printf("Umur tertua dipegang oleh Sepuh %s dengan umur %d ",sepuh,umurTua);
 ```
 
     Berat badan terendah adalah : 45
     Rata-rata tinggi badan adalah : 157.0
-    Umur tertua adalah : 20
+    Umur tertua dipegang oleh Sepuh Beky dengan umur 20
 
 
 ```Java
