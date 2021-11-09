@@ -1,8 +1,8 @@
 Identitas Diri
 
-Nim : [Indira Irawati Putri]
+Nim : 2131710047
 
-Nama: [2131710022]
+Nama: Nabila Rasyidah
 
 ### Soal UTS 2021-2022
 Waktu: 90 menit
@@ -20,74 +20,8 @@ kode program pada cell yang telah disediakan dan jangan lupa untuk menjalankan h
 
 ```Java
 // tulis jawaban di sini
-import java.util.Scanner;
-String nama_barang;
-int jumlah_barang,harga,totalharga;
-double diskon = 0.075;
-double totalbayar;
-System.out.println("Toko");
-System.out.ptintln("-----------------------");
-System.out.println("Masukan barang");
-System.out.println("Nama Barang= ");
-nama_barang = input.nextLine();
-System.out.println("Jumlah Barang= ");
-jumlah_barang = input.nextLine();
-}
-}
-System.out.println("Jumlah Barang= ");
-jumlah_barang = input.nextLine();
-if(jumlah_barang <=0) {
-     System.out.println("Mohon masukan jumlah yang benar dan ulang programnya");
-   System.exit(0);
-}
-System.out.println("Harga Barang=  ");
-harga = input.nextInt();
-if (harga<100) {
-      System.out.println("Mohon masukan harga yang valid dan ulang programnya");
-   System.exit(0);
-}
-System.out.println("Harga Barang=  ");
-harga = input.nextInt();
-if (harga<100) {
-      System.out.println("Mohon masukan harga yang valid dan ulang programnya");
-   System.exit(0);
-}
-
-System.out.println("Anda mendapatkan diskon 7,5%");
-totalharga = jumlah_barang * harga;
-System.out.println("Total Harga="+totalharga");
-diskon = totalharga * diskon;
-totalbayar = totalharga - diskon;
-System.out.println("Total Bayar ="+totalbayar");
-                   System.out.println("Anda mendapatkan diskon 7,5%");
-totalharga = jumlah_barang * harga;
-System.out.println("Total Harga="+totalharga");
-diskon = totalharga * diskon;
-totalbayar = totalharga - diskon;
-System.out.println("Total Bayar ="+totalbayar");
-System.out.println("-------------------------");
-System.out.println("Nota Belanja");
-System.out.println("Nama Barang =" +nama_barang);
-System.out.println("Jumlah Barang =" +jumlah_barang);
-System.out.println("Harga Barang =" +harga);
-System.out.println("Total Harga="+totalharga");
-System.out.println("Total Bayar ="+totalbayar");
-System.out.println("-------------------------");
 
 ```
-
-    Toko
-
-
-
-    |   System.out.ptintln("-----------------------");
-
-    cannot find symbol
-
-      symbol:   method ptintln(java.lang.String)
-
-    
-
 
 2.	Seorang yang akan membayar pajak perlu dihitung semua harta kekayaan atau penghasilan. Kriteria yang dapat dihitung adalah sebagai berikut
     + Sebelum dihitung, wajib pajak ditanya terlebih dahulu apakah memiliki usaha atau tidak. Ketika memiliki usaha, maka perlu diinputkan penghasilan dalam 1 tahun berapa? Kemudian dikenai pajak sebesar 15%
@@ -97,7 +31,41 @@ System.out.println("-------------------------");
 
 
 ```Java
+// tulis jawaban di sini
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+String usaha, keluarga, harta, hartaKekayaan, pendidikan;
+double penghasilan, pajak, pjAwal, pjAkhir, total;
+double bergerak, tidakBergerak, perhiasan, nilaiJual, penghasilan;
 
+System.out.println("Pembayaran Pajak");
+System.out.print("Apakah memiliki usaha? (y/n): ");
+usaha = sc.nextLine();
+if(usaha == "y"){
+    System.out.print("Penghasilan 1 Tahun: " + penghasilan);
+    penghasilan = sc.nextInt();
+    pjAwal = penghasilan * 15 / 100;
+    pjAkhir = penghasilan - pjAwal;
+}
+System.out.print("Harta kekayaan (bergerak/tidak) : ");
+harta = sc.nextLine();
+System.out.print("Nilai jual harta anda saat ini : ");
+nilaiJual = sc.nextDouble();
+
+if(hartaKekayaan.equals ("bergerak"))
+    {
+        System.out.println("Masukkan nama harta bergerak anda (motor): ");
+        harta = sc.nextLine();
+        System.out.println("Masukkan nilai jual harta anda: ");
+        nilaiJual = sc.nextDouble();
+    } else (hartaKekayaan.equals ("tidak bergerak")){
+        System.out.println("Masukkan nama harta tidak bergerak anda (perhiasan): ");
+        harta = sc.nextLine();
+        System.out.println("Masukkan nilai jual harta anda: ");
+        nilaiJual = sc.nextDouble();
+    }
+System.out.print("Tingkat pendidikan anak (SD,SMP,SMA,KULIAH): " + pendidikan);
+pendidikan = sc.nextLine();
 ```
 
 > **Kerjakan secara individu, segala bentuk yang mengarah kepada kecurangan akan mendapatkan nilai 0.**
