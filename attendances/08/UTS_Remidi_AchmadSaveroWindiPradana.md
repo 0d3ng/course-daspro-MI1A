@@ -1,8 +1,8 @@
-## Identitas Diri
+Identitas Diri
 
-Nim : 2131710142
+Nim : [Isikan NIM Anda]
 
-Nama: Selly Amelia Putri
+Nama: [Isikan Nama Anda]
 
 ### Soal UTS 2021-2022
 Waktu: 90 menit
@@ -31,78 +31,74 @@ kode program pada cell yang telah disediakan dan jangan lupa untuk menjalankan h
 
 ```Java
 // tulis jawaban di sini
-import java.util.Scanner;
+Scanner input = new Scanner(System.in);
 import java.math.BigDecimal;  
-
     Scanner in = new Scanner(System.in);
     Boolean usaha = false;
-    double penghasilan, pajak = 0;
-    String bendaGerak;
-    double nilaiJualBendaGerak;
+    double penghasilan, nilaiJualBendaGerak, pajak = 0;
+    String bendaBergerak;
+    String tingkatPendidikan;
+    String jmlhAnak;
     String perhiasan;
     double nilaiJualPerhiasan;
-    System.out.print("Anda memiliki usaha? (ya/tidak): ");
+    System.out.println("Program Perhitungan Pajak"); 
+    System.out.printf("Apakah anda sudah memiliki usaha?(Iya / Tidak)? : ");
 
     while(true) {
         String temp = in.nextLine();
-        if(temp.equalsIgnoreCase("Ya")) {
+        if(temp.equalsIgnoreCase("Iya")) {
             usaha = true;
-            System.out.print("\nMasukkan Penghasilan dalam 1 Tahun?: ");
+            System.out.println("Berapakah penghasilan anda dalam 1 tahun?: ");
             penghasilan = in.nextDouble();
-            in.nextLine(); // handlebug
+            in.nextLine();
             break;
         } else if(temp.equalsIgnoreCase("Tidak")) {
             break;
         } else System.out.println("Maaf, input anda salah");
     }
     
-    System.out.print("Harta kekayaan berupa benda gerak (Mobil, Sepeda Motor): ");
-    bendaGerak = in.nextLine();
-    System.out.print("Nilai jual saat ini: ");
+    System.out.printf("Berapa jumlah Harta Kekayaan berupa (Mobil)? : ");
+    bendaBergerak = in.nextLine();
+    System.out.print("Masukkan nilai jual Harta Kekayaan: ");
 
     nilaiJualBendaGerak = in.nextDouble();
     penghasilan += nilaiJualBendaGerak;
-    
-    System.out.print("Harta kekayaan berupa perhiasan: ");
+    System.out.print("Berapa jumlah harta kekayaan berupa (perhiasan)? : ");
     perhiasan = in.nextLine();
-    in.nextLine(); // handlebug
-    System.out.print("Nilai jual saat ini: ");
+    in.nextLine();
+    System.out.print("Masukkan nilai jual Harta Kekayaan: ");
     nilaiJualPerhiasan = in.nextDouble();
     penghasilan+= nilaiJualPerhiasan;
     
-//     System.out.println("Apakah anda sudah berkeluarga? (ya/tidak): ");
-
-//     int jumlahAnak;
-//     String[] pendidikanAnak;
-//     while(true) {
-//         if(temp.equalsIgnoreCase("Ya")) {
-//             System.out.println("Jumlah anak?");
-//             jumlahAnak = in.nextInt();
-//             for(int i = 0; i < jumlahAnak; i++) {
-//                 System.out.println("Tingkat pendidikan anak ke" + (i+=1) + "(SD,SMP,SMA,Kuliah)");
-//                 if(temp.equalsIgnoreCase("SMA") ) {
-//                     pendidikanAnak[i] = "SMA";
-//                 }
-//             }
-//             break;
-//         } else if(temp.equalsIgnoreCase("Tidak")) break;
-//         else System.out.println("Maaf, input anda salah");
-//     }
-    System.out.println("-------------------------------------------------------");    
-    System.out.println("Penghasilan anda: Rp." + penghasilan);    
-    System.out.println(": Rp." + penghasilan * 0.15);
-```p
-
-    Anda memiliki usaha? (ya/tidak): ya
+    System.out.print("Masukkan Tingkat Pendidikan Anak (SD,SMP,SMA,KULIAH) ");
+    tingkatPendidikan = in.nextLine();
+    in.nextLine();
+    System.out.print("Masukkan Jumlah Anak pada pendidikan tersebut: ");
+    jmlhAnak = in.nextLine();
     
-    Masukkan Penghasilan dalam 1 Tahun?: 5000000
-    Harta kekayaan berupa benda gerak (Mobil, Sepeda Motor): Mobil
-    Nilai jual saat ini: 8000000
-    Harta kekayaan berupa perhiasan: kalung
-    Nilai jual saat ini: 900000
-    -------------------------------------------------------
-    Penghasilan anda: Rp.1.39E7
-    Pajak yang harus anda bayar: Rp.2085000.0
+    System.out.println("======================================================="); 
+    System.out.println("         Penghasilan Anda     :"); 
+    System.out.println("======================================================="); 
+    System.out.println("Penghasilan anda: Rp." + penghasilan);    
+    System.out.println("Pajak yang harus anda bayar: Rp." + penghasilan * 0.15);
+
+```
+
+    Program Perhitungan Pajak
+    Apakah anda sudah memiliki usaha?(Iya / Tidak)? : Iya
+    Berapakah penghasilan anda dalam 1 tahun?: 
+    20000000
+    Berapa jumlah Harta Kekayaan berupa (Mobil)? : 3
+    Masukkan nilai jual Harta Kekayaan: 500000000
+    Berapa jumlah harta kekayaan berupa (perhiasan)? : 20
+    Masukkan nilai jual Harta Kekayaan: 10000000
+    Masukkan Tingkat Pendidikan Anak (SD,SMP,SMA,KULIAH) SMP
+    Masukkan Jumlah Anak pada pendidikan tersebut: 2
+    =======================================================
+             Penghasilan Anda     :
+    =======================================================
+    Penghasilan anda: Rp.5.3E8
+    Pajak yang harus anda bayar: Rp.7.95E7
 
 
 > **Kerjakan secara individu, segala bentuk yang mengarah kepada kecurangan akan mendapatkan nilai 0.**
