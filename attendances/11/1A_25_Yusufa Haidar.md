@@ -278,44 +278,8 @@ Sebagai operator untuk menghitung rata-rata dari data total dan array harga
 
 ```Java
 // Tuliskan jawaban nomor 2
-import java.util.Scanner;
-Scanner sc = new Scanner(System.in);
-int[][] harga = new int[3][6];
-total = 0;
-rata = 0;
-double total, rata;
-for (int i = 0; i < harga.length; i++){
-    for (int j = 0; j < harga[0].length; j++){
-        System.out.printf("Masukkan harga[%d][%d]: ", i, j);
-        harga[i][j] = sc.nextInt();
-        total += harga [i][j];
-    }
-    rata = total / harga[0].length;
-    System.out.printf("Rata-rata harga bahan ke-%d adalah %.2f\n", i, rata);
-}
-```
-    Masukkan harga[0][0]: 100
-    Masukkan harga[0][1]: 100
-    Masukkan harga[0][2]: 100
-    Masukkan harga[0][3]: 100
-    Masukkan harga[0][4]: 100
-    Masukkan harga[0][5]: 100
-    Rata-rata harga bahan ke-0 adalah 100.00
-    Masukkan harga[1][0]: 0
-    Masukkan harga[1][1]: 0
-    Masukkan harga[1][2]: 0
-    Masukkan harga[1][3]: 0
-    Masukkan harga[1][4]: 0
-    Masukkan harga[1][5]: 0
-    Rata-rata harga bahan ke-1 adalah 100.00
-    Masukkan harga[2][0]: 200
-    Masukkan harga[2][1]: 200
-    Masukkan harga[2][2]: 200
-    Masukkan harga[2][3]: 200
-    Masukkan harga[2][4]: 200
-    Masukkan harga[2][5]: 200
-    Rata-rata harga bahan ke-2 adalah 300.00
-    Karena inisialisasi akan dilakukan di outerloop, apabila inisialisasi diletakkan di luar perulangan *for* (setelah deklarasi array)? maka yang terjadi adalah penambahan rata" pada setiap perhitungan rata"
+    Agar perhitungan rata-rata terjadi perulangan setiap 6 kali, dan tidak menambahkan nilai rata-rata pada perhitungan sebelumnya.
+````
 ## Tugas
 
 1. Perhatikan flowchart berikut.
@@ -327,14 +291,16 @@ Buat kode program sesuai dengan flowchart tersebut untuk mencari suhu tertinggi 
 // Tuliskan jawaban nomor 1
 import java.util.Scanner;
 Scanner sc = new Scanner(System.in);
+// Kode dibawah sebagai deklarasi array
 double[][] suhu = new double[5][7];
+// Kode dibawah sebagai acuan utama data
 int x, y;
 double max = 0;
 for(int x = 0; x < suhu.length; x++){
     for(int y = 0; y < suhu[0].length; y++){
         System.out.printf("Masukkan suhu kota ke-%d hari ke-%d : ", x, y);
         suhu[x][y] = sc.nextDouble();
-        if(suhu[x][y] > max) max = suhu[x][y];    
+        if(suhu[x][y] > max) max = suhu[x][y]; // Digunakan untuk mengubah variabel dengan suhu tertinggi     
         }
     }
 System.out.print("Suhu max adalah: " + max);
@@ -385,23 +351,31 @@ System.out.print("Suhu max adalah: " + max);
 
 ```Java
 // Tuliskan jawaban nomor 2
-int[][] data = {{19,51,155}, {18,55,163}, {18,45,153}, {20,46,158}, {19,58,160}};
+// Kode dibawah sebagai deklarasi array 
+int[][] data = {{19,51,155}, {18,55,163}, {18,45,153}, {20,46,158}, {19,58,160}}; 
 String[] namaMahasiswa = {"Desi", "Rofan", "Lala", "Beky", "Ega"};
+// Kode dibawah sebagai acuan utama data
 int terkecil = data[0][1]; 
 int tertua = data[0][0];
 int totalTinggi = 0;
 int mhsTertua;
-for(int i = 0; i < data.length; i++){
+for(int i = 0; i < data.length; i++){ 
     for(int j = 0; j < data[0].length; j++){
-        if(j == 1 && terkecil > data[i][j]) terkecil = data[i][j];
-        else if(j == 2)totalTinggi += data[i][j]; 
+        // Kode dibawah digunakan untuk mencari berat terkecil dari data diatas
+        if(j == 1 && terkecil > data[i][j]) terkecil = data[i][j]; // Digunakan untuk merubah variabel jika variabel terendah
+        // Kode dibawah digunakan untuk menghitung rata-rata tinggi badan 
+        else if(j == 2)totalTinggi += data[i][j]; // Digunakan untuk menghitung tinggi pada iterasi
+        // Kode dibawah digunakan untuk mencari Mahasiswa Tertua 
         else if(j == 0 && tertua < data[i][j]){
-            mhsTertua = i;
-            tertua = data[i][j]; 
+            mhsTertua = i; // Merubah variabel menjadi indeks untuk mengambil Nama dari data String diatas
+            tertua = data[i][j]; // Merubah variabel menjadi mahasiswa tertua
         }
     }
-}
-System.out.println("Berat badan terendah adalah " + terkecil);
-System.out.println("Rata-rata tinggi badan adalah " + ((double) totalTinggi/data.length));
-System.out.printf("Mahasiswa Tertua adalah %s yang berumur %d", namaMahasiswa[mhsTertua], tertua);
+} // Kode dibawah sebagai output data
+System.out.println("Berat badan terendah adalah " + terkecil); // Digunakan untuk menampilkan output perhitungan berat terkecil
+System.out.println("Rata-rata tinggi badan adalah " + ((double) totalTinggi/data.length)); // Digunakan untuk menampilkan output perhitungan rata-rata tinggi
+System.out.printf("Mahasiswa Tertua adalah %d yang berumur %d", namaMahasiswa[mhsTertua], tertua); // Digunakan untuk menampilkan output pencarian Mahasiswa Tertua
 ```
+    Berat badan terendah adalah 45
+    Rata-rata tinggi badan adalah 157.8
+    Mahasiswa Tertua adalah Beky yang berumur 20
