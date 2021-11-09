@@ -392,10 +392,10 @@ int tertua = data[0][0];
 int totalTinggi = 0;
 int mhsTertua;
 for(int i = 0; i < data.length; i++){
-    for(int j = 0; j < data[0].length; j++) {
+    for(int j = 0; j < data[0].length; j++){
         if(j == 1 && terkecil > data[i][j]) terkecil = data[i][j];
-        else if(j == 2) totalTinggi += data[i][j]; 
-        else if(j == 0 && tertua < data[i][j]) {
+        else if(j == 2)totalTinggi += data[i][j]; 
+        else if(j == 0 && tertua < data[i][j]){
             mhsTertua = i;
             tertua = data[i][j]; 
         }
@@ -403,8 +403,5 @@ for(int i = 0; i < data.length; i++){
 }
 System.out.println("Berat badan terendah adalah " + terkecil);
 System.out.println("Rata-rata tinggi badan adalah " + ((double) totalTinggi/data.length));
-System.out.printf("Mahasiswa Tertua adalah %s yang berumur %d", namaMahasiswa[mhsTertua], tertua );
+System.out.printf("Mahasiswa Tertua adalah %s yang berumur %d", namaMahasiswa[mhsTertua], tertua);
 ```
-    Berat badan terendah adalah 45
-    Rata-rata tinggi badan adalah 157.8
-    Mahasiswa Tertua adalah Beky yang berumur 20
