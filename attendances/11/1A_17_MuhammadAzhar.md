@@ -232,10 +232,10 @@ untuk mencari nilai rata rata dengan menghitung total dibagi dengan panjang arra
 
 2. Mengapa insialisasi variabel **total = 0** dan **rata = 0** berada di dalam perulangan *for* yang pertama? Menurut Anda, apa yang terjadi jika inisialisasi kedua variabel tersebut diletakkan di luar perulangan *for* (setelah deklarasi array)?
 
-
 ```Java
 // Tuliskan jawaban nomor 2
-Agar perhitungan berikutnya tetap dimulai dengan 0. Jika inisialisasi variabel diletakkan diluar perulangan, maka ketika menghitung rata rata dan total pada bahan kedua dan ketiga, variabel sudah terisi nilai bahan yang pertama
+Agar perhitungan 
+berikutnya tetap dimulai dengan 0. Jika inisialisasi variabel diletakkan diluar perulangan, maka ketika menghitung rata rata dan total pada bahan kedua dan ketiga, variabel sudah terisi nilai bahan yang pertama
 ```
 
 ## Tugas
@@ -266,6 +266,11 @@ for(x=0; x<suhu.length; x++){
 }
 System.out.print("Suhu tertinggi dari 5 kota di Jepang selama 7 hari berturut-turut adalah "+ max)
 ```
+```Java
+// Penjelasan
+Pertama memasukkan library scanner untuk inputan. Kedua menambahkan array suhu dengan tipe double. Baris 5 dan kolom 7. setelah itu menambahkan int x, y dan variabel max dengan isian 0. Selanjutnya membuat perulangan outer dan inner(baris dan kolom). Kemudian menampilkan "Masukkan suhu kota " +(x+1) +" hari ke " +(y+1) + " : ". fungsi ditambah 1 agar output dimulai dari angka 1. kemudian inputan dimasukkan ke dalam aray suhu. sintaks selanjutnya, jika array suhu lebih dari max(nilai awal 0), maka inputan akan tersimpan kedalam variabel max. Terakhir menampilkan variabel max
+```
+
 
 2. Terdapat hasil pencatatan data lima mahasiswa yang berisi informasi mengenai umur, berat badan (kg), dan tinggi badan (cm). Data tersebut disimpan ke dalam array dua dimensi.
 ![Gambar 13](images/tugas-2.PNG)
@@ -290,7 +295,7 @@ int totalTinggi = 0;
 int mahasiswaTertua;
 
 for(int i = 0; i < mahasiswa.length; i++)
-    for(int j = 0; j < mahasiswa[0].length; j++) {
+    for(int j = 0; j < mahasiswa[1].length; j++) {
         
         if(j == 1 && terendah > mahasiswa[i][j]) terendah = mahasiswa[i][j]; 
  
@@ -306,4 +311,8 @@ for(int i = 0; i < mahasiswa.length; i++)
 System.out.println("Berat badan mahasiswa yang paling terendah adalah " + terendah);
 System.out.println("Rata-rata tinggi badan ke-5 mahasiswa tersebut adalah " + ((double) totalTinggi/mahasiswa.length));
 System.out.printf("\nUmur Mahasiswa yang Tertua jatuh kepada %s dengan umur %d", namaMahasiswa[mahasiswaTertua], tertua );
+```
+```Java
+// Penjelasan
+Pertama inisialsiasi array mahasiswa tipe integer dan juga mengisi data ke dalam array tsb. kemudian membuat variabel string namaMahasiswa beserta pengisian variabel. Selanjutnya membuat array dengan tipe data int sejumlah 2 (terendah dengan panjang baris 1, kolom 2 dan tertua dengan panjang baris 1 dan kolom 1). Selanjutnya membuat variabel totalTinggi tipe int dengan nilai 0 dan variabel mahasiswaTertua dengan tipe data int. Kemudian membuat outerloop untuk baris dan inerloop untuk kolom berindeks 1. Jika elemen lebih kecil dari nilai variabel terendah. maka nilai akan tersimpan di variabel terendah. Jika pemilihan pertama false maka akan tereksekusi ke tinggi mahahsiswa. jika memenuhi akan menabah nilai totalTinggi. Terakhir untuk mencari data mahasiswa tertua jika kurang dari nilai array mahasiswa[i][j] maka nilai mahasiswaTertua akan disimpan di variabel i. dan array mahasiswa akan tersimpan di variabel tertua. Terakhir menampilkan output variabel terendah, menampilkan rata rata dengan proses totalTinggi/mahasiswa.length dan mahasiswa tertua dengan output umur dan nama
 ```
