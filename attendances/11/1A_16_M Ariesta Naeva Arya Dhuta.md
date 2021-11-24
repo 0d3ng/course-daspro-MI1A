@@ -20,7 +20,7 @@ Pada Percobaan 1, kode program yang dibuat digunakan untuk menyimpan nilai prakt
 
 ```Java
 // Tuliskan kode program Percobaan 1 Langkah 1
-int[][] nilai = new int[2][3];// deklarasi variabel array
+int[][] nilai = new int[2][3];
 ```
 
 2. Isi masing-masing elemen array **nilai** sebagai berikut:
@@ -29,12 +29,12 @@ int[][] nilai = new int[2][3];// deklarasi variabel array
 
 ```Java
 // Tuliskan kode program Percobaan 1 Langkah 2
-nilai[0][0] = 75;//mengisi data di setiap kordinat
-nilai[0][1] = 90;//mengisi data di setiap kordinat
-nilai[0][2] = 88;//mengisi data di setiap kordinat
-nilai[1][0] = 79;//mengisi data di setiap kordinat
-nilai[1][1] = 82;//mengisi data di setiap kordinat
-nilai[1][2] = 67;//mengisi data di setiap kordinat
+nilai[0][0] = 75;
+nilai[0][1] = 90;
+nilai[0][2] = 88;
+nilai[1][0] = 79;
+nilai[1][1] = 82;
+nilai[1][2] = 67;
 ```
 
 
@@ -50,17 +50,16 @@ nilai[1][2] = 67;//mengisi data di setiap kordinat
 
 ```Java
 // Tuliskan kode program Percobaan 1 Langkah 2
-System.out.printf("%d %d %d",nilai[0][0],nilai[0][1],nilai[0][2]);//menampilkan data yang dipanggil tiap kordinat
-System.out.printf("\n%d %d %d",nilai[1][0],nilai[1][1],nilai[1][2]);//menampilkan data yang dipanggil tiap kordinat
+System.out.printf("%d %d %d",nilai[0][0],nilai[0][1],nilai[0][2]);
+System.out.printf("%d %d %d",nilai[1][0],nilai[1][1],nilai[1][2]);
 ```
 
-    75 90 88
-    79 82 67
+    75 90 8879 82 67
 
 
 
 
-    java.io.PrintStream@1428a73
+    java.io.PrintStream@a737ed2
 
 
 
@@ -75,11 +74,11 @@ Bisa karena tidak error saat saya coba
 
 ```Java
 // Tuliskan jawaban nomor 2
-for(int i = 0; i<nilai.length; i++){//perulangan baris
-    for(int j = 0; j<nilai[0].length; j++){//perulangan untuk kolom
-    System.out.print(" "+nilai[i][j]);//menampilkan data dari array nilai
+for(int i = 0; i<nilai.length; i++){
+    for(int j = 0; j<nilai[0].length; j++){
+    System.out.print(" "+nilai[i][j]);
     }
-    System.out.println();//sama menampilkan tapi baris selanjutnya
+    System.out.println();
 }
 ```
 
@@ -105,39 +104,22 @@ Scanner sc = new Scanner (System.in);
 
 ```Java
 // Tuliskan kode program Percobaan 2 Langkah 2
-int[][] rating = new int [4][2];//deklarasi variabel array
+int[][] rating = new int [4][2];
 ```
 
 3. Dengan menggunakan perulangan *for*, buat input untuk mengisi elemen array **rating**
 ![Gambar 6](images/percobaan2-3.PNG)
 
-
-```Java
-
-for (int j = 0; j<rating.length; j++){//perulangan untuk baris
-    for(int i = 0; i<rating[0].length; i++){//perulangan untuk kolom
-        System.out.print("Masukkan rating pengguna" + j + "untuk restoran " + i + " : ");//untuk menampilkan tulisan +j+ yang berarti dia mengambil dari baris nya sedangkan +i+ diambil dari kolomnya dan jika di run yang muncul pertama kali yaitu 0
-        rating[j][i] = sc.nextInt();//inputan
+##### // Tuliskan kode program Percobaan 2 Langkah 3
+for (int j = 0; j<rating.length; j++){
+    for(int i = 0; i<rating[0].length; i++){
+        System.out.print("Masukkan rating pengguna" + j + "untuk restoran " + i + " : ");
+        rating[j][i] = sc.nextInt();
     }
     System.out.println("");
 }
-```
 
-    Masukkan rating pengguna0untuk restoran 0 : 3
-    Masukkan rating pengguna0untuk restoran 1 : 4
-    
-    Masukkan rating pengguna1untuk restoran 0 : 5
-    Masukkan rating pengguna1untuk restoran 1 : 6
-    
-    Masukkan rating pengguna2untuk restoran 0 : 7
-    Masukkan rating pengguna2untuk restoran 1 : 3
-    
-    Masukkan rating pengguna3untuk restoran 0 : 4
-    Masukkan rating pengguna3untuk restoran 1 : 5
-    
-
-
-###### 4. Dengan menggunakan perulangan *for-each*, tampilkan semua isi elemen dari array **rating**
+4. Dengan menggunakan perulangan *for-each*, tampilkan semua isi elemen dari array **rating**
 ![Gambar 7](images/percobaan2-4.PNG)
 
 
@@ -149,7 +131,6 @@ for (int[] rtg : rating) {
     }
     System.out.println("");
 }
-//script ini digunakan untuk menampilkan data yang sudah dimasukkan
 ```
 
     2 3 
@@ -170,13 +151,11 @@ bisa karena itu hanya variable doang
 ```Java
 import java.util.Scanner;
 Scanner sc = new Scanner (System.in);
-//deklarasi variabel,membuat inputan,gg gaming
 System.out.print("Masukkan Baris : ");
 int baris = sc.nextInt();
 System.out.print("Masukkan Kolom : ");
 int kolom = sc.nextInt();
 int kolbar[][] = new int[baris][kolom];
-
 
 for (int j = 0; j<kolbar.length; j++){
     for(int i = 0; i<kolbar[0].length; i++){
@@ -239,14 +218,14 @@ double total, rata;
 ```Java
 // Tuliskan kode program Percobaan 3 Langkah 3
 for(int i = 0; i< harga.length; i++){
-    total = 0;//agar saat mengulang total kembali 0 agar sesuai keinginan
-    rata = 0;//agar saat mengulang rata kembali 0 agar sesuai keinginan
+    total = 0;
+    rata = 0;
     for(int j = 0; j<harga[0].length; j++){
         System.out.printf("Masukkan harga[%d][%d] : ",i, j);
         harga[i][j] = sc.nextInt();
-        total += harga[i][j];//total berawalan 0 jika harga nya sudah diinputkan semisal 30000 total akan menjadi 30000,script ini akan mengulang sampai kolom nya selesai,jika sudah akan berganti baris dan total nya akan kembali 0000
+        total += harga[i][j];
     }
-    rata = total / harga[0].length;//menghitung rata rata
+    rata = total / harga[0].length;
     System.out.printf("Rata-rata harga bahan ke-%d adalah %.2f\n", i, rata);
 }
 ```
@@ -306,9 +285,9 @@ double max = 0;
     
 for (int j = 0; j<suhu.length; j++){
     for(int i = 0; i<suhu[0].length; i++){
-        System.out.print("Masukkan suhu kota "  + (j + 1)+ " hari ke " + (i + 1)+ " : ");//sama seperti percobaan 2 langkah 3 tetapi j nya di + 1 agar saat di run kota nya langsung ke 1 tidak ke 0
+        System.out.print("Masukkan suhu kota "  + (j + 1)+ " hari ke " + (i + 1)+ " : ");
         suhu[j][i] = sc.nextInt();
-         if(suhu[j][i]>max){//pemilihan untuk mencari suhu terbesar
+         if(suhu[j][i]>max){
             max = suhu[j][i];
          }
     }
@@ -374,41 +353,35 @@ int keseluruhan[][] = {{19,51,155},
                      {18,55,163},
                      {18,45,153},
                      {20,46,158},
-                     {19,58,160}};//mendeklarasi variabel array sekalian datanya
-String nama [] = {"Desi", "Rofan", "Lala", "Beky", "Ega"};
-String sepuh ;
+                     {19,58,160}};
 int beratRendah = 2000;
 int umurTua = 0;
 double rataTinggi;
 int totalTinggi;
 
-
 for(int i = 0;i<keseluruhan.length; i++){
     for(int j = 0;j<keseluruhan[0].length; j++){
         
         if(keseluruhan[i][1]<beratRendah){
-            beratRendah = keseluruhan[i][1];//perulangan untuk mencari berat badan terendah
+            beratRendah = keseluruhan[i][1];
         }
         if(keseluruhan[i][0]>umurTua){
-            umurTua = keseluruhan[i][0];//perulangan untuk mencari umur paling tua
-            sepuh = nama[i] ;//untuk mencari nama dengan umur tertinggi sekalian mencari umur tertua karena baris nya sama yang di cari seperti itu
+            umurTua = keseluruhan[i][0];
         }
         
-        }
-     totalTinggi += keseluruhan[i][2];//untuk menjumlah total semua tinggi mahasiswa
     }
+    totalTinggi += keseluruhan[i][2];
     
-   
-
-rataTinggi = totalTinggi/keseluruhan.length;//jumlah total tinggi yang di atas dibagi keseluruhan.length yang berarti dibagi 5
+}
+rataTinggi = totalTinggi/keseluruhan.length;
 System.out.print("Berat badan terendah adalah : "+beratRendah);
 System.out.println("\nRata-rata tinggi badan adalah : "+rataTinggi);
-System.out.printf("Umur tertua dipegang oleh Sepuh %s dengan umur %d ",sepuh,umurTua);
+System.out.print("Umur tertua adalah : "+umurTua);
 ```
 
     Berat badan terendah adalah : 45
     Rata-rata tinggi badan adalah : 157.0
-    Umur tertua dipegang oleh Sepuh Beky dengan umur 20
+    Umur tertua adalah : 20
 
 
 ```Java

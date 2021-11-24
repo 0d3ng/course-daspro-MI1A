@@ -23,7 +23,13 @@
 
 
 ```Java
-
+static void beriSalam(){
+    System.out.println("Halo! Selamat Pagi");//fungsi tanpa parameter yang hanya untuk menampilkan halo selamat pagi
+}
+static void beriSalam(){
+    System.out.println("Halo! Selamat Pagi");
+}
+beriSalam();
 ```
 
 3. Buat fungsi **beriUcapan** dengan sebuah parameter bertipe String.
@@ -51,7 +57,7 @@ static void beriUcapan(String ucapan){
 
 beriSalam();
 String salam = "Selamat datang di pemrograman Java";
-beriUcapan(salam);
+beriUcapan(salam);//memanggil fungsi beriUcapan dengan String ucapan yang sudah diganti dengan "Selamat datang di pemrograman Java"
 ```
 
     Halo! Selamat Pagi
@@ -84,20 +90,15 @@ Pada Percobaan 2, kode program yang dibuat digunakan untuk menghitung luas perse
 
 ```Java
 static int luasPersegi (int sisi){
-    int luas = sisi * sisi ;
-    return luas;
+    int luas = sisi * sisi ;//fungsi yang dibuat untuk memakai rumus menghitung luas
+    return luas;//untuk mengembalikan
 }
-int luasan = luasPersegi(5);
+int luasan = luasPersegi(5);//disini fungsi luasPersegi dipanggil dan sisi nya sudah diinputkan di fungsinya
 System.out.println("Luas Persegi dengan sisi 5 =" + luasan);
 ```
 
     Luas Persegi dengan sisi 5 =25
 
-
-
-```Java
-
-```
 
 #### Pertanyaan
 1. jelaskan mengapa ketika memanggil fungsi **luasPersegi** harus membuat variabel baru yaitu luasan?
@@ -124,8 +125,8 @@ static int luasPersegi (int sisi){
     int luas = sisi * sisi ;
     return luas;
 }
-int masuk = sc.nextInt();
-int luasan = luasPersegi(masuk);
+int masuk = sc.nextInt();//inputan
+int luasan = luasPersegi(masuk);//disini memanggil fungsi luasPersegi dan variabel nya sudah di inputkan di inputan sebelumnya
 System.out.printf("Luas Persegi dengan sisi %d = %d ",masuk,luasan);
 ```
 
@@ -306,9 +307,9 @@ l=input.nextInt();
 System.out.println("Masukkan tinggi");
 t=input.nextInt();
 
-L = hitungLuas(p,l);
+L = hitungLuas(p,l);//sebelumnya kan kita menginputkan angka p dan l yang berarti panjang dan lebar,di syntax ini kita memanggil fungsi hitungLuas dan di variabel pjg dan lb sudah terisi dengan nilai yang sudah di inputkan sebelumnya
 System.out.println("Masukkan Persegi Panjang Adalah "+L);
-vol=hitungVolume(t,p,l);
+vol=hitungVolume(t,p,l);//sama seperti di L
 System.out.println("Volume balok adalah"+ vol);
 ```
 
@@ -374,14 +375,14 @@ static int [] isiarray (int angka){
     int array[]= new int [angka];
     for (i = 0; i<array.length; i++){
         System.out.println("Masukkan data ke - "+(i+1));
-        array[i] = input.nextInt();
+        array[i] = input.nextInt();//fungsi array untuk menginputkan
     }
     return array;
 }
 
 static void tampilArray(int [] arr){
     for (i=0; i<arr.length; i++){
-        System.out.println("Nilai yang anda inputkan ke "+(i+1));
+        System.out.println("Nilai yang anda inputkan ke "+(i+1));//fungsi array untuk menampilkan
         System.out.println(arr[i]);
     }
 }
@@ -491,7 +492,7 @@ System.out.println("Total nilai= "+total)
 
 ```Java
 // Tuliskan jawaban nomor 1
-static int Max3(int A, int B, int C){
+static int Max3(int A, int B, int C){//fungsi untuk mencari nilai terbesar
     int l = 0;
         if(A>B && A>C){
             l = A;
@@ -512,7 +513,7 @@ bil2=sc.nextInt();
 System.out.print("bil 3 = ");
 bil3=sc.nextInt();
 
-max=Max3(bil1,bil2,bil3);
+max=Max3(bil1,bil2,bil3);//memanggil fungsi Max3(fungsi untuk mencari nilai terbesar)
 System.out.print("Nilai Terbesar adalah = "+ max)
 
 
@@ -520,8 +521,8 @@ System.out.print("Nilai Terbesar adalah = "+ max)
 
     bil 1 = 2
     bil 2 = 1
-    bil 3 = 3
-    Nilai Terbesar adalah = 3
+    bil 3 = 5
+    Nilai Terbesar adalah = 5
 
 2. Disebuah restoran terdapat 3 menu yang dijual yaitu nasi goreng, soto, dan sate. Harga nasi goreng Rp. 20.000, soto Rp. 15.000, dan sate Rp. 25.000. Restoran tersebut buka dari hari senin sampai jumat. Berikut ini merupakan tabel pejualan perhari untuk masing-masing menu di restoran tersebut dari hari senin sampai jumat
 ![Gambar 13](images/soal3.png)
@@ -533,6 +534,7 @@ Buatlah Fungsi sebagai berikut:
 
 
 ```Java
+// Tuliskan jawaban nomor 2
 static String hari[] = {"Senin","Selasa","Rabu","Kamis","Jumat"};
 static String panganan[]= {"Nasi Goreng","Soto","Sate"};
 static int porsi[][] = {{20,15,35,24,70},
@@ -543,8 +545,9 @@ static void Fav(){
     int max1 = 0;
     String pangan1="";
     String pangan2="";
-     for(int i = 0; i<porsi.length; i++){
-             if(porsi[i][1]>max)//if untuk mencari porsi terbesar dan juga mencari nama makanan
+     for(int i = 0; i<porsi.length; i++){////if untuk mencari porsi terbesar dan juga mencari nama makanan
+         for(int j = 0; j<porsi[0].length; j++){
+             if(porsi[i][1]>max)
              {
                   max = porsi[i][1];
                   pangan1 = panganan[i];
@@ -556,7 +559,7 @@ static void Fav(){
              }
              
              
-         
+         }
      }
         System.out.println("Favorit di hari selasa adalah "+max+" Porsi "+pangan1);
         System.out.println("Favorit di hari jumat adalah "+max1+ " Porsi "+pangan2);
@@ -570,8 +573,7 @@ static void duit(){
     int duitSoto  = 0 ;
     int sate = 0 ;
     int duitSate  = 0 ;
-    int totPem = 0;
-    for(int i = 0; i<porsi.length; i++){//fungsi untuk menjumlah semua pemasokan
+    for(int i = 0; i<porsi.length; i++){//untuk menjumlah semua pemasokan
         for(int j = 0; j<porsi[0].length; j++){
            if (i == 0){
                nasgor += porsi[i][j];
@@ -596,12 +598,9 @@ static void duit(){
     duitNasgor = nasgor * 20000 ;
     duitSoto = soto * 15000 ;
     duitSate = sate * 25000 ;
-    totPem = duitNasgor + duitSoto + duitSate;
-    System.out.println("\nPemasokan uang Nasi Goreng pada hari senin sampai jum'at adalah Rp." +duitNasgor) ;
-     System.out.println("Pemasokan uang Soto pada hari senin sampai jum'at adalah Rp." +duitSoto) ;
-     System.out.println("Pemasokan uang Sate pada hari senin sampai jum'at adalah Rp." +duitSate) ;
-    System.out.println("\nTotal pemasokan semuanya adalah Rp." +totPem) ;
-    
+    System.out.println("\nPemasokan uang Nasi Goreng pada hari senin sampai jum'at adalah " +duitNasgor) ;
+     System.out.println("Pemasokan uang Soto pada hari senin sampai jum'at adalah " +duitSoto) ;
+     System.out.println("Pemasokan uang Sate pada hari senin sampai jum'at adalah " +duitSate) ;
 }
 
 duit();
@@ -635,17 +634,20 @@ duit();
         System.out.println("Porsi Soto pada hari senin sampai jum at yang terjual adalah " +sto+ " Porsi");
         System.out.println("Porsi Sate pada hari senin sampai jum at yang terjual adalah " +ste+ " Porsi");
     }
-pors()
+pors();
+    
+    
+
+    
+
 ```
 
     Favorit di hari selasa adalah 40 Porsi Soto
     Favorit di hari jumat adalah 48 Porsi Sate
     
-    Pemasokan uang Nasi Goreng pada hari senin sampai jum'at adalah Rp.3280000
-    Pemasokan uang Soto pada hari senin sampai jum'at adalah Rp.2145000
-    Pemasokan uang Sate pada hari senin sampai jum'at adalah Rp.3200000
-    
-    Total pemasokan semuanya adalah Rp.8625000
+    Pemasokan uang Nasi Goreng pada hari senin sampai jum'at adalah 3280000
+    Pemasokan uang Soto pada hari senin sampai jum'at adalah 2145000
+    Pemasokan uang Sate pada hari senin sampai jum'at adalah 3200000
     
     Porsi Nasi Goreng pada hari senin sampai jum at yang terjual adalah 164 Porsi
     Porsi Soto pada hari senin sampai jum at yang terjual adalah 143 Porsi
@@ -653,9 +655,6 @@ pors()
 
 
 
-```Java
-
-```
 
 
 ```Java
