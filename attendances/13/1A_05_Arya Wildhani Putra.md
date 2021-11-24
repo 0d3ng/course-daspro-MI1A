@@ -63,7 +63,7 @@ static void beriUcapan(String ucapan){ // dengan parameter
 #### Pertanyaan
 1. Jelaskan perbedaan fungsi **beriSalam** dan **beriUcapan** pada praktikum 1!
 
-fungsi pada beriSalam tidak terdapat parameter sedangkan pada beriUcapan terdapat parameter berupa String ucapan yang dapat memberikan output jika dipanggil. 
+fungsi pada beriSalam tidak terdapat parameter sedangkan pada beriUcapan terdapat parameter berupa String ucapan yang dapat memberikan output jika dipanggil 
 
 2. Jelaskan cara pemanggilan sebuah fungsi void yang berparameter dan tanpa parameter!
 
