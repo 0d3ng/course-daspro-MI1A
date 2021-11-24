@@ -534,6 +534,7 @@ Buatlah Fungsi sebagai berikut:
 
 
 ```Java
+// Tuliskan jawaban nomor 2
 static String hari[] = {"Senin","Selasa","Rabu","Kamis","Jumat"};
 static String panganan[]= {"Nasi Goreng","Soto","Sate"};
 static int porsi[][] = {{20,15,35,24,70},
@@ -544,9 +545,9 @@ static void Fav(){
     int max1 = 0;
     String pangan1="";
     String pangan2="";
-     for(int i = 0; i<porsi.length; i++){
+     for(int i = 0; i<porsi.length; i++){////if untuk mencari porsi terbesar dan juga mencari nama makanan
          for(int j = 0; j<porsi[0].length; j++){
-             if(porsi[i][1]>max)//if untuk mencari porsi terbesar dan juga mencari nama makanan
+             if(porsi[i][1]>max)
              {
                   max = porsi[i][1];
                   pangan1 = panganan[i];
@@ -572,7 +573,7 @@ static void duit(){
     int duitSoto  = 0 ;
     int sate = 0 ;
     int duitSate  = 0 ;
-    for(int i = 0; i<porsi.length; i++){//untuk menjumlah semua porsi
+    for(int i = 0; i<porsi.length; i++){//untuk menjumlah semua pemasokan
         for(int j = 0; j<porsi[0].length; j++){
            if (i == 0){
                nasgor += porsi[i][j];
@@ -603,7 +604,7 @@ static void duit(){
 }
 
 duit();
-    static void pors(){
+    static void pors(){//fungsi untuk menjumlah semua porsi
         int sego = 0;
         int sto = 0;
         int ste = 0;
@@ -633,7 +634,12 @@ duit();
         System.out.println("Porsi Soto pada hari senin sampai jum at yang terjual adalah " +sto+ " Porsi");
         System.out.println("Porsi Sate pada hari senin sampai jum at yang terjual adalah " +ste+ " Porsi");
     }
-pors()
+pors();
+    
+    
+
+    
+
 ```
 
     Favorit di hari selasa adalah 40 Porsi Soto
@@ -646,6 +652,8 @@ pors()
     Porsi Nasi Goreng pada hari senin sampai jum at yang terjual adalah 164 Porsi
     Porsi Soto pada hari senin sampai jum at yang terjual adalah 143 Porsi
     Porsi Sate pada hari senin sampai jum at yang terjual adalah 128 Porsi
+
+
 
 
 
