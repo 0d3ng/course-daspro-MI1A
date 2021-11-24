@@ -534,7 +534,6 @@ Buatlah Fungsi sebagai berikut:
 
 
 ```Java
-// Tuliskan jawaban nomor 2
 static String hari[] = {"Senin","Selasa","Rabu","Kamis","Jumat"};
 static String panganan[]= {"Nasi Goreng","Soto","Sate"};
 static int porsi[][] = {{20,15,35,24,70},
@@ -545,9 +544,8 @@ static void Fav(){
     int max1 = 0;
     String pangan1="";
     String pangan2="";
-     for(int i = 0; i<porsi.length; i++){////if untuk mencari porsi terbesar dan juga mencari nama makanan
-         for(int j = 0; j<porsi[0].length; j++){
-             if(porsi[i][1]>max)
+     for(int i = 0; i<porsi.length; i++){
+             if(porsi[i][1]>max)//if untuk mencari porsi terbesar dan juga mencari nama makanan
              {
                   max = porsi[i][1];
                   pangan1 = panganan[i];
@@ -559,7 +557,7 @@ static void Fav(){
              }
              
              
-         }
+         
      }
         System.out.println("Favorit di hari selasa adalah "+max+" Porsi "+pangan1);
         System.out.println("Favorit di hari jumat adalah "+max1+ " Porsi "+pangan2);
@@ -573,7 +571,8 @@ static void duit(){
     int duitSoto  = 0 ;
     int sate = 0 ;
     int duitSate  = 0 ;
-    for(int i = 0; i<porsi.length; i++){//untuk menjumlah semua pemasokan
+    int totPem = 0;
+    for(int i = 0; i<porsi.length; i++){//fungsi untuk menjumlah semua pemasokan
         for(int j = 0; j<porsi[0].length; j++){
            if (i == 0){
                nasgor += porsi[i][j];
@@ -598,9 +597,12 @@ static void duit(){
     duitNasgor = nasgor * 20000 ;
     duitSoto = soto * 15000 ;
     duitSate = sate * 25000 ;
-    System.out.println("\nPemasokan uang Nasi Goreng pada hari senin sampai jum'at adalah " +duitNasgor) ;
-     System.out.println("Pemasokan uang Soto pada hari senin sampai jum'at adalah " +duitSoto) ;
-     System.out.println("Pemasokan uang Sate pada hari senin sampai jum'at adalah " +duitSate) ;
+    totPem = duitNasgor + duitSoto + duitSate;
+    System.out.println("\nPemasokan uang Nasi Goreng pada hari senin sampai jum'at adalah Rp." +duitNasgor) ;
+     System.out.println("Pemasokan uang Soto pada hari senin sampai jum'at adalah Rp." +duitSoto) ;
+     System.out.println("Pemasokan uang Sate pada hari senin sampai jum'at adalah Rp." +duitSate) ;
+    System.out.println("\nTotal pemasokan semuanya adalah Rp." +totPem) ;
+    
 }
 
 duit();
@@ -634,20 +636,17 @@ duit();
         System.out.println("Porsi Soto pada hari senin sampai jum at yang terjual adalah " +sto+ " Porsi");
         System.out.println("Porsi Sate pada hari senin sampai jum at yang terjual adalah " +ste+ " Porsi");
     }
-pors();
-    
-    
-
-    
-
+pors()
 ```
 
     Favorit di hari selasa adalah 40 Porsi Soto
     Favorit di hari jumat adalah 48 Porsi Sate
     
-    Pemasokan uang Nasi Goreng pada hari senin sampai jum'at adalah 3280000
-    Pemasokan uang Soto pada hari senin sampai jum'at adalah 2145000
-    Pemasokan uang Sate pada hari senin sampai jum'at adalah 3200000
+    Pemasokan uang Nasi Goreng pada hari senin sampai jum'at adalah Rp.3280000
+    Pemasokan uang Soto pada hari senin sampai jum'at adalah Rp.2145000
+    Pemasokan uang Sate pada hari senin sampai jum'at adalah Rp.3200000
+    
+    Total pemasokan semuanya adalah Rp.8625000
     
     Porsi Nasi Goreng pada hari senin sampai jum at yang terjual adalah 164 Porsi
     Porsi Soto pada hari senin sampai jum at yang terjual adalah 143 Porsi
@@ -655,6 +654,9 @@ pors();
 
 
 
+```Java
+
+```
 
 
 ```Java
