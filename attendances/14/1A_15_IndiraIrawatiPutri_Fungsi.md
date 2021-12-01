@@ -302,10 +302,10 @@ static int pembiakan(int n, int a, int b) { // deklarasi fungsi rekursif
      return pembiakan(n - 1, b, a + b); // recursion call 
 }
 
-printf("Pada bulan ke %d terdapat %d pasangan ",12 , pembiakan(12, 0, 1)); // memanggil dan menampilkan hasil dari pembiakan
+printf("Pada bulan ke %d terdapat %d sepasang marmut ",12 , pembiakan(12, 0, 1)); // memanggil dan menampilkan hasil dari pembiakan
 ```
 
-    Pada bulan ke 12 terdapat 144 pasangan 
+    Pada bulan ke 12 terdapat 144 sepasang marmut
 
 
 ```Java
