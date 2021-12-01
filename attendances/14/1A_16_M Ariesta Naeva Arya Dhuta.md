@@ -28,7 +28,7 @@ Pada percobaan ini akan dilakukan pembuatan program untuk menghitung nilai fakto
 ```Java
 // Tuliskan kode program Percobaan 1 Langkah 1
 import java.util.Scanner;
-Scanner sc = new Scanner(System.in);
+Scanner sc = new Scanner(System.in);//scanner seperti biasaa
 ```
 
 2. Buat lagi fungsi static dengan nama **faktorialIteratif()**, dengan tipe data kembalian fungsi int dan memiliki 1 parameter dengan tipe data int berupa bilangan yang akan dihitung nilai faktorialnya.
@@ -39,10 +39,10 @@ Scanner sc = new Scanner(System.in);
 ```Java
 // Tuliskan kode program Percobaan 1 Langkah 2
 static int faktorialRekursif(int n){//rekursif 
-    if ( n == 0){
+    if ( n == 0){//base case nya
         return(1);
     }else{
-        return(n * faktorialRekursif(n-1));//agar n nya terus berkurang saat fungsi nya dipanggil lagi
+        return(n * faktorialRekursif(n-1));//agar n nya terus berkurang saat fungsi nya dipanggil lagi,dan terus dikalikan
     }
 }
 static int faktorialIteratif(int n){//untuk iteratif
@@ -50,7 +50,7 @@ static int faktorialIteratif(int n){//untuk iteratif
     for(int i = n; i>= 1; i--){
         faktor = faktor * i;
     }
-    return faktor;
+    return faktor;//recursion call nya
 }
 ```
 
@@ -61,8 +61,8 @@ static int faktorialIteratif(int n){//untuk iteratif
 
 ```Java
 // Tuliskan kode program Percobaan 1 Langkah 1, 2, 3
-System.out.println(faktorialRekursif(5));
-System.out.println(faktorialIteratif(5));
+System.out.println(faktorialRekursif(5));//menampilkan hasil akhir dari faktorialRekursif
+System.out.println(faktorialIteratif(5));//menampilkan hasil akhir dari faktorialIteratif
 ```
 
     120
@@ -103,10 +103,10 @@ Pada percobaan ini akan dilakukan pembuatan program untuk menghitung pangkat seb
 ```Java
 // Tuliskan kode program Percobaan 2 Langkah 1 - 5
 static int hitungPangkat(int x, int y){
-    if (y == 0) {
+    if (y == 0) {//base case
         return (1);
     }else{
-        return(x * hitungPangkat(x, y - 1));
+        return(x * hitungPangkat(x, y - 1));//recursion call
     }
 }
 int bilangan;
@@ -194,7 +194,8 @@ System.out.printf("Jumlah uang setelah " + tahun + " tahun: %.0f",total);
 ```Java
 // Tuliskan jawaban tugas nomor 1
 // Tuliskan jawaban tugas nomor 1
-static int faktorialRekursif(int n){
+static int faktorialRekursif(int n){//kalo rekursif rada susah karna pake if else
+
     if ( n == 0){
         return(0);
     }else{
@@ -203,7 +204,7 @@ static int faktorialRekursif(int n){
         
     }
 }
-static int faktorialIteratif(int n){
+static int faktorialIteratif(int n){//fungsi iteratif ini enak bisa pakai for
     for(int i = n; i>=1; i--){
         System.out.print(i+" ");
     }
