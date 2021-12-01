@@ -38,14 +38,14 @@ Scanner sc = new Scanner(System.in);
 
 ```Java
 // Tuliskan kode program Percobaan 1 Langkah 2
-static int faktorialRekursif(int n){
+static int faktorialRekursif(int n){//rekursif 
     if ( n == 0){
         return(1);
     }else{
-        return(n * faktorialRekursif(n-1));
+        return(n * faktorialRekursif(n-1));//agar n nya terus berkurang saat fungsi nya dipanggil lagi
     }
 }
-static int faktorialIteratif(int n){
+static int faktorialIteratif(int n){//untuk iteratif
     int faktor = 1;
     for(int i = n; i>= 1; i--){
         faktor = faktor * i;
@@ -199,7 +199,7 @@ static int faktorialRekursif(int n){
         return(0);
     }else{
         System.out.print(n+" ");
-        return(faktorialRekursif(n-1));
+        return(faktorialRekursif(n-1));//
         
     }
 }
@@ -267,11 +267,11 @@ static int cekPrima(int a){
         }
     }
        if(anj > 2){
-            System.out.print("Bukan Prima");
+            System.out.print("Bukan Prima");//untuk mengecek angka yang bukan prima
             return 0;
         }
         else if (anj == 2){
-            System.out.print("Prima"); 
+            System.out.print("Prima"); //untuk mengecek angka yang prima
             return 0;
         }
     return cekPrima(a - 1);
