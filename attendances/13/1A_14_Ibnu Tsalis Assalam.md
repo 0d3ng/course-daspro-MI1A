@@ -531,29 +531,22 @@ static int[][] dataMakan()//Fungsi untuk input data porsi makanan
     return array;
 }
 
-static void menuFav(int[][] arrFav)//Fungsi untuk menampilkan makanan favorit(maks)
+static int menuFav(int[][] arrFav, int mPilihan)//Fungsi untuk menampilkan makanan favorit(maks)
 {
-    String menuSelasa = "", menuJumat = "";
-    int max1 = 0, max2 = 0;
+    String mFav = "", hFav = "";
+    int max = 0;
+    mPilihan -= 1;
     for(i=0; i<arrFav.length; i++)
     {
-        for(j=0; j<arrFav[0].length; j++)
+        if(arrFav[i][mPilihan] > max)
         {
-            if(arrFav[i][1] > max1)
-            {
-                menuSelasa = makanan[j];
-                max1 = arrFav[i][1];
-            }
-            if(arrFav[i][4] > max2)
-            {
-                menuJumat = makanan[j];
-                max2 = arrFav[i][4];
-            }
-        }
+            mFav = makanan[i];
+            hFav = hari[mPilihan];
+            max = arrFav[i][mPilihan];
+        }    
     }
-    System.out.println("");
-    System.out.println("Makanan favorit hari Selasa adalah " + menuSelasa);
-    System.out.println("Makanan favorit hari Jumat adalah " + menuJumat);
+    System.out.printf("Makanan favorit hari %s adalah %s\n", hFav, mFav);
+    return mPilihan;
 }
 
 static int pemasukan(int h1, int h2, int h3)//Fungsi untuk menghitung pemasukan dengan parameter dari fungsi jumMenu
@@ -582,34 +575,59 @@ static void jumMenu(int[][] jumMenu)//Fungsi untuk menghitung jumlah porsi senin
     System.out.println("Jumlah porsi Sate mulai dari Senin sampai Jumat adalah " + menu3);
     harga = pemasukan(menu1, menu2, menu3);//pemanggilan fungsi pemasukan dengan 3 parameter
 }
-
+int pilihan = 6;
 int[][] dataArray = dataMakan();//pemanggilan fungsi dataMakan
-menuFav(dataArray);//pemanggilan fungsi menuFav
+
+do
+{
+    System.out.println("");
+    System.out.print("Silahkan masukkan makanan favorit hari senin-jumat(1->5), berhenti(0): ");
+    pilihan = input.nextInt();
+    if(pilihan > 0)
+    {    
+        menuFav(dataArray, pilihan);//pemanggilan fungsi menuFav
+    }
+}
+while(pilihan != 0);
+
 jumMenu(dataArray);//pemanggilan fungsi jumMenu
 ```
 
-    Masukkan porsi Nasi Goreng hari Senin: 23
-    Masukkan porsi Nasi Goreng hari Selasa: 24
-    Masukkan porsi Nasi Goreng hari Rabu: 25
-    Masukkan porsi Nasi Goreng hari Kamis: 21
-    Masukkan porsi Nasi Goreng hari Jumat: 33
-    Masukkan porsi Soto hari Senin: 43
-    Masukkan porsi Soto hari Selasa: 51
-    Masukkan porsi Soto hari Rabu: 25
-    Masukkan porsi Soto hari Kamis: 34
-    Masukkan porsi Soto hari Jumat: 25
-    Masukkan porsi Sate hari Senin: 22
-    Masukkan porsi Sate hari Selasa: 43
-    Masukkan porsi Sate hari Rabu: 51
+    Masukkan porsi Nasi Goreng hari Senin: 20
+    Masukkan porsi Nasi Goreng hari Selasa: 23
+    Masukkan porsi Nasi Goreng hari Rabu: 22
+    Masukkan porsi Nasi Goreng hari Kamis: 24
+    Masukkan porsi Nasi Goreng hari Jumat: 22
+    Masukkan porsi Soto hari Senin: 21
+    Masukkan porsi Soto hari Selasa: 24
+    Masukkan porsi Soto hari Rabu: 23
+    Masukkan porsi Soto hari Kamis: 28
+    Masukkan porsi Soto hari Jumat: 27
+    Masukkan porsi Sate hari Senin: 21
+    Masukkan porsi Sate hari Selasa: 23
+    Masukkan porsi Sate hari Rabu: 24
     Masukkan porsi Sate hari Kamis: 23
-    Masukkan porsi Sate hari Jumat: 43
-    
-    Makanan favorit hari Selasa adalah Nasi Goreng
-    Makanan favorit hari Jumat adalah Nasi Goreng
-    
-    Jumlah porsi Nasi Goreng mulai dari Senin sampai Jumat adalah 126
-    Jumlah porsi Soto mulai dari Senin sampai Jumat adalah 178
-    Jumlah porsi Sate mulai dari Senin sampai Jumat adalah 182
-    
-    Total pemasukan adalah 9740000
+    Masukkan porsi Sate hari Jumat: 22
 
+    Silahkan masukkan makanan favorit hari senin-jumat(1->5), berhenti(0): 1
+    Makanan favorit hari Senin adalah Soto
+
+    Silahkan masukkan makanan favorit hari senin-jumat(1->5), berhenti(0): 2
+    Makanan favorit hari Selasa adalah Soto
+
+    Silahkan masukkan makanan favorit hari senin-jumat(1->5), berhenti(0): 3
+    Makanan favorit hari Rabu adalah Sate
+
+    Silahkan masukkan makanan favorit hari senin-jumat(1->5), berhenti(0): 4
+    Makanan favorit hari Kamis adalah Soto
+
+    Silahkan masukkan makanan favorit hari senin-jumat(1->5), berhenti(0): 5
+    Makanan favorit hari Jumat adalah Soto
+
+    Silahkan masukkan makanan favorit hari senin-jumat(1->5), berhenti(0): 0
+
+    Jumlah porsi Nasi Goreng mulai dari Senin sampai Jumat adalah 111
+    Jumlah porsi Soto mulai dari Senin sampai Jumat adalah 123
+    Jumlah porsi Sate mulai dari Senin sampai Jumat adalah 113
+
+    Total pemasukan adalah 6890000
